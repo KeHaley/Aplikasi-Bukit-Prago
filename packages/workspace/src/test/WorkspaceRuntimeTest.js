@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var WorkspaceService_js_1 = require("../WorkspaceService.js");
+var service = new WorkspaceService_js_1.WorkspaceService();
+node_assert_1.strict.equal(service.getWorkspaceName(), "BPV4 Workspace");
+node_assert_1.strict.equal(service.getWorkspaceVersion(), "1.0.0");
+node_assert_1.strict.ok(service.getRuntime().engine);
+node_assert_1.strict.ok(service.getRuntime().projectManager);
+console.log("");
+console.log("======================================");
+console.log("Workspace Runtime Test PASSED");
+console.log("======================================");

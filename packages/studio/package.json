@@ -1,0 +1,28 @@
+{
+  "name": "@bpv4/studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "tsc -b --clean"
+  },
+  "dependencies": {
+    "@bpv4/core": "workspace:*",
+    "@bpv4/shared": "workspace:*",
+    "@bpv4/ui": "workspace:*",
+    "@bpv4/workspace": "workspace:*",
+    "@bpv4/project": "workspace:*"
+  }
+}

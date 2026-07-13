@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var DeploymentConfiguration_js_1 = require("../DeploymentConfiguration.js");
+var WorkspaceDeployment_js_1 = require("../WorkspaceDeployment.js");
+var deployment = new WorkspaceDeployment_js_1.WorkspaceDeployment();
+var result = deployment.deploy(new DeploymentConfiguration_js_1.DeploymentConfiguration("BPV4", "Google Apps Script"));
+node_assert_1.strict.equal(result.success, true);
+node_assert_1.strict.equal(result.message, "Deployment validation passed.");
+console.log("WorkspaceDeploymentTest PASS");

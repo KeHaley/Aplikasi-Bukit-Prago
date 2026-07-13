@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var BuildContext_js_1 = require("../BuildContext.js");
+var WorkspaceBuilder_js_1 = require("../WorkspaceBuilder.js");
+var builder = new WorkspaceBuilder_js_1.WorkspaceBuilder();
+var result = builder.build(new BuildContext_js_1.BuildContext(".", "./dist"));
+node_assert_1.strict.equal(result.success, true);
+node_assert_1.strict.equal(result.errors.length, 0);
+console.log("WorkspaceBuilderTest PASS");

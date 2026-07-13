@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var BuildContext_js_1 = require("../BuildContext.js");
+var BuildService_js_1 = require("../BuildService.js");
+var service = new BuildService_js_1.BuildService();
+var context = new BuildContext_js_1.BuildContext("./workspace", "./dist");
+var result = service.build(context);
+var summary = service.getBuildSummary(result);
+node_assert_1.strict.equal(summary.success, true);
+node_assert_1.strict.equal(summary.warningCount, 0);
+node_assert_1.strict.equal(summary.errorCount, 0);
+node_assert_1.strict.equal(summary.healthy, true);
+node_assert_1.strict.equal(service.isHealthy(result), true);
+console.log("");
+console.log("======================================");
+console.log("Build Service Test PASSED");
+console.log("======================================");

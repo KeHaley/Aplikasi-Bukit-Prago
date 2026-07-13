@@ -1,0 +1,14 @@
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\BukitPrago.exe
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\runtimes\win-x86\native\WebView2Loader.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\runtimes\win-x64\native\WebView2Loader.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\runtimes\win-arm64\native\WebView2Loader.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\BukitPrago.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\BukitPrago.deps.json
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\BukitPrago.runtimeconfig.json
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\BukitPrago.pdb
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.dll
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.xml
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.xml
+D:\BPV4_MASTER\BPV4_Master\apps\bpv4-desktop\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.xml

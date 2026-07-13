@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@bpv4/shared": ["packages/shared/src"],
+      "@bpv4/project": ["packages/project/src"],
+      "@bpv4/parser": ["packages/parser/src"],
+      "@bpv4/registry": ["packages/registry/src"],
+      "@bpv4/analyzer": ["packages/analyzer/src"],
+      "@bpv4/generator": ["packages/generator/src"],
+      "@bpv4/core": ["packages/core/src"],
+      "@bpv4/builder": ["packages/builder/src"],
+      "@bpv4/documentation": ["packages/documentation/src"],
+      "@bpv4/deployment": ["packages/deployment/src"],
+      "@bpv4/workspace": ["packages/workspace/src"],
+      "@bpv4/ui": ["packages/ui/src"],
+      "@bpv4/studio": ["packages/studio/src"],
+      "@bpv4/cli": ["packages/cli/src"]
+    },
+
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
+  }
+}

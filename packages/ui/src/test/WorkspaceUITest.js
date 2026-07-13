@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var View_js_1 = require("../View.js");
+var WorkspaceUI_js_1 = require("../WorkspaceUI.js");
+var ui = new WorkspaceUI_js_1.WorkspaceUI();
+ui.register(new View_js_1.View("home", "Home"));
+node_assert_1.strict.equal(ui.getViews().length, 1);
+node_assert_1.strict.equal(ui.getViews()[0].title, "Home");
+console.log("WorkspaceUITest PASS");

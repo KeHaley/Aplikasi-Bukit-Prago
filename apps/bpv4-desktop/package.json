@@ -1,0 +1,19 @@
+{
+  "name": "@bpv4/desktop",
+  "version": "1.0.0-alpha",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "build": "tsc -b",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "38.8.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.3"
+  }
+}

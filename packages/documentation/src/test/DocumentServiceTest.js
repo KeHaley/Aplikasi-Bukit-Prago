@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var DocumentService_js_1 = require("../DocumentService.js");
+var service = new DocumentService_js_1.DocumentService();
+var document = service.create("Developer Guide", "Hello BPV4");
+var summary = service.getSummary(document);
+node_assert_1.strict.equal(summary.title, "Developer Guide");
+node_assert_1.strict.equal(summary.contentLength, 10);
+node_assert_1.strict.equal(summary.healthy, true);
+node_assert_1.strict.equal(service.isHealthy(document), true);
+console.log("");
+console.log("======================================");
+console.log("Document Service Test PASSED");
+console.log("======================================");

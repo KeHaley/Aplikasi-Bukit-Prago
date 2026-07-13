@@ -1,0 +1,11 @@
+{
+  "name": "@bpv4/registry",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "dependencies": {
+    "@bpv4/shared": "workspace:*",
+    "@bpv4/parser": "workspace:*"
+  }
+}

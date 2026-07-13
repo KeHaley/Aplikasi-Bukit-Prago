@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var node_assert_1 = require("node:assert");
+var DeploymentConfiguration_js_1 = require("../DeploymentConfiguration.js");
+var DeploymentService_js_1 = require("../DeploymentService.js");
+var DeploymentStatus_js_1 = require("../DeploymentStatus.js");
+var service = new DeploymentService_js_1.DeploymentService();
+var configuration = new DeploymentConfiguration_js_1.DeploymentConfiguration("PROJECT_ID", "Google Apps Script");
+var result = service.deploy(configuration);
+var metadata = service.getMetadata(configuration);
+node_assert_1.strict.equal(metadata.projectId, "PROJECT_ID");
+node_assert_1.strict.equal(metadata.deploymentTarget, "Google Apps Script");
+node_assert_1.strict.ok(metadata.createdAt instanceof Date);
+node_assert_1.strict.equal(service.getStatus(result), DeploymentStatus_js_1.DeploymentStatus.Success);
+console.log("");
+console.log("======================================");
+console.log("Deployment Service Test PASSED");
+console.log("======================================");

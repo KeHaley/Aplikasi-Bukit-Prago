@@ -1,0 +1,53 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/project"
+    },
+    {
+      "path": "./packages/parser"
+    },
+    {
+      "path": "./packages/knowledge"
+    },
+    {
+      "path": "./packages/registry"
+    },
+    {
+      "path": "./packages/analyzer"
+    },
+    {
+      "path": "./packages/generator"
+    },
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/builder"
+    },
+    {
+      "path": "./packages/documentation"
+    },
+    {
+      "path": "./packages/deployment"
+    },
+    {
+      "path": "./packages/workspace"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/studio"
+    },
+    {
+      "path": "./packages/cli"
+    },
+    {
+      "path": "./apps/bpv4-master"
+    }
+  ]
+}

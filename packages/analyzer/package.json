@@ -1,0 +1,28 @@
+{
+  "name": "@bpv4/analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "clean": "tsc -b --clean"
+  },
+  "dependencies": {
+    "@bpv4/shared": "workspace:*",
+    "@bpv4/parser": "workspace:*",
+    "@bpv4/project": "workspace:*",
+    "@bpv4/registry": "workspace:*"
+  }
+}
