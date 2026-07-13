@@ -2,7 +2,7 @@
 
 # INFORMATION OWNERSHIP
 
-Version : 2.0
+Version : 2.1
 
 Status : OFFICIAL
 
@@ -65,6 +65,7 @@ Information ownership SHALL follow these principles.
 | Architecture Decisions | docs/03_ARCHITECTURE_DECISIONS.md |
 | Engineering Roadmap | docs/04_ROADMAP.md |
 | Project History | docs/05_CHANGELOG.md |
+| Repository Baselines | docs/99_RELEASE_BASELINE.md |
 | AI Policy | docs/06_AI_ASSISTANT_POLICY.md |
 | Startup Procedure | docs/07_AI_STARTUP_GUIDE.md |
 | Documentation Standard | docs/08_DOCUMENTATION_STANDARD.md |
@@ -95,8 +96,8 @@ The owner document SHALL:
 
 Other documents:
 
-- MAY reference the owner;
-- SHALL NOT redefine the information;
+- MAY reference the owner.
+- SHALL NOT redefine the information.
 - SHALL NOT contradict the owner.
 
 ---
@@ -163,6 +164,12 @@ Documentation Migration Plan
 docs/14_DOCUMENTATION_MIGRATION_PLAN.md
 ```
 
+Release Baseline
+
+```text
+docs/99_RELEASE_BASELINE.md
+```
+
 Current Engineering Contract
 
 ```text
@@ -179,7 +186,11 @@ Information Ownership
 
 Version
 
-2.0
+2.1
+
+Status
+
+OFFICIAL
 
 State
 

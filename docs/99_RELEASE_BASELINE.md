@@ -2,9 +2,9 @@
 
 # RELEASE BASELINE
 
-Version : 1.0
+Version : 1.1
 
-Status : PROVISIONAL
+Status : OFFICIAL
 
 State : ACTIVE
 
@@ -14,7 +14,7 @@ State : ACTIVE
 
 Record every official project baseline.
 
-This document provides a single reference for identifying the current engineering baseline, completed milestones, frozen documentation, and future release history.
+This document provides a single reference for identifying the current engineering baseline, completed milestones, frozen documentation and official repository baselines.
 
 It answers one question:
 
@@ -91,6 +91,10 @@ Name
 
 Documentation V5
 
+Version
+
+5.0
+
 Status
 
 COMPLETE
@@ -99,15 +103,55 @@ State
 
 FROZEN
 
+Git Tag
+
+DOC-V5-FROZEN
+
 Description
 
-Project documentation has been migrated to the V5 structure.
+Project documentation has been migrated to Documentation V5.
 
 Information Ownership has been implemented.
 
 Documentation duplication has been minimized.
 
-Documentation is the official engineering SSOT.
+Documentation is the official Engineering SSOT.
+
+---
+
+## Repository
+
+Name
+
+Repository Engineering Baseline V1
+
+Version
+
+1.0
+
+Status
+
+COMPLETE
+
+State
+
+FROZEN
+
+Git Tag
+
+REPO-V1-FROZEN
+
+Description
+
+Repository engineering foundation validated.
+
+Git repository initialized.
+
+Repository audit completed.
+
+Package audit completed.
+
+Repository frozen as Engineering Baseline V1.
 
 ---
 
@@ -125,6 +169,7 @@ Documentation is the official engineering SSOT.
 | Baseline | Version | Status |
 |----------|---------|--------|
 | Documentation V5 | 5.0 | FROZEN |
+| Repository Engineering V1 | 1.0 | FROZEN |
 | Desktop Runtime M-01 | 1.0 | FROZEN |
 
 ---
@@ -157,6 +202,7 @@ A new baseline SHALL be added only when:
 
 - a milestone is completed;
 - documentation is officially frozen;
+- a repository engineering baseline is officially established;
 - architecture changes are officially adopted;
 - the Project Owner approves the baseline.
 
@@ -169,9 +215,9 @@ Minor implementation changes SHALL NOT create a new baseline.
 This document SHALL be updated only when:
 
 - a new milestone is frozen;
-- a new official documentation baseline is established;
-- a major architecture baseline is approved;
-- a major repository baseline is established.
+- a new documentation baseline is established;
+- a new repository baseline is established;
+- a major architecture baseline is approved.
 
 Routine engineering work SHALL NOT update this document.
 
@@ -219,11 +265,11 @@ Release Baseline
 
 Version
 
-1.0
+1.1
 
 Status
 
-PROVISIONAL
+OFFICIAL
 
 State
 
