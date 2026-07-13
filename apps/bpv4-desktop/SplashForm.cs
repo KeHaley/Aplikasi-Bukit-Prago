@@ -5,5 +5,7 @@ public partial class SplashForm : Form
     public SplashForm()
     {
         InitializeComponent();
+
+        DoubleBuffered = true;
     }
 }

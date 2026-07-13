@@ -26,7 +26,7 @@ partial class MainForm
 
         WindowState = FormWindowState.Maximized;
 
-        Load += MainForm_Load;
+        Shown += async (_, _) => await InitializeAsync();
 
         ResumeLayout(false);
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BukitPrago")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e693282ab2a9091873b8bc497620bf8c29a55931")]
 [assembly: System.Reflection.AssemblyProductAttribute("BukitPrago")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BukitPrago")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
