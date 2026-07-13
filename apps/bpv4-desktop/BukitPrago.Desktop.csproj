@@ -9,15 +9,27 @@
     <UseWindowsForms>true</UseWindowsForms>
 
     <AssemblyName>BukitPrago</AssemblyName>
-
     <TargetName>BukitPrago</TargetName>
-
-
     <RootNamespace>BPV4.Desktop</RootNamespace>
 
     <Nullable>enable</Nullable>
-
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+
+    <Company>Bukit Prago</Company>
+    <Product>Bukit Prago Desktop</Product>
+    <Description>Bukit Prago Desktop Runtime</Description>
+
+    <ApplicationIcon>assets\BukitPrago.ico</ApplicationIcon>
+
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+
+    <PublishTrimmed>false</PublishTrimmed>
 
   </PropertyGroup>
 
@@ -25,6 +37,20 @@
 
     <PackageReference Include="Microsoft.Web.WebView2"
                       Version="1.0.3351.48" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+
+    <Content Include="assets\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
 
   </ItemGroup>
 

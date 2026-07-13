@@ -5,8 +5,7 @@ namespace BPV4.Desktop;
 
 public partial class MainForm : Form
 {
-    private const string AppUrl =
-        "https://script.google.com/macros/s/AKfycbwkb8DYqH6nQ_8-_b29mFeK1K5z2FEBb95KPp8aBE2yVb4UAOMC_fShxzAW7OApNV7q/exec";
+    private readonly AppConfiguration config = AppConfiguration.Load();
 
     private readonly System.Windows.Forms.Timer retryTimer = new();
     private readonly System.Windows.Forms.Timer startupTimeout = new();
@@ -22,10 +21,10 @@ public partial class MainForm : Form
         ShowInTaskbar = true;
         Opacity = 0;
 
-        retryTimer.Interval = 5000;
+        retryTimer.Interval = config.RetryInterval;
         retryTimer.Tick += RetryTimer_Tick;
 
-        startupTimeout.Interval = 30000;
+        startupTimeout.Interval = config.StartupTimeout;
         startupTimeout.Tick += StartupTimeout_Tick;
     }
 
@@ -50,7 +49,7 @@ public partial class MainForm : Form
             webView.CoreWebView2.NavigationCompleted += OnNavigationCompleted;
             webView.CoreWebView2.ProcessFailed += OnProcessFailed;
 
-            webView.Source = new Uri(AppUrl);
+            webView.Source = new Uri(config.Url);
         }
         catch (Exception ex)
         {
@@ -58,7 +57,7 @@ public partial class MainForm : Form
 
             MessageBox.Show(
                 ex.Message,
-                "Bukit Prago",
+                config.Name,
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
 
@@ -118,16 +117,16 @@ public partial class MainForm : Form
 
         MessageBox.Show(
             "WebView2 mengalami gangguan.\nAplikasi akan mencoba kembali otomatis.",
-            "Bukit Prago",
+            config.Name,
             MessageBoxButtons.OK,
             MessageBoxIcon.Warning);
     }
 
-    private static void ShowOfflineMessage()
+    private void ShowOfflineMessage()
     {
         MessageBox.Show(
             "Koneksi internet tidak tersedia.\nAplikasi akan mencoba kembali otomatis.",
-            "Bukit Prago",
+            config.Name,
             MessageBoxButtons.OK,
             MessageBoxIcon.Information);
     }
