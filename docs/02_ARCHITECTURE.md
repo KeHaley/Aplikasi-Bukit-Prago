@@ -2,7 +2,7 @@
 
 # ARCHITECTURE
 
-Version : 5.0
+Version : 5.1
 
 Status : OFFICIAL
 
@@ -14,7 +14,35 @@ State : ACTIVE
 
 Define the official architecture of the BPV4 project.
 
-This document defines the repository architecture, engineering layers, component responsibilities, dependency rules, and runtime architecture supporting the Bukit Prago Operational Application.
+This document defines the engineering platform architecture, repository architecture, engineering layers, component responsibilities, dependency rules and runtime architecture supporting the Bukit Prago Operational Application.
+
+---
+
+# Engineering Platform
+
+BPV4_MASTER is the official Engineering Platform for the Bukit Prago Operational Application.
+
+The repository is developed as one integrated engineering platform.
+
+Every engineering capability exists to support one common objective:
+
+Restore.
+
+Launch.
+
+Operate.
+
+Preserve.
+
+Continuously improve.
+
+The Bukit Prago Operational Application.
+
+Engineering capabilities are NOT independent products.
+
+They are integrated engineering components working together within one engineering platform.
+
+The Bukit Prago Operational Application remains the only primary product.
 
 ---
 
@@ -25,6 +53,8 @@ BPV4 follows a product-centric architecture.
 The Bukit Prago Operational Application is the center of the engineering ecosystem.
 
 Every engineering component exists to support, protect and improve the Product SSOT.
+
+Engineering SHALL always prioritize the product over engineering infrastructure.
 
 ---
 
@@ -52,14 +82,14 @@ apps/bpv4-desktop
 
 The official Windows Desktop Runtime.
 
-Responsibilities:
+Responsibilities
 
 - Launch the production application.
 - Host Microsoft Edge WebView2.
 - Integrate with the Windows desktop environment.
 - Preserve production behaviour.
 
-The Desktop Runtime is an engineering component.
+The Desktop Runtime is an engineering capability.
 
 It is NOT the primary product.
 
@@ -67,21 +97,32 @@ It is NOT the primary product.
 
 # Repository Architecture
 
+BPV4_MASTER is organized as one integrated engineering platform.
+
 ```text
 BPV4_MASTER
 │
-├── apps
-│   ├── bukit-prago          ← Product SSOT
-│   └── bpv4-desktop         ← Desktop Runtime
+├── Product
+│   └── apps/
+│       ├── bukit-prago
+│       └── bpv4-desktop
 │
-├── packages
+├── Engineering Components
+│   ├── packages/
+│   ├── docs/
+│   ├── tests/
+│   └── tools/
 │
-├── docs
-│
-├── tests
-│
-└── tools
+└── Engineering Assets
+    ├── blueprint/
+    ├── archive/
+    ├── patches/
+    └── other engineering resources
 ```
+
+Additional engineering directories MAY exist.
+
+As long as they support the Product SSOT and remain consistent with the engineering platform architecture.
 
 ---
 
@@ -95,6 +136,8 @@ apps/bukit-prago
 
 Official production application.
 
+Product Single Source of Truth.
+
 ---
 
 ## Layer 2 — Desktop Runtime
@@ -104,6 +147,8 @@ apps/bpv4-desktop
 ```
 
 Official Windows Desktop Runtime.
+
+Responsible for launching and hosting the Product SSOT.
 
 ---
 
@@ -115,7 +160,7 @@ packages/
 
 Reusable engineering libraries.
 
-Examples:
+Examples
 
 - workspace
 - parser
@@ -134,7 +179,9 @@ docs/
 
 Official engineering documentation.
 
-Permanent project knowledge.
+Permanent engineering knowledge.
+
+Documentation is the Engineering Single Source of Truth.
 
 ---
 
@@ -184,7 +231,39 @@ Bukit Prago Operational Application
 
 # Dependency Architecture
 
-Dependencies SHALL always move toward the Product SSOT.
+All engineering dependencies SHALL move toward the Product SSOT.
+
+```text
+Engineering Components
+
+↓
+
+Desktop Runtime
+
+↓
+
+Product SSOT
+```
+
+Engineering infrastructure MAY depend on other engineering components.
+
+The Product SSOT SHALL NEVER depend on engineering infrastructure.
+
+---
+
+# Dependency Rules
+
+Allowed
+
+```text
+Engineering Components
+
+↓
+
+Engineering Components
+```
+
+Allowed
 
 ```text
 Desktop Runtime
@@ -194,44 +273,10 @@ Desktop Runtime
 Product SSOT
 ```
 
-Engineering components MAY depend on engineering libraries.
-
-The Product SSOT SHALL NEVER depend on:
-
-- Desktop Runtime
-- Engineering Packages
-- Testing
-- Documentation
-- Tools
-
----
-
-# Dependency Rules
-
-Allowed
-
-```text
-Desktop Runtime
-
-↓
-
-Product
-```
-
-Allowed
-
-```text
-Packages
-
-↓
-
-Packages
-```
-
 Prohibited
 
 ```text
-Product
+Product SSOT
 
 ↓
 
@@ -241,14 +286,61 @@ Desktop Runtime
 Prohibited
 
 ```text
-Product
+Product SSOT
 
 ↓
 
-Packages
+Engineering Components
+```
+
+Prohibited
+
+```text
+Product SSOT
+
+↓
+
+Documentation
+```
+
+Prohibited
+
+```text
+Product SSOT
+
+↓
+
+Tests
+```
+
+Prohibited
+
+```text
+Product SSOT
+
+↓
+
+Tools
 ```
 
 Circular dependencies are prohibited.
+
+---
+
+# Engineering Platform Principles
+
+BPV4_MASTER SHALL operate as one integrated engineering platform.
+
+Engineering capabilities SHALL:
+
+- cooperate;
+- share engineering knowledge;
+- preserve the Product SSOT;
+- remain modular;
+- remain loosely coupled;
+- support the active engineering contract.
+
+Engineering capabilities SHALL NOT become independent products unless explicitly defined by the Project Owner.
 
 ---
 
@@ -280,28 +372,34 @@ Engineering SHALL NOT:
 
 # Related Documentation
 
-Engineering methodology
+Engineering Methodology
 
 ```text
 docs/09_ENGINEERING_METHODOLOGY.md
 ```
 
-Engineering workflow
+Engineering Workflow
 
 ```text
 docs/11_ENGINEERING_PLAYBOOK.md
 ```
 
-Architecture decisions
+Architecture Decisions
 
 ```text
 docs/03_ARCHITECTURE_DECISIONS.md
 ```
 
-Repository standard
+Repository Standard
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
 ```
 
 ---
@@ -310,9 +408,11 @@ docs/12_REPOSITORY_STANDARD.md
 
 The architecture is considered successful when:
 
+- the engineering platform is understood as one integrated system;
 - repository responsibilities are clearly separated;
 - the Product SSOT remains protected;
 - the Desktop Runtime remains independent;
+- engineering capabilities remain integrated;
 - dependencies remain consistent;
 - engineering components remain modular;
 - future engineering expansion can be implemented without impacting the production application.
@@ -327,7 +427,11 @@ Architecture
 
 Version
 
-5.0
+5.1
+
+Status
+
+OFFICIAL
 
 State
 
