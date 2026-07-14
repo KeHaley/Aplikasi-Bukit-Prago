@@ -2,7 +2,7 @@
 
 # ROADMAP
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -14,9 +14,9 @@ State : ACTIVE
 
 Define the long-term engineering roadmap of the BPV4 project.
 
-This document describes the planned evolution of the Bukit Prago Operational Application.
+This document describes the planned evolution of the Bukit Prago Operational Application and the BPV4 Engineering Platform.
 
-The roadmap defines engineering direction.
+The roadmap defines long-term engineering direction.
 
 It does not define the current engineering contract.
 
@@ -24,7 +24,9 @@ It does not define the current engineering contract.
 
 # Engineering Vision
 
-The engineering vision is to continuously improve the Bukit Prago Operational Application while preserving production integrity.
+The long-term engineering vision is to continuously improve the Bukit Prago Operational Application while preserving production integrity.
+
+BPV4 SHALL continuously evolve as an Engineering Platform supporting the complete engineering lifecycle of the Bukit Prago Operational Application.
 
 Every milestone SHALL contribute directly to the Product SSOT.
 
@@ -35,19 +37,19 @@ Every milestone SHALL contribute directly to the Product SSOT.
 The BPV4 project follows one continuous lifecycle.
 
 ```text
-Restore
+Understand
 
 ↓
 
-Launch
-
-↓
-
-Stabilize
+Build
 
 ↓
 
 Verify
+
+↓
+
+Stabilize
 
 ↓
 
@@ -70,7 +72,7 @@ Repeat
 
 Launch Bukit Prago Desktop Application
 
-Objective
+### Objective
 
 Launch the production application as a Windows desktop application while preserving production behaviour.
 
@@ -80,11 +82,11 @@ Launch the production application as a Windows desktop application while preserv
 
 Desktop Stabilization
 
-Objective
+### Objective
 
 Improve the Desktop Runtime while preserving production behaviour.
 
-Expected Deliverables
+### Expected Deliverables
 
 - Splash Screen
 - Loading Screen
@@ -101,11 +103,11 @@ Expected Deliverables
 
 Operational Verification
 
-Objective
+### Objective
 
 Verify every operational feature using the running desktop application.
 
-Expected Deliverables
+### Expected Deliverables
 
 - Dashboard Verification
 - Production Verification
@@ -123,11 +125,11 @@ Expected Deliverables
 
 Behavior Baseline Freeze
 
-Objective
+### Objective
 
 Establish a verified production behaviour baseline.
 
-Expected Deliverables
+### Expected Deliverables
 
 - Verified Behaviour Baseline
 - Regression Baseline
@@ -139,11 +141,11 @@ Expected Deliverables
 
 Behavior-Preserving Modularization
 
-Objective
+### Objective
 
 Modularize the production source code while preserving identical operational behaviour.
 
-Expected Deliverables
+### Expected Deliverables
 
 - Modular Kode.gs
 - Modular Index.html
@@ -156,16 +158,52 @@ Expected Deliverables
 
 Continuous Improvement
 
-Objective
+### Objective
 
 Continuously improve the Bukit Prago Operational Application.
 
-Expected Deliverables
+### Expected Deliverables
 
 - Incremental Improvements
 - Stable Releases
 - Updated Documentation
 - Engineering Knowledge Growth
+
+---
+
+## M-07
+
+Engineering Platform
+
+### Objective
+
+Continuously strengthen BPV4 as the engineering platform supporting the complete lifecycle of the Bukit Prago Operational Application.
+
+### Expected Deliverables
+
+- Engineering Automation
+- Improved Repository Architecture
+- Improved Documentation Quality
+- Engineering Productivity Improvements
+- Stable Engineering Governance
+
+---
+
+## M-08
+
+AI Native Engineering
+
+### Objective
+
+Continuously improve AI-assisted engineering capabilities while preserving repository consistency and engineering governance.
+
+### Expected Deliverables
+
+- AI Engineering Workflow Improvements
+- AI Startup Improvements
+- AI Repository Integration
+- Improved Engineering Efficiency
+- Continuous AI Capability Evolution
 
 ---
 
@@ -177,7 +215,8 @@ Every roadmap milestone SHALL:
 - preserve production behaviour;
 - remain evidence-driven;
 - maintain backward compatibility;
-- improve engineering quality.
+- improve engineering quality;
+- preserve repository consistency.
 
 ---
 
@@ -216,7 +255,8 @@ The roadmap is successful when:
 - every milestone contributes to the Product SSOT;
 - engineering remains product-driven;
 - production behaviour is preserved;
-- improvements are evidence-based;
+- engineering quality continuously improves;
+- repository quality continuously improves;
 - engineering knowledge continuously grows.
 
 ---
@@ -229,7 +269,11 @@ Roadmap
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

@@ -2,7 +2,7 @@
 
 # ENGINEERING PLAYBOOK
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -12,9 +12,9 @@ State : ACTIVE
 
 # Purpose
 
-Define the official implementation workflow used throughout the BPV4 project.
+Define the official engineering execution workflow used throughout the BPV4 project.
 
-Every implementation SHALL follow this playbook.
+Every engineering activity SHALL follow this playbook.
 
 ---
 
@@ -22,25 +22,25 @@ Every implementation SHALL follow this playbook.
 
 This document defines:
 
-- implementation workflow;
+- engineering workflow;
 - engineering execution;
 - implementation deliverables;
-- completion procedure.
+- engineering completion procedure.
 
-Engineering policy, methodology, architecture and project status are defined in their respective owner documents.
+Engineering policy, methodology, repository standard, startup procedure, and project status are defined in their respective owner documents.
 
 ---
 
 # Engineering Workflow
 
-Every implementation SHALL follow this sequence.
+Every engineering activity SHALL follow this sequence.
 
 ```text
-Read Documentation
+Repository Validation
 
 ↓
 
-Validate Repository
+Documentation Startup
 
 ↓
 
@@ -48,11 +48,15 @@ Understand Current Work
 
 ↓
 
-Audit
+Engineering Audit
 
 ↓
 
-Implement
+Engineering Planning
+
+↓
+
+Implementation
 
 ↓
 
@@ -68,7 +72,7 @@ Typecheck
 
 ↓
 
-Review
+Engineering Review
 
 ↓
 
@@ -76,7 +80,7 @@ PASS
 
 ↓
 
-Update Documentation (if required)
+Documentation Update (if required)
 
 ↓
 
@@ -89,15 +93,9 @@ Continue
 
 ---
 
-# Implementation Procedure
+# Engineering Procedure
 
 ## Step 1
-
-Read the official documentation.
-
----
-
-## Step 2
 
 Validate the repository.
 
@@ -105,6 +103,20 @@ Follow:
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
+```
+
+Implementation SHALL NOT begin before repository validation passes.
+
+---
+
+## Step 2
+
+Complete the official startup procedure.
+
+Follow:
+
+```text
+docs/07_AI_STARTUP_GUIDE.md
 ```
 
 ---
@@ -117,73 +129,104 @@ Read the current engineering contract.
 CURRENT_WORK.md
 ```
 
+Identify:
+
+- Current Phase
+- Current Milestone
+- Current Objective
+- Current Priority
+- Current Deliverables
+
 ---
 
 ## Step 4
 
-Audit the implementation target.
+Perform an engineering audit.
 
 Understand:
 
 - current behaviour;
 - dependencies;
-- impact;
-- compatibility.
+- implementation impact;
+- compatibility;
+- repository evidence.
+
+Engineering decisions SHALL remain evidence-based.
 
 ---
 
 ## Step 5
 
-Implement only the required changes.
+Prepare the engineering plan.
 
-Avoid unnecessary modifications.
+Determine:
+
+- implementation scope;
+- affected components;
+- expected deliverables.
+
+Avoid unnecessary implementation.
 
 ---
 
 ## Step 6
 
-Provide FULL FILES unless explicitly instructed otherwise.
+Implement only the required engineering changes.
+
+Preserve:
+
+- Product SSOT;
+- repository consistency;
+- documentation consistency;
+- backward compatibility.
 
 ---
 
 ## Step 7
 
-Run Build.
-
-Use the appropriate build command for the active project.
+Provide FULL FILES unless explicitly instructed otherwise.
 
 ---
 
 ## Step 8
 
-Run Typecheck.
+Run Build.
 
-Use the appropriate typecheck command for the active project.
+Use the appropriate build procedure for the active project.
 
 ---
 
 ## Step 9
 
-Review the implementation.
+Run Typecheck.
 
-Verify:
-
-- objective achieved;
-- compatibility preserved;
-- build passed;
-- typecheck passed.
+Use the appropriate validation procedure for the active project.
 
 ---
 
 ## Step 10
 
-Wait for PASS.
+Perform an engineering review.
 
-Do not continue implementation before PASS.
+Verify:
+
+- objective achieved;
+- compatibility preserved;
+- Build PASS;
+- Typecheck PASS;
+- repository consistency preserved.
 
 ---
 
 ## Step 11
+
+Wait for PASS.
+
+Implementation SHALL NOT continue before PASS.
+
+---
+
+## Step 12
 
 Update documentation only when required.
 
@@ -193,34 +236,39 @@ Documentation updates SHALL follow:
 docs/08_DOCUMENTATION_STANDARD.md
 ```
 
+Documentation SHALL always follow Information Ownership.
+
 ---
 
-## Step 12
+## Step 13
 
 Freeze the completed work.
 
-Continue with the next task only after PASS.
+Continue only after PASS.
 
 ---
 
 # Working Rules
 
-Every implementation SHALL:
+Every engineering activity SHALL:
 
 - support the current engineering contract;
 - preserve the Product SSOT;
+- preserve Source Code SSOT;
 - preserve production behaviour;
 - minimize unnecessary changes;
 - remain backward compatible;
-- remain evidence-driven.
+- remain evidence-driven;
+- preserve repository consistency;
+- preserve documentation consistency.
 
 ---
 
 # Default Deliverables
 
-Every implementation SHOULD provide:
+Every engineering activity SHOULD provide:
 
-- implementation summary;
+- engineering summary;
 - FULL FILES;
 - build result;
 - typecheck result;
@@ -230,12 +278,13 @@ Every implementation SHOULD provide:
 
 # Definition of Done
 
-An implementation is complete when:
+An engineering activity is complete when:
 
-- the implementation objective is satisfied;
+- the engineering objective is satisfied;
 - production behaviour remains compatible;
 - Build PASS;
 - Typecheck PASS;
+- repository consistency is preserved;
 - required documentation has been updated;
 - the Project Owner confirms PASS.
 
@@ -255,22 +304,10 @@ Future milestones SHALL NOT begin prematurely.
 
 # Related Documentation
 
-Engineering methodology
+AI Assistant Policy
 
 ```text
-docs/09_ENGINEERING_METHODOLOGY.md
-```
-
-Repository standard
-
-```text
-docs/12_REPOSITORY_STANDARD.md
-```
-
-Documentation standard
-
-```text
-docs/08_DOCUMENTATION_STANDARD.md
+docs/06_AI_ASSISTANT_POLICY.md
 ```
 
 AI Startup Guide
@@ -279,7 +316,31 @@ AI Startup Guide
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
-Current engineering contract
+Engineering Methodology
+
+```text
+docs/09_ENGINEERING_METHODOLOGY.md
+```
+
+Repository Standard
+
+```text
+docs/12_REPOSITORY_STANDARD.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
+Documentation Standard
+
+```text
+docs/08_DOCUMENTATION_STANDARD.md
+```
+
+Current Engineering Contract
 
 ```text
 CURRENT_WORK.md
@@ -295,7 +356,11 @@ Engineering Playbook
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

@@ -2,7 +2,7 @@
 
 # REPOSITORY STANDARD
 
-Version : 5.0
+Version : 5.1
 
 Status : OFFICIAL
 
@@ -14,7 +14,7 @@ State : ACTIVE
 
 Define the official repository standard of the BPV4 project.
 
-This document specifies the minimum repository structure and validation requirements before any engineering activity may begin.
+This document specifies the official repository model, repository lifecycle, Source Code Single Source of Truth (Source Code SSOT), and the minimum repository validation requirements before any engineering activity may begin.
 
 ---
 
@@ -22,9 +22,61 @@ This document specifies the minimum repository structure and validation requirem
 
 The repository is the official implementation source.
 
+The official GitHub repository SHALL be the Source Code Single Source of Truth (Source Code SSOT).
+
 Every engineering activity SHALL use the latest repository approved by the Project Owner.
 
 The repository SHALL remain internally consistent.
+
+---
+
+# Repository Authority
+
+The official GitHub repository SHALL be the authoritative source of all BPV4 source code.
+
+The local repository is the official Working Copy used for engineering activities.
+
+Cloud Backup and Offline Backup support repository recovery but SHALL NOT replace the Source Code SSOT.
+
+---
+
+# Repository Lifecycle
+
+Repository lifecycle SHALL follow the sequence below.
+
+```text
+Working Copy
+
+↓
+
+Build
+
+↓
+
+Test
+
+↓
+
+Commit
+
+↓
+
+Push
+
+↓
+
+GitHub Repository (Source Code SSOT)
+
+↓
+
+Cloud Backup
+
+↓
+
+Offline Backup
+```
+
+Only the GitHub repository represents the official source code baseline.
 
 ---
 
@@ -110,7 +162,9 @@ Before implementation begins, verify:
 - required documentation;
 - Product SSOT;
 - Desktop Runtime;
-- CURRENT_WORK.md.
+- CURRENT_WORK.md;
+- official Git repository;
+- Working Copy consistency.
 
 If any required item is missing:
 
@@ -134,6 +188,9 @@ Repository validation SHALL confirm:
 - Desktop Runtime exists
 - Product accessible
 - Desktop Runtime accessible
+- GitHub repository available
+- Working Copy available
+- Source Code SSOT confirmed
 
 Every item SHALL pass before implementation begins.
 
@@ -154,11 +211,33 @@ Any inconsistency SHALL be reported before implementation.
 Engineering SHALL:
 
 - verify repository contents;
+- verify Source Code SSOT;
 - use repository evidence;
 - avoid assumptions;
-- preserve repository consistency.
+- preserve repository consistency;
+- preserve Working Copy consistency.
 
 Repository evidence always overrides assumptions.
+
+---
+
+# Backup Model
+
+Repository backup SHALL follow the official recovery model.
+
+```text
+GitHub Repository
+
+↓
+
+Cloud Backup
+
+↓
+
+Offline Backup
+```
+
+Cloud Backup and Offline Backup exist for recovery purposes and SHALL NOT become the official Source Code SSOT.
 
 ---
 
@@ -172,6 +251,8 @@ The repository is considered valid when:
 - Product SSOT exists;
 - Desktop Runtime exists;
 - CURRENT_WORK.md exists;
+- GitHub repository is available;
+- Source Code SSOT is confirmed;
 - repository validation passes.
 
 ---
@@ -190,6 +271,12 @@ AI startup
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
+Information ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
 Current engineering contract
 
 ```text
@@ -206,7 +293,11 @@ Repository Standard
 
 Version
 
-5.0
+5.1
+
+Status
+
+OFFICIAL
 
 State
 

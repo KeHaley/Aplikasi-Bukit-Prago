@@ -2,7 +2,7 @@
 
 # PROJECT INTENT
 
-Version : 5.0
+Version : 5.1
 
 Status : OFFICIAL
 
@@ -24,9 +24,11 @@ Why does this project exist in the long term?
 
 The BPV4 project exists to ensure the long-term success of the Bukit Prago Operational Application.
 
-The application is the primary product.
+BPV4_MASTER continuously evolves as the official Engineering Platform supporting the complete engineering lifecycle of the application.
 
-Everything else exists to support the application throughout its lifecycle.
+The Bukit Prago Operational Application remains the primary product.
+
+Everything else exists only to support the application throughout its lifecycle.
 
 ---
 
@@ -34,6 +36,8 @@ Everything else exists to support the application throughout its lifecycle.
 
 The long-term mission of BPV4 is to:
 
+- restore the Bukit Prago Operational Application;
+- launch the application across supported environments;
 - preserve the Bukit Prago Operational Application;
 - ensure long-term operational reliability;
 - continuously improve engineering quality;
@@ -51,7 +55,8 @@ Engineering exists to:
 - preserve application quality;
 - improve engineering efficiency;
 - support operational excellence;
-- enable sustainable product evolution.
+- enable sustainable product evolution;
+- continuously strengthen the BPV4 Engineering Platform.
 
 Engineering is a supporting capability.
 
@@ -65,7 +70,7 @@ The production application SHALL remain protected throughout the lifetime of the
 
 Engineering SHALL preserve compatibility and operational behaviour unless an intentional product change is approved by the Project Owner.
 
-Whenever possible, new capabilities SHALL be implemented outside the production application.
+Whenever practical, new engineering capabilities SHALL be implemented outside the production application.
 
 ---
 
@@ -74,8 +79,8 @@ Whenever possible, new capabilities SHALL be implemented outside the production 
 The BPV4 project follows these permanent principles.
 
 - Product First
+- Repository First
 - Preserve the Product
-- Working Software First
 - Evidence First
 - Knowledge First
 - Continuous Improvement
@@ -89,17 +94,18 @@ These principles are independent of any milestone or implementation phase.
 Engineering decisions SHALL always follow this order.
 
 1. Product
-2. Operational Stability
-3. Product Preservation
-4. Working Software
-5. Engineering Productivity
-6. Engineering Convenience
+2. Repository Consistency
+3. Operational Stability
+4. Product Preservation
+5. Source Code SSOT
+6. Engineering Productivity
+7. Engineering Convenience
 
 ---
 
 # Long-Term Vision
 
-BPV4 will become the complete engineering platform for the Bukit Prago Operational Application.
+BPV4_MASTER will continuously evolve as the complete Engineering Platform for the Bukit Prago Operational Application.
 
 Its responsibilities include:
 
@@ -107,36 +113,45 @@ Its responsibilities include:
 - preserving production integrity;
 - improving engineering productivity;
 - maintaining engineering knowledge;
-- enabling continuous product evolution.
+- enabling continuous product evolution;
+- strengthening engineering governance.
 
 The Bukit Prago Operational Application SHALL remain the Product Single Source of Truth (Product SSOT).
+
+The official GitHub repository SHALL remain the Source Code Single Source of Truth (Source Code SSOT).
 
 ---
 
 # Related Documentation
 
-Project context
+Project Context
 
 ```text
 docs/00_PROJECT_CONTEXT.md
 ```
 
-Current engineering contract
+Architecture
 
 ```text
-CURRENT_WORK.md
+docs/02_ARCHITECTURE.md
 ```
 
-Project roadmap
+Architecture Decisions
+
+```text
+docs/03_ARCHITECTURE_DECISIONS.md
+```
+
+Project Roadmap
 
 ```text
 docs/04_ROADMAP.md
 ```
 
-Repository architecture
+Current Engineering Contract
 
 ```text
-docs/02_ARCHITECTURE.md
+CURRENT_WORK.md
 ```
 
 ---
@@ -149,7 +164,11 @@ Project Intent
 
 Version
 
-5.0
+5.1
+
+Status
+
+OFFICIAL
 
 State
 

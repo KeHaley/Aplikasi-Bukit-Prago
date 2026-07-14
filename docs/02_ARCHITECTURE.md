@@ -2,7 +2,7 @@
 
 # ARCHITECTURE
 
-Version : 5.1
+Version : 5.2
 
 Status : OFFICIAL
 
@@ -124,6 +124,10 @@ Additional engineering directories MAY exist.
 
 As long as they support the Product SSOT and remain consistent with the engineering platform architecture.
 
+The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
+
+Engineering activities are performed using local Working Copies synchronized with the official repository.
+
 ---
 
 # Repository Layers
@@ -173,15 +177,13 @@ Examples
 
 ## Layer 4 — Documentation
 
-```text
-docs/
-```
-
 Official engineering documentation.
+
+Official engineering governance.
 
 Permanent engineering knowledge.
 
-Documentation is the Engineering Single Source of Truth.
+Engineering Documentation Single Source of Truth (Documentation SSOT).
 
 ---
 
@@ -411,6 +413,7 @@ The architecture is considered successful when:
 - the engineering platform is understood as one integrated system;
 - repository responsibilities are clearly separated;
 - the Product SSOT remains protected;
+- the Source Code SSOT remains protected;
 - the Desktop Runtime remains independent;
 - engineering capabilities remain integrated;
 - dependencies remain consistent;
@@ -427,7 +430,7 @@ Architecture
 
 Version
 
-5.1
+5.2
 
 Status
 

@@ -2,7 +2,7 @@
 
 # PROJECT CONTEXT
 
-Version : 5.0
+Version : 5.1
 
 Status : OFFICIAL
 
@@ -14,17 +14,37 @@ State : ACTIVE
 
 Define the permanent context of the BPV4 project.
 
-This document explains why the project exists, what the primary product is, and the engineering principles that govern every implementation.
+This document explains why the project exists, what the primary product is, and the permanent engineering context that governs the entire BPV4 Engineering Platform.
 
 ---
 
 # Project Mission
 
-Restore, launch, operate, preserve and continuously improve the Bukit Prago Operational Application.
+Restore.
+
+Launch.
+
+Operate.
+
+Preserve.
+
+Continuously improve.
+
+The Bukit Prago Operational Application.
 
 Every engineering activity exists to support that mission.
 
 The Bukit Prago Operational Application is the reason the BPV4 project exists.
+
+---
+
+# Engineering Platform
+
+BPV4_MASTER is the official Engineering Platform for the Bukit Prago Operational Application.
+
+The engineering platform exists solely to support the complete engineering lifecycle of the primary product.
+
+The engineering platform itself is not the product.
 
 ---
 
@@ -48,9 +68,9 @@ The production application SHALL remain preserved.
 
 # Engineering Ecosystem
 
-The BPV4 repository contains engineering components that support the Product SSOT.
+The BPV4 repository contains engineering capabilities that support the Product SSOT.
 
-These components include:
+These capabilities include:
 
 - Desktop Runtime
 - Engineering Packages
@@ -58,7 +78,7 @@ These components include:
 - Testing
 - Engineering Utilities
 
-Engineering components exist only to support the primary product.
+Engineering capabilities exist only to support the primary product.
 
 They are not the product.
 
@@ -76,13 +96,14 @@ BPV4 exists to:
 
 - restore the application;
 - launch the application;
+- operate the application;
 - preserve the production application;
 - understand the application;
 - verify operational readiness;
 - continuously improve the application;
 - build engineering capabilities that directly support the application.
 
-Engineering tools are supporting components.
+Engineering capabilities are supporting components.
 
 They are never the primary objective.
 
@@ -94,7 +115,7 @@ The production application SHALL be preserved.
 
 Engineering SHALL NOT modify the production application unless explicitly instructed by the Project Owner.
 
-Whenever possible, new capabilities SHALL be implemented outside the production application while maintaining full compatibility.
+Whenever practical, new engineering capabilities SHALL be implemented outside the production application while maintaining full compatibility.
 
 Operational behaviour SHALL be preserved.
 
@@ -102,12 +123,11 @@ Operational behaviour SHALL be preserved.
 
 # Engineering Principles
 
-The project follows these principles.
+The project follows these permanent principles.
 
 - Product First
-- Launch Before Development
+- Repository First
 - Preserve the Product
-- Working Software First
 - Evidence First
 - Knowledge First
 - Continuous Improvement
@@ -123,6 +143,7 @@ The project is considered successful when:
 - the Bukit Prago Operational Application operates successfully;
 - operational behaviour remains reliable;
 - the production application remains preserved;
+- engineering capabilities continuously improve the product;
 - engineering knowledge continues to grow;
 - improvements are continuously delivered without disrupting production.
 
@@ -130,7 +151,9 @@ The project is considered successful when:
 
 # Repository Authority
 
-The latest repository approved by the Project Owner is the official implementation source.
+The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
+
+Engineering activities are performed using local Working Copies synchronized with the official repository.
 
 Implementation SHALL always continue from the latest approved repository.
 
@@ -138,25 +161,31 @@ Implementation SHALL always continue from the latest approved repository.
 
 # Related Documentation
 
-Current engineering execution:
-
-```text
-CURRENT_WORK.md
-```
-
-Repository architecture:
+Architecture
 
 ```text
 docs/02_ARCHITECTURE.md
 ```
 
-Project progress:
+Architecture Decisions
+
+```text
+docs/03_ARCHITECTURE_DECISIONS.md
+```
+
+Current Engineering Contract
+
+```text
+CURRENT_WORK.md
+```
+
+Project State
 
 ```text
 docs/01_PROJECT_STATE.md
 ```
 
-Project roadmap:
+Project Roadmap
 
 ```text
 docs/04_ROADMAP.md
@@ -172,7 +201,11 @@ Project Context
 
 Version
 
-5.0
+5.1
+
+Status
+
+OFFICIAL
 
 State
 

@@ -2,7 +2,7 @@
 
 # INFORMATION OWNERSHIP
 
-Version : 2.1
+Version : 2.2
 
 Status : OFFICIAL
 
@@ -49,6 +49,7 @@ Information ownership SHALL follow these principles.
 - Other documents MAY reference the owner.
 - Duplicate information SHOULD be eliminated whenever practical.
 - Information ownership SHALL remain stable.
+- Documentation SHALL evolve by revising the owner document rather than creating duplicate owner documents whenever practical.
 
 ---
 
@@ -67,11 +68,25 @@ Information ownership SHALL follow these principles.
 | Project History | docs/05_CHANGELOG.md |
 | Repository Baselines | docs/99_RELEASE_BASELINE.md |
 | AI Policy | docs/06_AI_ASSISTANT_POLICY.md |
+| AI Native Engineering Policy | docs/06_AI_ASSISTANT_POLICY.md |
+| AI Safe Mode | docs/06_AI_ASSISTANT_POLICY.md |
+| Git Command Guidance | docs/06_AI_ASSISTANT_POLICY.md |
+| AI Responsibility Model | docs/06_AI_ASSISTANT_POLICY.md |
 | Startup Procedure | docs/07_AI_STARTUP_GUIDE.md |
+| AI Startup Protocol | docs/07_AI_STARTUP_GUIDE.md |
+| AI Startup Package | docs/07_AI_STARTUP_GUIDE.md |
+| AI Context Protocol | docs/07_AI_STARTUP_GUIDE.md |
+| AI Session Continuation | docs/07_AI_STARTUP_GUIDE.md |
 | Documentation Standard | docs/08_DOCUMENTATION_STANDARD.md |
 | Engineering Methodology | docs/09_ENGINEERING_METHODOLOGY.md |
 | Engineering Workflow | docs/11_ENGINEERING_PLAYBOOK.md |
 | Repository Standard | docs/12_REPOSITORY_STANDARD.md |
+| Source Code SSOT | docs/12_REPOSITORY_STANDARD.md |
+| Official Git Repository | docs/12_REPOSITORY_STANDARD.md |
+| Working Copy Standard | docs/12_REPOSITORY_STANDARD.md |
+| Repository Lifecycle | docs/12_REPOSITORY_STANDARD.md |
+| Cloud Backup Policy | docs/12_REPOSITORY_STANDARD.md |
+| Offline Backup Policy | docs/12_REPOSITORY_STANDARD.md |
 | Current Engineering Contract | CURRENT_WORK.md |
 | Current Phase | CURRENT_WORK.md |
 | Current Milestone | CURRENT_WORK.md |
@@ -138,6 +153,21 @@ Routine implementation SHALL NOT change information ownership.
 
 ---
 
+# Documentation Evolution Rule
+
+Repository documentation SHALL evolve by extending the appropriate owner document.
+
+Creating a new document SHALL be the last option.
+
+A new owner document MAY be introduced only when:
+
+- a new information domain is introduced;
+- no existing owner document can legitimately own the information;
+- no ownership overlap is introduced;
+- the Project Owner approves the new owner document.
+
+---
+
 # Success Criteria
 
 Information ownership is complete when:
@@ -164,6 +194,24 @@ Documentation Migration Plan
 docs/14_DOCUMENTATION_MIGRATION_PLAN.md
 ```
 
+Repository Standard
+
+```text
+docs/12_REPOSITORY_STANDARD.md
+```
+
+AI Assistant Policy
+
+```text
+docs/06_AI_ASSISTANT_POLICY.md
+```
+
+AI Startup Guide
+
+```text
+docs/07_AI_STARTUP_GUIDE.md
+```
+
 Release Baseline
 
 ```text
@@ -186,7 +234,7 @@ Information Ownership
 
 Version
 
-2.1
+2.2
 
 Status
 

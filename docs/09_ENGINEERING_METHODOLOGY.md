@@ -2,7 +2,7 @@
 
 # ENGINEERING METHODOLOGY
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -26,6 +26,8 @@ The application is always the primary product.
 
 Engineering is successful only when it continuously improves the product while preserving production integrity.
 
+Engineering SHALL always be repository-driven, evidence-driven, and documentation-driven.
+
 ---
 
 # Core Principles
@@ -33,9 +35,12 @@ Engineering is successful only when it continuously improves the product while p
 The BPV4 project follows these permanent engineering principles.
 
 - Product First
-- Preserve the Product
-- Working Software First
+- Repository First
 - Evidence First
+- Documentation First
+- Preserve the Product
+- Preserve the Repository
+- Working Software First
 - Knowledge First
 - Continuous Improvement
 
@@ -52,11 +57,23 @@ Understand
 
 ↓
 
+Audit
+
+↓
+
+Plan
+
+↓
+
 Implement
 
 ↓
 
 Verify
+
+↓
+
+Review
 
 ↓
 
@@ -79,6 +96,16 @@ This lifecycle applies throughout the lifetime of the project.
 
 ---
 
+# Repository First
+
+Engineering SHALL begin from verified repository evidence.
+
+The official GitHub repository SHALL be treated as the Source Code Single Source of Truth.
+
+Repository evidence SHALL always override assumptions.
+
+---
+
 # Product Preservation
 
 The Product SSOT SHALL remain protected.
@@ -89,11 +116,24 @@ Whenever practical, engineering improvements SHALL be implemented outside the pr
 
 ---
 
+# Documentation Evolution
+
+Engineering documentation SHALL evolve by revising the appropriate owner document.
+
+Creation of new documentation SHALL be minimized.
+
+Documentation SHALL remain consistent with the Information Ownership model.
+
+---
+
 # Engineering Rules
 
 Every engineering activity SHALL:
 
 - preserve the Product SSOT;
+- preserve the Source Code SSOT;
+- preserve repository consistency;
+- preserve documentation consistency;
 - remain backward compatible;
 - minimize unnecessary changes;
 - produce working software;
@@ -108,11 +148,13 @@ Every engineering activity SHALL:
 Engineering decisions SHALL always follow this order.
 
 1. Product
-2. Operational Stability
-3. Product Preservation
-4. Working Software
-5. Engineering Productivity
-6. Engineering Convenience
+2. Repository Consistency
+3. Operational Stability
+4. Product Preservation
+5. Source Code SSOT
+6. Working Software
+7. Engineering Productivity
+8. Engineering Convenience
 
 ---
 
@@ -120,47 +162,62 @@ Engineering decisions SHALL always follow this order.
 
 An engineering task is considered complete when:
 
-- the implementation satisfies its objective;
+- the engineering objective has been achieved;
 - production behaviour remains compatible;
+- repository consistency is preserved;
 - Build PASS;
 - Typecheck PASS;
-- documentation is updated when required;
+- documentation has been updated when required;
 - the Project Owner confirms PASS.
 
 ---
 
 # Continuous Improvement
 
-Engineering SHALL continuously improve the product based on verified operational evidence.
+Engineering SHALL continuously improve the product based on verified repository and operational evidence.
 
 Observed operational behaviour SHALL always take priority over assumptions.
+
+Engineering methodology SHALL continuously evolve while preserving documentation consistency.
 
 ---
 
 # Related Documentation
 
-Current engineering contract
+AI Assistant Policy
 
 ```text
-CURRENT_WORK.md
+docs/06_AI_ASSISTANT_POLICY.md
 ```
 
-Engineering workflow
+AI Startup Guide
+
+```text
+docs/07_AI_STARTUP_GUIDE.md
+```
+
+Engineering Playbook
 
 ```text
 docs/11_ENGINEERING_PLAYBOOK.md
 ```
 
-Architecture
+Repository Standard
 
 ```text
-docs/02_ARCHITECTURE.md
+docs/12_REPOSITORY_STANDARD.md
 ```
 
-AI Assistant Policy
+Information Ownership
 
 ```text
-docs/06_AI_ASSISTANT_POLICY.md
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
+Current Engineering Contract
+
+```text
+CURRENT_WORK.md
 ```
 
 ---
@@ -173,7 +230,11 @@ Engineering Methodology
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

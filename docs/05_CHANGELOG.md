@@ -2,7 +2,7 @@
 
 # CHANGELOG
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -21,6 +21,91 @@ What has changed?
 The changelog is an append-only historical record.
 
 Entries SHALL NOT be modified except to correct factual errors.
+
+---
+
+# Version 6.0
+
+Date
+
+YYYY-MM-DD
+
+---
+
+## Documentation
+
+Documentation upgraded to Documentation V6.
+
+Major improvements:
+
+- Documentation governance strengthened.
+- Information Ownership refined.
+- Repository Standard updated.
+- AI Assistant Policy upgraded.
+- AI Startup Guide upgraded.
+- Engineering Methodology updated.
+- Engineering Playbook updated.
+- Architecture Decisions expanded.
+- Product Profile introduced as an official document.
+- Documentation consistency improved across the repository.
+
+---
+
+## Architecture
+
+Architecture documentation strengthened.
+
+Major changes:
+
+- Introduced Source Code Single Source of Truth (Source Code SSOT).
+- Introduced Working Copy model.
+- Introduced Repository Recovery Model.
+- Introduced AI Engineering Partner architecture.
+- Introduced Documentation Evolution architecture.
+- Architecture consistency improved.
+
+---
+
+## Repository
+
+Repository governance improved.
+
+Changes:
+
+- GitHub recognized as the official Source Code SSOT.
+- Working Copy model documented.
+- Repository lifecycle documented.
+- Backup model documented.
+- Repository validation strengthened.
+
+---
+
+## Engineering
+
+Engineering methodology and execution refined.
+
+Major improvements:
+
+- Repository First strengthened.
+- Documentation Evolution adopted.
+- Repository consistency strengthened.
+- Engineering workflow refined.
+- Engineering governance strengthened.
+
+---
+
+## AI
+
+AI engineering responsibilities expanded.
+
+Major improvements:
+
+- AI Engineering Partner model introduced.
+- Repository-driven startup adopted.
+- Startup protocol improved.
+- Safe engineering guidance established.
+- Git workflow guidance standardized.
+- Engineering workflow aligned with Information Ownership.
 
 ---
 
@@ -278,7 +363,11 @@ Changelog
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

@@ -2,7 +2,7 @@
 
 # ARCHITECTURE DECISIONS
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -165,30 +165,104 @@ Engineering architecture SHALL preserve existing production behaviour unless an 
 
 ---
 
+## AD-013
+
+### Source Code Single Source of Truth
+
+The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
+
+All official source code SHALL be committed to and maintained in the official GitHub repository.
+
+Local repositories are Working Copies.
+
+---
+
+## AD-014
+
+### Working Copy Model
+
+Engineering activities SHALL be performed using a local Working Copy.
+
+The Working Copy represents the current engineering workspace.
+
+Only the official GitHub repository represents the authoritative Source Code SSOT.
+
+---
+
+## AD-015
+
+### Repository Recovery Model
+
+Repository recovery SHALL follow the official recovery hierarchy.
+
+```text
+GitHub Repository
+        ↓
+Cloud Backup
+        ↓
+Offline Backup
+```
+
+Cloud Backup and Offline Backup exist solely for recovery purposes.
+
+Neither SHALL replace the Source Code SSOT.
+
+---
+
+## AD-016
+
+### AI Engineering Partner
+
+Artificial Intelligence is an Engineering Partner within BPV4.
+
+The AI participates in repository analysis, engineering planning, implementation guidance, documentation maintenance, testing guidance and engineering governance.
+
+The Project Owner defines business objectives and approves engineering decisions.
+
+---
+
+## AD-017
+
+### Documentation Evolution
+
+Repository documentation SHALL evolve through revision of the appropriate owner document.
+
+Creation of new owner documents SHALL be minimized.
+
+Documentation architecture SHALL preserve Information Ownership and Documentation SSOT.
+
+---
+
 # Related Documentation
 
-Engineering methodology
+Engineering Methodology
 
 ```text
 docs/09_ENGINEERING_METHODOLOGY.md
 ```
 
-Engineering workflow
+Engineering Playbook
 
 ```text
 docs/11_ENGINEERING_PLAYBOOK.md
 ```
 
-Documentation standard
+Documentation Standard
 
 ```text
 docs/08_DOCUMENTATION_STANDARD.md
 ```
 
-Repository standard
+Repository Standard
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
 ```
 
 ---
@@ -198,6 +272,7 @@ docs/12_REPOSITORY_STANDARD.md
 Future architecture decisions SHALL:
 
 - preserve Product SSOT;
+- preserve Source Code SSOT;
 - preserve architectural consistency;
 - reduce unnecessary coupling;
 - improve maintainability;
@@ -214,7 +289,11 @@ Architecture Decisions
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

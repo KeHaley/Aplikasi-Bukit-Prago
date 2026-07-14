@@ -2,7 +2,7 @@
 
 # PROJECT STATE
 
-Version : 5.0
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -34,6 +34,14 @@ Official Product Single Source of Truth (Product SSOT).
 
 ---
 
+# Source Code SSOT
+
+The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
+
+Engineering activities are performed using a local Working Copy synchronized with the official repository.
+
+---
+
 # Desktop Runtime
 
 ```text
@@ -50,19 +58,22 @@ Current official documentation:
 
 - README
 - PROJECT_CONTEXT
-- PROJECT_INTENT
+- PROJECT_STATE
 - ARCHITECTURE
 - ARCHITECTURE_DECISIONS
-- ENGINEERING_METHODOLOGY
+- ROADMAP
+- CHANGELOG
 - AI_ASSISTANT_POLICY
 - AI_STARTUP_GUIDE
 - DOCUMENTATION_STANDARD
+- ENGINEERING_METHODOLOGY
+- PROJECT_INTENT
 - ENGINEERING_PLAYBOOK
 - REPOSITORY_STANDARD
 - INFORMATION_OWNERSHIP
 - DOCUMENTATION_MIGRATION_PLAN
+- PRODUCT_PROFILE
 - CURRENT_WORK
-- PROJECT_STATE
 
 ---
 
@@ -70,13 +81,17 @@ Current official documentation:
 
 Completed:
 
-- Repository Structure
+- Repository Foundation
 - Documentation Foundation
+- Engineering Governance Foundation
+- Engineering Methodology Foundation
+- AI Engineering Foundation
 - Workspace Foundation
 - Parser Foundation
 - Registry Foundation
 - Analyzer Foundation
 - Knowledge Foundation
+- Desktop Runtime Foundation
 
 ---
 
@@ -86,19 +101,19 @@ Completed:
 
 Launch Bukit Prago Desktop Application
 
-Status
+### Status
 
 COMPLETE
 
 FROZEN
 
-Achievements:
+### Achievements
 
 - BukitPrago.exe
 - Windows Desktop Runtime
-- Microsoft Edge WebView2 integration
-- Desktop application launches successfully
-- Production application accessible from desktop
+- Microsoft Edge WebView2 Integration
+- Desktop Application Launch
+- Production Application Accessible from Desktop
 
 ---
 
@@ -110,6 +125,8 @@ Current engineering progress:
 |-----------|--------|
 | Repository Foundation | COMPLETE |
 | Documentation Foundation | COMPLETE |
+| Engineering Governance | COMPLETE |
+| AI Engineering Foundation | COMPLETE |
 | Workspace | COMPLETE |
 | Parser | COMPLETE |
 | Registry | COMPLETE |
@@ -132,11 +149,12 @@ CURRENT_WORK.md
 
 This document defines:
 
-- current milestone;
-- current objective;
-- current priority;
-- current deliverables;
-- definition of done.
+- Current Phase
+- Current Milestone
+- Current Objective
+- Current Priority
+- Current Deliverables
+- Definition of Done
 
 ---
 
@@ -152,28 +170,34 @@ This milestone begins after the current engineering contract has been completed 
 
 # Related Documentation
 
-Current engineering contract
+Current Engineering Contract
 
 ```text
 CURRENT_WORK.md
 ```
 
-Project roadmap
+Project Roadmap
 
 ```text
 docs/04_ROADMAP.md
 ```
 
-AI startup guide
+Architecture Decisions
+
+```text
+docs/03_ARCHITECTURE_DECISIONS.md
+```
+
+AI Startup Guide
 
 ```text
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
-Repository architecture
+Repository Standard
 
 ```text
-docs/02_ARCHITECTURE.md
+docs/12_REPOSITORY_STANDARD.md
 ```
 
 ---
@@ -186,7 +210,11 @@ Project State
 
 Version
 
-5.0
+6.0
+
+Status
+
+OFFICIAL
 
 State
 

@@ -2,7 +2,7 @@
 
 # PRODUCT PROFILE
 
-Version : 1.0
+Version : 2.0
 
 Status : OFFICIAL
 
@@ -14,11 +14,11 @@ State : ACTIVE
 
 Provide a concise technical profile of the primary product.
 
-This document allows a new AI or engineer to quickly understand what is being developed before reading detailed documentation.
+This document allows a new AI or engineer to quickly understand the primary product before reading the detailed engineering documentation.
 
-It summarizes the essential facts of the product.
+It summarizes the essential product information.
 
-Detailed engineering rules remain in their respective owner documents.
+Engineering governance, repository rules, architecture decisions and engineering methodology remain in their respective owner documents.
 
 ---
 
@@ -42,6 +42,52 @@ The Product SSOT is the official production application.
 
 ---
 
+# Product Mission
+
+Provide a stable, reliable and productive operational application supporting the daily operations of the Bukit Prago plantation.
+
+The production application is always the highest engineering priority.
+
+All engineering activities SHALL ultimately support this product.
+
+---
+
+# Product Scope
+
+The Bukit Prago Operational Application provides operational support for plantation management, including:
+
+- Dashboard
+- Production Management
+- Sales Management
+- Fertilizer Management
+- Forecast
+- Target Management
+- Annual Reporting
+- Backup
+- Administration
+
+---
+
+# Product Architecture
+
+The BPV4 repository consists of three complementary engineering layers.
+
+```text
+Bukit Prago Operational Application
+            │
+            ▼
+Windows Desktop Runtime
+            │
+            ▼
+BPV4 Engineering Platform
+```
+
+The Bukit Prago Operational Application remains the primary product.
+
+The Desktop Runtime and BPV4 Engineering Platform exist only to support the product.
+
+---
+
 # Desktop Runtime
 
 Location
@@ -57,14 +103,6 @@ ACTIVE
 Purpose
 
 Launch and host the Bukit Prago Operational Application on Windows while preserving production behaviour.
-
----
-
-# Product Mission
-
-Provide a stable, reliable and productive operational application for the Bukit Prago plantation.
-
-The production application is always the highest engineering priority.
 
 ---
 
@@ -125,7 +163,7 @@ tools/
 
 # Current Engineering Status
 
-Current engineering status is defined in:
+The current engineering contract is defined in:
 
 ```text
 CURRENT_WORK.md
@@ -155,6 +193,8 @@ The product SHALL:
 - remain available for daily operational activities.
 
 Desktop Runtime SHALL support the product without modifying production behaviour.
+
+Engineering Platform SHALL support engineering activities without modifying production behaviour.
 
 ---
 
@@ -190,6 +230,12 @@ Architecture
 docs/02_ARCHITECTURE.md
 ```
 
+Architecture Decisions
+
+```text
+docs/03_ARCHITECTURE_DECISIONS.md
+```
+
 Current Engineering Contract
 
 ```text
@@ -212,7 +258,11 @@ Product Profile
 
 Version
 
-1.0
+2.0
+
+Status
+
+OFFICIAL
 
 State
 

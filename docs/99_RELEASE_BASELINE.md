@@ -2,7 +2,7 @@
 
 # RELEASE BASELINE
 
-Version : 1.1
+Version : 2.0
 
 Status : OFFICIAL
 
@@ -32,6 +32,8 @@ A baseline SHALL:
 - pass Build;
 - pass Typecheck (when applicable);
 - preserve product behaviour;
+- preserve repository consistency;
+- preserve documentation consistency;
 - be approved by the Project Owner;
 - be frozen before further engineering continues.
 
@@ -58,6 +60,26 @@ apps/bukit-prago
 State
 
 LOCKED
+
+---
+
+## Source Code
+
+Name
+
+Official GitHub Repository
+
+Role
+
+Source Code Single Source of Truth (Source Code SSOT)
+
+Status
+
+ACTIVE
+
+State
+
+OFFICIAL
 
 ---
 
@@ -89,11 +111,11 @@ Technology
 
 Name
 
-Documentation V5
+Documentation V6
 
 Version
 
-5.0
+6.0
 
 Status
 
@@ -105,17 +127,29 @@ FROZEN
 
 Git Tag
 
-DOC-V5-FROZEN
+DOC-V6-FROZEN
 
 Description
 
-Project documentation has been migrated to Documentation V5.
+Documentation architecture upgraded.
 
-Information Ownership has been implemented.
+Engineering governance strengthened.
 
-Documentation duplication has been minimized.
+Repository Standard updated.
 
-Documentation is the official Engineering SSOT.
+AI Assistant Policy updated.
+
+AI Startup Guide updated.
+
+Engineering Methodology updated.
+
+Engineering Playbook updated.
+
+Architecture Decisions expanded.
+
+Information Ownership strengthened.
+
+Documentation consistency established.
 
 ---
 
@@ -123,11 +157,11 @@ Documentation is the official Engineering SSOT.
 
 Name
 
-Repository Engineering Baseline V1
+Repository Engineering Baseline V2
 
 Version
 
-1.0
+2.0
 
 Status
 
@@ -139,19 +173,51 @@ FROZEN
 
 Git Tag
 
-REPO-V1-FROZEN
+REPO-V2-FROZEN
 
 Description
 
 Repository engineering foundation validated.
 
-Git repository initialized.
+Source Code SSOT established.
 
-Repository audit completed.
+Repository lifecycle documented.
 
-Package audit completed.
+Repository governance strengthened.
 
-Repository frozen as Engineering Baseline V1.
+Repository validation standardized.
+
+---
+
+## Engineering Governance
+
+Name
+
+Engineering Governance Baseline
+
+Version
+
+6.0
+
+Status
+
+COMPLETE
+
+State
+
+FROZEN
+
+Description
+
+Engineering governance standardized.
+
+Repository First adopted.
+
+Documentation Evolution adopted.
+
+Information Ownership enforced.
+
+Engineering workflow standardized.
 
 ---
 
@@ -169,8 +235,11 @@ Repository frozen as Engineering Baseline V1.
 | Baseline | Version | Status |
 |----------|---------|--------|
 | Documentation V5 | 5.0 | FROZEN |
+| Documentation V6 | 6.0 | FROZEN |
 | Repository Engineering V1 | 1.0 | FROZEN |
+| Repository Engineering V2 | 2.0 | FROZEN |
 | Desktop Runtime M-01 | 1.0 | FROZEN |
+| Engineering Governance V6 | 6.0 | FROZEN |
 
 ---
 
@@ -203,7 +272,8 @@ A new baseline SHALL be added only when:
 - a milestone is completed;
 - documentation is officially frozen;
 - a repository engineering baseline is officially established;
-- architecture changes are officially adopted;
+- an engineering governance baseline is officially established;
+- a major architecture baseline is approved;
 - the Project Owner approves the baseline.
 
 Minor implementation changes SHALL NOT create a new baseline.
@@ -217,6 +287,7 @@ This document SHALL be updated only when:
 - a new milestone is frozen;
 - a new documentation baseline is established;
 - a new repository baseline is established;
+- a new engineering governance baseline is established;
 - a major architecture baseline is approved.
 
 Routine engineering work SHALL NOT update this document.
@@ -265,7 +336,7 @@ Release Baseline
 
 Version
 
-1.1
+2.0
 
 Status
 
