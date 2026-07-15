@@ -2,7 +2,7 @@
 
 # ENGINEERING PLAYBOOK
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -84,11 +84,15 @@ Documentation Update (if required)
 
 ↓
 
-Freeze
+Freeze Milestone (if completed)
 
 ↓
 
-Continue
+Continue Current Milestone
+
+or
+
+Start Next Milestone
 ```
 
 ---
@@ -167,6 +171,12 @@ Determine:
 
 Avoid unnecessary implementation.
 
+## Verification Planning
+
+When implementation involves structural changes to the Product SSOT, engineering SHALL first determine whether operational verification and behavior baseline freeze are required.
+
+Behavior-preserving modularization SHALL only begin after the required verification activities have been completed.
+
 ---
 
 ## Step 6
@@ -242,9 +252,9 @@ Documentation SHALL always follow Information Ownership.
 
 ## Step 13
 
-Freeze the completed work.
+Freeze the completed milestone when all Definition of Done requirements have been satisfied.
 
-Continue only after PASS.
+Engineering SHALL NOT begin the next milestone before the current milestone has been officially frozen.
 
 ---
 
@@ -286,6 +296,7 @@ An engineering activity is complete when:
 - Typecheck PASS;
 - repository consistency is preserved;
 - required documentation has been updated;
+- completed milestones have been frozen when applicable;
 - the Project Owner confirms PASS.
 
 ---
@@ -356,7 +367,7 @@ Engineering Playbook
 
 Version
 
-6.0
+6.1
 
 Status
 

@@ -2,7 +2,7 @@
 
 # ARCHITECTURE DECISIONS
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -231,6 +231,34 @@ Creation of new owner documents SHALL be minimized.
 
 Documentation architecture SHALL preserve Information Ownership and Documentation SSOT.
 
+## AD-018
+
+### Verify Before Modularization
+
+Behavior-preserving modularization SHALL only begin after operational verification has been completed and a verified behavior baseline has been established.
+
+The engineering sequence SHALL be:
+
+```text
+Operational Verification
+        ↓
+Behavior Baseline Freeze
+        ↓
+Behavior-Preserving Modularization
+```
+
+Analysis and planning activities MAY be performed before modularization.
+
+However, the following activities SHALL NOT occur before the behavior baseline has been frozen:
+
+- moving production functions;
+- splitting production source files;
+- renaming production interfaces;
+- changing execution flow;
+- modifying production behavior.
+
+The objective of this decision is to ensure that every structural change can be verified against an approved behavior baseline, minimizing engineering risk while preserving the Product SSOT.
+
 ---
 
 # Related Documentation
@@ -289,7 +317,7 @@ Architecture Decisions
 
 Version
 
-6.0
+6.1
 
 Status
 

@@ -2,7 +2,7 @@
 
 # AI ASSISTANT POLICY
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -129,6 +129,21 @@ The AI SHALL:
 - support the current engineering contract;
 - follow the official repository workflow.
 
+# Verification Before Refactoring
+
+When engineering activities involve structural modification of the Product SSOT, the AI SHALL verify that the required operational verification and behavior baseline have been completed.
+
+The AI SHALL NOT recommend or perform behavior-preserving modularization before the approved behavior baseline has been frozen.
+
+The AI MAY assist with:
+
+- repository analysis;
+- dependency mapping;
+- architecture planning;
+- modularization design;
+
+before implementation begins.
+
 ---
 
 # Engineering Responsibility
@@ -186,9 +201,10 @@ When multiple solutions exist, the AI SHALL:
 
 1. analyse repository evidence;
 2. evaluate alternatives;
-3. select the most appropriate solution;
-4. explain the decision when necessary;
-5. continue implementation.
+3. preserve Product SSOT;
+4. select the most appropriate solution;
+5. explain the decision when necessary;
+6. continue implementation.
 
 The AI SHALL avoid unnecessary clarification when sufficient evidence already exists.
 
@@ -280,7 +296,7 @@ AI Assistant Policy
 
 Version
 
-6.0
+6.1
 
 Status
 

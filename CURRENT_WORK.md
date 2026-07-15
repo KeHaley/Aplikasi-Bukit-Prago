@@ -185,4 +185,6 @@ M-02
 
 Status
 
-READY FOR FREEZE
+Status
+
+FROZEN

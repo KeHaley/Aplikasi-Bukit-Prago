@@ -2,7 +2,7 @@
 
 # ENGINEERING METHODOLOGY
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -77,6 +77,10 @@ Review
 
 ↓
 
+Freeze
+
+↓
+
 Release
 
 ↓
@@ -113,6 +117,27 @@ The Product SSOT SHALL remain protected.
 Engineering SHALL preserve production behaviour unless an intentional product change has been approved by the Project Owner.
 
 Whenever practical, engineering improvements SHALL be implemented outside the production application.
+
+# Verification Before Modularization
+
+Behavior-preserving modularization SHALL only begin after:
+
+- operational verification has been completed; and
+- a verified behavior baseline has been established.
+
+Engineering SHALL follow the sequence below whenever structural refactoring of the Product SSOT is planned.
+
+```text
+Operational Verification
+        ↓
+Behavior Baseline Freeze
+        ↓
+Behavior-Preserving Modularization
+```
+
+Analysis, planning and dependency mapping MAY be performed before modularization.
+
+Structural changes to the Product SSOT SHALL NOT begin until the behavior baseline has been frozen.
 
 ---
 
@@ -168,6 +193,7 @@ An engineering task is considered complete when:
 - Build PASS;
 - Typecheck PASS;
 - documentation has been updated when required;
+- completed milestones have been frozen when applicable;
 - the Project Owner confirms PASS.
 
 ---
@@ -230,7 +256,7 @@ Engineering Methodology
 
 Version
 
-6.0
+6.1
 
 Status
 
