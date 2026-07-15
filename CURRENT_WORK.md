@@ -2,7 +2,7 @@
 
 # CURRENT WORK
 
-Version : 5.0
+Version : 5.1
 
 Status : ACTIVE
 
@@ -62,9 +62,13 @@ Current implementation SHALL focus on:
 - Loading Indicator
 - Offline Detection
 - Error Handling
-- About
+
+The following items are intentionally excluded from M-02:
+
+- About Dialog
 - Settings
-- Installer
+
+Installer remains a mandatory project deliverable but SHALL be implemented during the Release phase after the Desktop Runtime and the Bukit Prago Application have reached production maturity.
 
 No work outside this priority SHALL take precedence.
 
@@ -79,12 +83,13 @@ This milestone SHALL produce:
 - Loading Screen
 - Offline Detection
 - Error Handling
-- About Dialog
-- Settings
-- Installer
 - Production behaviour preserved
 - Build PASS
 - Typecheck PASS
+
+Installer is NOT part of M-02.
+
+Installer SHALL be implemented during the Release phase after the application has reached production readiness.
 
 ---
 
@@ -96,6 +101,7 @@ During this milestone:
 - Preserve production behaviour.
 - Desktop Runtime SHALL remain independent from the Product SSOT.
 - Avoid unnecessary architectural changes.
+- Do NOT introduce native Desktop UI that changes the existing user experience without explicit approval.
 
 ---
 
@@ -119,6 +125,19 @@ Implementation workflow is defined in:
 ```text
 docs/11_ENGINEERING_PLAYBOOK.md
 ```
+
+---
+
+# Engineering Decisions
+
+The following decisions are LOCKED for M-02:
+
+- Desktop Runtime acts only as the native host.
+- The primary user interface remains the Bukit Prago Web Application.
+- Native desktop menus (About, Settings, etc.) are intentionally omitted.
+- Desktop Runtime shall remain lightweight and focused on stability.
+- Avoid feature additions without demonstrated operational value.
+- Installer remains a mandatory Release deliverable and SHALL NOT be implemented before the application reaches production maturity.
 
 ---
 
@@ -154,7 +173,7 @@ Current Work
 
 Version
 
-5.0
+5.1
 
 State
 
@@ -166,4 +185,4 @@ M-02
 
 Status
 
-ACTIVE
+READY FOR FREEZE

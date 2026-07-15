@@ -2,7 +2,7 @@
 
 # PROJECT STATE
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -49,6 +49,21 @@ apps/bpv4-desktop
 ```
 
 Official Windows Desktop Runtime.
+
+Current capabilities:
+
+- Native Windows Host
+- Microsoft Edge WebView2 Runtime
+- Splash Screen
+- Loading Indicator
+- Offline Detection
+- Error Handling
+- Automatic Retry
+- Product SSOT Preservation
+
+Desktop Runtime intentionally provides only the native host environment.
+
+The primary user interface remains the Bukit Prago Web Application.
 
 ---
 
@@ -117,6 +132,38 @@ FROZEN
 
 ---
 
+# Current Milestone
+
+## M-02
+
+Desktop Stabilization
+
+### Status
+
+READY FOR FREEZE
+
+### Completed
+
+- Stable Desktop Runtime
+- Splash Screen
+- Loading Indicator
+- Offline Detection
+- Error Handling
+- Repository Cleanup
+- Build PASS
+- Production Behaviour Preserved
+
+### Engineering Decisions
+
+The following items were intentionally excluded from M-02:
+
+- About Dialog
+- Settings
+
+Installer remains a mandatory Release deliverable and will be implemented after the application reaches production maturity.
+
+---
+
 # Engineering Status
 
 Current engineering progress:
@@ -134,7 +181,7 @@ Current engineering progress:
 | Knowledge Foundation | COMPLETE |
 | Desktop Runtime | COMPLETE |
 | Desktop Application Launch | COMPLETE |
-| Desktop Stabilization | IN PROGRESS |
+| Desktop Stabilization | READY FOR FREEZE |
 | Operational Verification | NOT STARTED |
 
 ---
@@ -164,7 +211,7 @@ M-03
 
 Operational Verification
 
-This milestone begins after the current engineering contract has been completed and frozen.
+This milestone SHALL NOT begin before M-02 has been officially frozen.
 
 ---
 
@@ -210,7 +257,7 @@ Project State
 
 Version
 
-6.0
+6.1
 
 Status
 

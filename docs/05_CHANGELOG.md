@@ -2,7 +2,7 @@
 
 # CHANGELOG
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -21,6 +21,80 @@ What has changed?
 The changelog is an append-only historical record.
 
 Entries SHALL NOT be modified except to correct factual errors.
+
+---
+
+# Version 6.1
+
+Date
+
+YYYY-MM-DD
+
+---
+
+## Desktop Runtime
+
+Desktop Runtime stabilization completed.
+
+Major improvements:
+
+- Splash Screen implemented.
+- Loading Indicator implemented.
+- Offline Detection implemented.
+- Automatic Retry implemented.
+- ApplicationHealthService introduced.
+- Startup reliability improved.
+- Error Handling strengthened.
+- Desktop Runtime stability improved.
+- Production behaviour preserved.
+
+---
+
+## Engineering
+
+Desktop stabilization completed according to the active engineering contract.
+
+Engineering decisions:
+
+- Native Desktop Runtime acts only as the Windows host.
+- Primary user interface remains the Bukit Prago Web Application.
+- Native desktop menus (About and Settings) intentionally removed after implementation review.
+- Desktop Runtime kept lightweight to avoid unnecessary complexity.
+- Installer remains a mandatory Release deliverable and will be implemented after production maturity.
+
+---
+
+## Repository
+
+Repository quality improved.
+
+Completed:
+
+- Desktop Runtime cleanup.
+- Temporary engineering artifacts removed.
+- Repository hygiene improved.
+- Build verification completed.
+- GitHub repository synchronized.
+
+---
+
+## Milestone
+
+Current status:
+
+M-02
+
+Desktop Stabilization
+
+Status:
+
+READY FOR FREEZE
+
+Next milestone:
+
+M-03
+
+Operational Verification
 
 ---
 
@@ -363,7 +437,7 @@ Changelog
 
 Version
 
-6.0
+6.1
 
 Status
 

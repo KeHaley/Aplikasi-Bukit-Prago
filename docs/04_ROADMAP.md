@@ -2,7 +2,7 @@
 
 # ROADMAP
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -61,6 +61,10 @@ Improve
 
 ↓
 
+Release
+
+↓
+
 Repeat
 ```
 
@@ -92,10 +96,18 @@ Improve the Desktop Runtime while preserving production behaviour.
 - Loading Screen
 - Offline Detection
 - Error Handling
-- About
-- Settings
-- Installer
 - Stable Desktop Runtime
+
+### Engineering Decisions
+
+The following items are intentionally excluded from M-02:
+
+- About Dialog
+- Settings
+
+These features were evaluated during implementation and intentionally omitted to preserve a lightweight Desktop Runtime while maintaining the existing user experience.
+
+Installer remains a mandatory project deliverable but SHALL be implemented during the Release phase after the Bukit Prago Application has reached production maturity.
 
 ---
 
@@ -168,6 +180,15 @@ Continuously improve the Bukit Prago Operational Application.
 - Stable Releases
 - Updated Documentation
 - Engineering Knowledge Growth
+
+### Release Deliverables
+
+The following deliverables SHALL be completed before any production release:
+
+- Windows Installer
+- Desktop Packaging
+- Release Validation
+- Distribution Package
 
 ---
 
@@ -269,7 +290,7 @@ Roadmap
 
 Version
 
-6.0
+6.1
 
 Status
 

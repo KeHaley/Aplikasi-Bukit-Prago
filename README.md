@@ -2,7 +2,7 @@
 
 Engineering Platform for the Bukit Prago Operational Application.
 
-Version : 6.0
+Version : 6.1
 
 Status : OFFICIAL
 
@@ -151,9 +151,9 @@ Read the documentation in the following order.
 8. docs/06_AI_ASSISTANT_POLICY.md
 9. docs/13_INFORMATION_OWNERSHIP.md
 10. CURRENT_WORK.md
-11. docs/07_AI_STARTUP_GUIDE.md
-12. docs/08_DOCUMENTATION_STANDARD.md
-13. docs/11_ENGINEERING_PLAYBOOK.md
+11. docs/11_ENGINEERING_PLAYBOOK.md
+12. docs/07_AI_STARTUP_GUIDE.md
+13. docs/08_DOCUMENTATION_STANDARD.md
 
 Do not skip documents.
 
@@ -232,7 +232,7 @@ README
 
 Version
 
-6.0
+6.1
 
 Status
 
