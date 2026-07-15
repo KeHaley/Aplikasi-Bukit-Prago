@@ -7,5 +7,20 @@ public partial class SplashForm : Form
         InitializeComponent();
 
         DoubleBuffered = true;
+
+        UpdateStatus("Memulai aplikasi...");
+    }
+
+    public void UpdateStatus(string message)
+    {
+        if (InvokeRequired)
+        {
+            Invoke(() => UpdateStatus(message));
+            return;
+        }
+
+        lblStatus.Text = message;
+
+        lblStatus.Refresh();
     }
 }

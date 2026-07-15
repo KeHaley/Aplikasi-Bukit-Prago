@@ -7,6 +7,7 @@ partial class SplashForm
 {
     private Label lblTitle = null!;
     private Label lblVersion = null!;
+    private Label lblStatus = null!;
     private ProgressBar progress = null!;
     private PictureBox logo = null!;
 
@@ -15,6 +16,7 @@ partial class SplashForm
         logo = new PictureBox();
         lblTitle = new Label();
         lblVersion = new Label();
+        lblStatus = new Label();
         progress = new ProgressBar();
 
         SuspendLayout();
@@ -49,6 +51,14 @@ partial class SplashForm
         lblVersion.TextAlign = ContentAlignment.MiddleCenter;
 
         //
+        // Status
+        //
+        lblStatus.Dock = DockStyle.Fill;
+        lblStatus.Text = "Memulai aplikasi...";
+        lblStatus.Font = new Font("Segoe UI", 10);
+        lblStatus.TextAlign = ContentAlignment.TopCenter;
+
+        //
         // Progress
         //
         progress.Dock = DockStyle.Bottom;
@@ -62,6 +72,7 @@ partial class SplashForm
         ClientSize = new Size(500, 320);
 
         Controls.Add(progress);
+        Controls.Add(lblStatus);
         Controls.Add(lblVersion);
         Controls.Add(lblTitle);
         Controls.Add(logo);

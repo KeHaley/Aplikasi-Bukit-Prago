@@ -15,9 +15,19 @@ public sealed class DesktopApplicationContext : ApplicationContext
         mainForm.ApplicationReady += MainForm_ApplicationReady;
         mainForm.FormClosed += MainForm_FormClosed;
 
+        splash.UpdateStatus("Memulai aplikasi...");
+
         splash.Show();
 
         _ = mainForm.InitializeAsync();
+    }
+
+    public void UpdateSplashStatus(string message)
+    {
+        if (!splash.IsDisposed)
+        {
+            splash.UpdateStatus(message);
+        }
     }
 
     private void MainForm_ApplicationReady(object? sender, EventArgs e)

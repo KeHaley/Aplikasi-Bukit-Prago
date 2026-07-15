@@ -11,34 +11,17 @@ public sealed class AppConfiguration
 
     public static AppConfiguration Load()
     {
-        var baseDirectory = AppContext.BaseDirectory;
-
-        MessageBox.Show(
-            $"Base Directory:\n\n{baseDirectory}",
-            "Bukit Prago");
-
         var fileName = Path.Combine(
-            baseDirectory,
+            AppContext.BaseDirectory,
             "appsettings.json");
-
-        MessageBox.Show(
-            $"Config File:\n\n{fileName}",
-            "Bukit Prago");
 
         if (!File.Exists(fileName))
         {
-            MessageBox.Show(
-                "File tidak ditemukan:\n\n" + fileName,
-                "Bukit Prago",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-
             throw new FileNotFoundException(
-                $"File konfigurasi '{fileName}' tidak ditemukan.");
+                $"Configuration file '{fileName}' was not found.");
         }
 
         using var stream = File.OpenRead(fileName);
-
         using var document = JsonDocument.Parse(stream);
 
         var application = document.RootElement.GetProperty("Application");

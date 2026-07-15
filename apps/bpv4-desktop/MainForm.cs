@@ -1,11 +1,12 @@
 using Microsoft.Web.WebView2.Core;
-using System.Net.NetworkInformation;
 
 namespace BPV4.Desktop;
 
 public partial class MainForm : Form
 {
     private readonly AppConfiguration config = AppConfiguration.Load();
+
+    private readonly ApplicationHealthService healthService = new();
 
     private readonly System.Windows.Forms.Timer retryTimer = new();
     private readonly System.Windows.Forms.Timer startupTimeout = new();
@@ -34,10 +35,16 @@ public partial class MainForm : Form
         {
             startupTimeout.Start();
 
-            if (!NetworkInterface.GetIsNetworkAvailable())
+            var health = await healthService.CheckAsync(
+                config.Url,
+                config.StartupTimeout);
+
+            if (!health.IsHealthy)
             {
                 ShowOfflineMessage();
+
                 retryTimer.Start();
+
                 return;
             }
 
@@ -67,9 +74,6 @@ public partial class MainForm : Form
 
     private async void RetryTimer_Tick(object? sender, EventArgs e)
     {
-        if (!NetworkInterface.GetIsNetworkAvailable())
-            return;
-
         retryTimer.Stop();
 
         await InitializeAsync();
@@ -94,7 +98,9 @@ public partial class MainForm : Form
         if (!e.IsSuccess)
         {
             ShowOfflineMessage();
+
             retryTimer.Start();
+
             return;
         }
 
@@ -125,7 +131,25 @@ public partial class MainForm : Form
     private void ShowOfflineMessage()
     {
         MessageBox.Show(
-            "Koneksi internet tidak tersedia.\nAplikasi akan mencoba kembali otomatis.",
+            "Koneksi ke aplikasi tidak tersedia.\nAplikasi akan mencoba kembali otomatis.",
+            config.Name,
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    private void MenuSettings_Click(object? sender, EventArgs e)
+    {
+        MessageBox.Show(
+            "Settings akan tersedia pada versi berikutnya.",
+            config.Name,
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    private void MenuAbout_Click(object? sender, EventArgs e)
+    {
+        MessageBox.Show(
+            "Bukit Prago Desktop Runtime\nVersion 1.0",
             config.Name,
             MessageBoxButtons.OK,
             MessageBoxIcon.Information);
