@@ -2,7 +2,7 @@
 
 # ENGINEERING PLAYBOOK
 
-Version : 6.1
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,9 +12,11 @@ State : ACTIVE
 
 # Purpose
 
-Define the official engineering execution workflow used throughout the BPV4 project.
+Define the official engineering execution workflow of the BPV4 Modularization Engine.
 
-Every engineering activity SHALL follow this playbook.
+This document defines how engineering work SHALL be executed.
+
+Every AI and engineer SHALL follow this playbook.
 
 ---
 
@@ -22,86 +24,51 @@ Every engineering activity SHALL follow this playbook.
 
 This document defines:
 
-- engineering workflow;
-- engineering execution;
-- implementation deliverables;
+- engineering execution workflow;
+- implementation workflow;
+- validation workflow;
+- documentation workflow;
 - engineering completion procedure.
 
-Engineering policy, methodology, repository standard, startup procedure, and project status are defined in their respective owner documents.
+Engineering policies, project status, and engineering contracts are defined in their respective owner documents.
 
 ---
 
 # Engineering Workflow
 
-Every engineering activity SHALL follow this sequence.
+Every engineering activity SHALL follow the following sequence.
 
 ```text
 Repository Validation
-
-↓
-
-Documentation Startup
-
-↓
-
-Understand Current Work
-
-↓
-
-Engineering Audit
-
-↓
-
+        ↓
+AI Startup
+        ↓
+Read CURRENT_WORK
+        ↓
+Engineering Analysis
+        ↓
 Engineering Planning
-
-↓
-
+        ↓
 Implementation
-
-↓
-
-Provide FULL FILE
-
-↓
-
-Build
-
-↓
-
-Typecheck
-
-↓
-
+        ↓
+Validation
+        ↓
 Engineering Review
-
-↓
-
-PASS
-
-↓
-
+        ↓
+Project Owner PASS
+        ↓
 Documentation Update (if required)
-
-↓
-
-Freeze Milestone (if completed)
-
-↓
-
-Continue Current Milestone
-
-or
-
-Start Next Milestone
+        ↓
+Continue CURRENT_WORK
 ```
 
 ---
 
-# Engineering Procedure
+# Engineering Execution Procedure
 
 ## Step 1
 
-Validate the repository.
+Validate the Repository.
 
 Follow:
 
@@ -109,13 +76,13 @@ Follow:
 docs/12_REPOSITORY_STANDARD.md
 ```
 
-Implementation SHALL NOT begin before repository validation passes.
+Implementation SHALL NOT begin until repository validation has passed.
 
 ---
 
 ## Step 2
 
-Complete the official startup procedure.
+Complete AI Startup.
 
 Follow:
 
@@ -123,11 +90,15 @@ Follow:
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
+Implementation SHALL NOT begin before startup has completed successfully.
+
 ---
 
 ## Step 3
 
-Read the current engineering contract.
+Read the Active Engineering Contract.
+
+Read:
 
 ```text
 CURRENT_WORK.md
@@ -135,126 +106,129 @@ CURRENT_WORK.md
 
 Identify:
 
+- Current Mission
 - Current Phase
-- Current Milestone
 - Current Objective
-- Current Priority
 - Current Deliverables
+- Current Constraints
+- Definition of Done
+
+The engineering contract SHALL govern all implementation.
 
 ---
 
 ## Step 4
 
-Perform an engineering audit.
+Perform Engineering Analysis.
 
-Understand:
+Before modifying any source code:
 
-- current behaviour;
-- dependencies;
-- implementation impact;
-- compatibility;
-- repository evidence.
+- understand the production behaviour;
+- identify dependencies;
+- identify engineering risks;
+- determine implementation scope;
+- collect repository evidence.
 
-Engineering decisions SHALL remain evidence-based.
+Engineering decisions SHALL remain evidence-driven.
 
 ---
 
 ## Step 5
 
-Prepare the engineering plan.
+Prepare the Engineering Plan.
 
 Determine:
 
 - implementation scope;
 - affected components;
-- expected deliverables.
+- expected deliverables;
+- validation strategy.
 
-Avoid unnecessary implementation.
-
-## Verification Planning
-
-When implementation involves structural changes to the Product SSOT, engineering SHALL first determine whether operational verification and behavior baseline freeze are required.
-
-Behavior-preserving modularization SHALL only begin after the required verification activities have been completed.
+Implementation SHALL remain limited to the approved scope.
 
 ---
 
 ## Step 6
 
-Implement only the required engineering changes.
+Implement.
 
-Preserve:
+Implementation SHALL:
 
-- Product SSOT;
-- repository consistency;
-- documentation consistency;
-- backward compatibility.
+- preserve production behaviour;
+- preserve repository consistency;
+- preserve documentation consistency;
+- preserve Source Code SSOT;
+- remain within the active engineering contract.
 
 ---
 
 ## Step 7
 
-Provide FULL FILES unless explicitly instructed otherwise.
+Validate.
+
+Perform every validation required by the current engineering activity.
+
+Validation MAY include:
+
+- engineering validation;
+- dependency validation;
+- regression validation;
+- build validation;
+- typecheck validation;
+- behaviour validation.
+
+Perform only the validations applicable to the current phase.
 
 ---
 
 ## Step 8
 
-Run Build.
+Engineering Review.
 
-Use the appropriate build procedure for the active project.
+Verify:
+
+- objective achieved;
+- constraints respected;
+- validation passed;
+- repository consistency preserved.
 
 ---
 
 ## Step 9
 
-Run Typecheck.
+Wait for Project Owner PASS.
 
-Use the appropriate validation procedure for the active project.
+Implementation SHALL NOT continue until PASS has been received.
 
 ---
 
 ## Step 10
 
-Perform an engineering review.
+Update Documentation.
 
-Verify:
+Update documentation only when required.
 
-- objective achieved;
-- compatibility preserved;
-- Build PASS;
-- Typecheck PASS;
-- repository consistency preserved.
+Documentation SHALL follow:
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
+Only the owner document SHALL be updated.
 
 ---
 
 ## Step 11
 
-Wait for PASS.
+Continue the Active Engineering Contract.
 
-Implementation SHALL NOT continue before PASS.
-
----
-
-## Step 12
-
-Update documentation only when required.
-
-Documentation updates SHALL follow:
+Review:
 
 ```text
-docs/08_DOCUMENTATION_STANDARD.md
+CURRENT_WORK.md
 ```
 
-Documentation SHALL always follow Information Ownership.
-
----
-
-## Step 13
-
-Freeze the completed milestone when all Definition of Done requirements have been satisfied.
-
-Engineering SHALL NOT begin the next milestone before the current milestone has been officially frozen.
+Continue the current objective unless the Project Owner explicitly changes the engineering contract.
 
 ---
 
@@ -262,27 +236,50 @@ Engineering SHALL NOT begin the next milestone before the current milestone has 
 
 Every engineering activity SHALL:
 
-- support the current engineering contract;
-- preserve the Product SSOT;
-- preserve Source Code SSOT;
+- follow CURRENT_WORK;
 - preserve production behaviour;
-- minimize unnecessary changes;
-- remain backward compatible;
 - remain evidence-driven;
+- minimize implementation scope;
+- avoid assumptions;
 - preserve repository consistency;
 - preserve documentation consistency.
 
 ---
 
+# Response Rules
+
+Every engineering response SHALL prioritize execution.
+
+Unless explicitly requested by the Project Owner, the AI SHALL NOT:
+
+- explain engineering theory;
+- provide long technical discussions;
+- compare multiple solutions;
+- produce educational content;
+- repeat documented information;
+- generate unnecessary implementation details.
+
+Default responses SHALL be:
+
+- concise;
+- implementation-focused;
+- evidence-driven;
+- action-oriented.
+
+---
+
 # Default Deliverables
 
-Every engineering activity SHOULD provide:
+Engineering activities SHOULD provide only the information required to continue implementation.
 
-- engineering summary;
-- FULL FILES;
-- build result;
-- typecheck result;
-- required user actions (if any).
+Typical deliverables include:
+
+- implementation summary;
+- modified files;
+- validation results;
+- required Project Owner actions.
+
+Avoid unnecessary narrative.
 
 ---
 
@@ -290,36 +287,16 @@ Every engineering activity SHOULD provide:
 
 An engineering activity is complete when:
 
-- the engineering objective is satisfied;
-- production behaviour remains compatible;
-- Build PASS;
-- Typecheck PASS;
-- repository consistency is preserved;
-- required documentation has been updated;
-- completed milestones have been frozen when applicable;
+- the objective has been achieved;
+- required validations have passed;
+- production behaviour has been preserved;
+- repository consistency has been maintained;
+- documentation has been updated when required;
 - the Project Owner confirms PASS.
 
 ---
 
-# After PASS
-
-After PASS:
-
-1. Freeze the completed work.
-2. Review CURRENT_WORK.md.
-3. Continue the active engineering contract.
-
-Future milestones SHALL NOT begin prematurely.
-
----
-
 # Related Documentation
-
-AI Assistant Policy
-
-```text
-docs/06_AI_ASSISTANT_POLICY.md
-```
 
 AI Startup Guide
 
@@ -345,13 +322,7 @@ Information Ownership
 docs/13_INFORMATION_OWNERSHIP.md
 ```
 
-Documentation Standard
-
-```text
-docs/08_DOCUMENTATION_STANDARD.md
-```
-
-Current Engineering Contract
+Current Work
 
 ```text
 CURRENT_WORK.md
@@ -367,7 +338,7 @@ Engineering Playbook
 
 Version
 
-6.1
+7.0
 
 Status
 

@@ -2,7 +2,7 @@
 
 # PROJECT CONTEXT
 
-Version : 5.1
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,39 +12,43 @@ State : ACTIVE
 
 # Purpose
 
-Define the permanent context of the BPV4 project.
+Define the permanent context of the BPV4 Modularization Engine project.
 
-This document explains why the project exists, what the primary product is, and the permanent engineering context that governs the entire BPV4 Engineering Platform.
+This document establishes the long-term engineering mission, project boundaries, engineering principles, and repository context.
+
+Every engineering activity SHALL remain aligned with this document.
+
+---
+
+# Project Definition
+
+Project Name
+
+BPV4 Modularization Engine
+
+Project Type
+
+Engineering Engine
+
+Primary Objective
+
+Safely modularize the Bukit Prago Operational Application.
+
+Primary Engineering Output
+
+Behaviour-preserving JavaScript modules extracted from the production application's `Index.html`.
+
+This repository exists to build an engineering engine.
+
+It does NOT exist to redesign or rewrite the production application.
 
 ---
 
 # Project Mission
 
-Restore.
+Build an engineering engine capable of safely transforming the Bukit Prago Operational Application into modular JavaScript while preserving identical behaviour.
 
-Launch.
-
-Operate.
-
-Preserve.
-
-Continuously improve.
-
-The Bukit Prago Operational Application.
-
-Every engineering activity exists to support that mission.
-
-The Bukit Prago Operational Application is the reason the BPV4 project exists.
-
----
-
-# Engineering Platform
-
-BPV4_MASTER is the official Engineering Platform for the Bukit Prago Operational Application.
-
-The engineering platform exists solely to support the complete engineering lifecycle of the primary product.
-
-The engineering platform itself is not the product.
+Every engineering activity SHALL contribute directly to that mission.
 
 ---
 
@@ -55,84 +59,135 @@ The primary product of this project is the Bukit Prago Operational Application.
 Official Product Location
 
 ```text
-apps/bukit-prago
+apps/Bukit Prago
 ```
 
-This directory contains the official production application.
+This directory is the Product Single Source of Truth (Product SSOT).
 
-It is the Product Single Source of Truth (Product SSOT).
-
-The production application SHALL remain preserved.
+Engineering SHALL preserve the Product SSOT throughout the entire project.
 
 ---
 
-# Engineering Ecosystem
+# Engineering Objective
 
-The BPV4 repository contains engineering capabilities that support the Product SSOT.
+The objective of this repository is to build the BPV4 Modularization Engine.
 
-These capabilities include:
+The Modularization Engine performs engineering analysis and generates the information required for safe modularization.
 
-- Desktop Runtime
-- Engineering Packages
-- Documentation
-- Testing
-- Engineering Utilities
+The engineering engine is a supporting capability.
 
-Engineering capabilities exist only to support the primary product.
-
-They are not the product.
-
-The official repository architecture is defined in:
-
-```text
-docs/02_ARCHITECTURE.md
-```
+It is NOT the operational application.
 
 ---
 
-# Engineering Responsibility
+# Engineering Scope
 
-BPV4 exists to:
+The Modularization Engine SHALL provide the following capabilities.
 
-- restore the application;
-- launch the application;
-- operate the application;
-- preserve the production application;
-- understand the application;
-- verify operational readiness;
-- continuously improve the application;
-- build engineering capabilities that directly support the application.
+- Source Discovery
+- Function Registry
+- Global Variable Registry
+- Dependency Extraction
+- Module Detection
+- Coupling Analysis
+- Extraction Planning
+- Safe Modularization
+- Verification
 
-Engineering capabilities are supporting components.
+Every capability SHALL contribute directly to safe modularization.
 
-They are never the primary objective.
+---
+
+# Out of Scope
+
+The following activities are NOT project objectives.
+
+- Reverse Engineering
+- Documentation Generation
+- Engineering Knowledge Base Generation
+- User Interface Redesign
+- Product Feature Development
+- Performance Optimization
+- Production Refactoring without an approved modularization plan
+
+These activities MAY support engineering but SHALL NOT become engineering objectives.
+
+---
+
+# Primary Engineering Question
+
+Every engineering decision SHALL answer one question.
+
+> Does this make modularization safer?
+
+If the answer is NO,
+
+the activity SHALL NOT become a project priority.
 
 ---
 
 # Product Preservation
 
-The production application SHALL be preserved.
+The production application SHALL remain preserved.
 
-Engineering SHALL NOT modify the production application unless explicitly instructed by the Project Owner.
+Engineering SHALL NOT intentionally change production behaviour unless explicitly approved by the Project Owner.
 
-Whenever practical, new engineering capabilities SHALL be implemented outside the production application while maintaining full compatibility.
+Whenever practical, engineering work SHALL be performed outside the production source code.
 
-Operational behaviour SHALL be preserved.
+Behaviour Preservation is mandatory.
 
 ---
 
 # Engineering Principles
 
-The project follows these permanent principles.
+The project permanently follows these principles.
 
-- Product First
-- Repository First
-- Preserve the Product
+- Source Code First
 - Evidence First
-- Knowledge First
-- Continuous Improvement
+- No Assumption
+- Static Analysis
+- Incremental Development
+- Behaviour Preservation
+- Safe Refactoring
+- Repeatable Engineering
 
-These principles are permanent and independent of the current milestone.
+These principles govern every engineering decision.
+
+---
+
+# Engineering Workflow
+
+The official engineering workflow is:
+
+```text
+Production Source Code
+        ↓
+Source Discovery
+        ↓
+Dependency Extraction
+        ↓
+Module Detection
+        ↓
+Coupling Analysis
+        ↓
+Extraction Planning
+        ↓
+Safe Modularization
+        ↓
+Verification
+```
+
+Every engineering artifact SHALL support the next stage of this workflow.
+
+---
+
+# Repository Authority
+
+The official repository is the Source Code Single Source of Truth (Source Code SSOT).
+
+All engineering work SHALL originate from the latest approved repository.
+
+Engineering decisions SHALL always be supported by evidence extracted from the source code.
 
 ---
 
@@ -140,26 +195,50 @@ These principles are permanent and independent of the current milestone.
 
 The project is considered successful when:
 
-- the Bukit Prago Operational Application operates successfully;
-- operational behaviour remains reliable;
-- the production application remains preserved;
-- engineering capabilities continuously improve the product;
-- engineering knowledge continues to grow;
-- improvements are continuously delivered without disrupting production.
+- the production source code can be analyzed automatically;
+- every dependency is extracted correctly;
+- safe module boundaries are identified;
+- extraction plans are generated automatically;
+- JavaScript modules are generated safely;
+- verification reports zero broken references;
+- production behaviour remains identical after modularization.
 
 ---
 
-# Repository Authority
+# Repository Structure
 
-The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
+The repository is organized into the following primary areas.
 
-Engineering activities are performed using local Working Copies synchronized with the official repository.
+```text
+apps/
+    Production Application (Product SSOT)
 
-Implementation SHALL always continue from the latest approved repository.
+engine/
+    BPV4 Modularization Engine
+
+docs/
+    Active Engineering Documentation
+
+archive/
+    Historical Documentation (Read Only)
+
+tests/
+    Verification and Regression Tests
+```
+
+Only documents located in `docs/` represent the active engineering context.
+
+Documents located in `archive/` SHALL NOT be used as active engineering references unless explicitly requested.
 
 ---
 
 # Related Documentation
+
+Project State
+
+```text
+docs/01_PROJECT_STATE.md
+```
 
 Architecture
 
@@ -173,23 +252,43 @@ Architecture Decisions
 docs/03_ARCHITECTURE_DECISIONS.md
 ```
 
-Current Engineering Contract
+Roadmap
+
+```text
+docs/04_ROADMAP.md
+```
+
+Current Work
 
 ```text
 CURRENT_WORK.md
 ```
 
-Project State
+---
 
-```text
-docs/01_PROJECT_STATE.md
-```
+# AI Startup
 
-Project Roadmap
+If you are an AI opening this repository for the first time:
 
-```text
-docs/04_ROADMAP.md
-```
+1. Read this document completely.
+2. Read `docs/01_PROJECT_STATE.md`.
+3. Read `docs/02_ARCHITECTURE.md`.
+4. Read `docs/03_ARCHITECTURE_DECISIONS.md`.
+5. Read `docs/04_ROADMAP.md`.
+6. Read `CURRENT_WORK.md`.
+
+After reading these documents you SHALL understand:
+
+- what the project is;
+- why the project exists;
+- the current engineering status;
+- the repository architecture;
+- the long-term roadmap;
+- the active engineering contract.
+
+Do NOT begin implementation before understanding the active engineering contract.
+
+Do NOT use archived documentation unless explicitly instructed.
 
 ---
 
@@ -201,7 +300,7 @@ Project Context
 
 Version
 
-5.1
+7.0
 
 Status
 

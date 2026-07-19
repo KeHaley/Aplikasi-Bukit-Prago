@@ -2,7 +2,7 @@
 
 # PROJECT STATE
 
-Version : 6.1
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,9 +12,11 @@ State : ACTIVE
 
 # Purpose
 
-Define the current engineering state of the BPV4 project.
+Define the current engineering state of the BPV4 Modularization Engine project.
 
-This document records what has been completed, what is currently available, and the overall engineering progress.
+This document records the current implementation status, engineering progress, active phase, and overall readiness of the project.
+
+Unlike PROJECT_CONTEXT, this document changes throughout the project lifecycle.
 
 ---
 
@@ -22,167 +24,117 @@ This document records what has been completed, what is currently available, and 
 
 ACTIVE
 
+Current Project
+
+BPV4 Modularization Engine
+
+Primary Engineering Goal
+
+Safely modularize the Bukit Prago Operational Application while preserving identical behaviour.
+
 ---
 
 # Primary Product
 
 ```text
-apps/bukit-prago
+apps/Bukit Prago
 ```
 
 Official Product Single Source of Truth (Product SSOT).
 
----
-
-# Source Code SSOT
-
-The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
-
-Engineering activities are performed using a local Working Copy synchronized with the official repository.
+The production application remains the engineering target.
 
 ---
 
-# Desktop Runtime
+# Engineering Engine
+
+Current Engineering Product
 
 ```text
-apps/bpv4-desktop
+engine/
 ```
 
-Official Windows Desktop Runtime.
+The engineering engine is responsible for:
 
-Current capabilities:
-
-- Native Windows Host
-- Microsoft Edge WebView2 Runtime
-- Splash Screen
-- Loading Indicator
-- Offline Detection
-- Error Handling
-- Automatic Retry
-- Product SSOT Preservation
-
-Desktop Runtime intentionally provides only the native host environment.
-
-The primary user interface remains the Bukit Prago Web Application.
+- Source Discovery
+- Static Analysis
+- Dependency Extraction
+- Module Detection
+- Coupling Analysis
+- Extraction Planning
+- Safe Modularization
+- Verification
 
 ---
 
-# Completed Documentation
+# Current Phase
 
-Current official documentation:
+Phase 2
 
-- README
-- PROJECT_CONTEXT
-- PROJECT_STATE
-- ARCHITECTURE
-- ARCHITECTURE_DECISIONS
-- ROADMAP
-- CHANGELOG
-- AI_ASSISTANT_POLICY
-- AI_STARTUP_GUIDE
-- DOCUMENTATION_STANDARD
-- ENGINEERING_METHODOLOGY
-- PROJECT_INTENT
-- ENGINEERING_PLAYBOOK
-- REPOSITORY_STANDARD
-- INFORMATION_OWNERSHIP
-- DOCUMENTATION_MIGRATION_PLAN
-- PRODUCT_PROFILE
-- CURRENT_WORK
+Dependency Extraction
+
+Status
+
+ACTIVE
+
+Current Objective
+
+Automatically extract every dependency required for safe modularization of `production/Index.html`.
+
+Current Deliverable
+
+DependencyGraph
 
 ---
 
-# Completed Engineering Foundation
+# Engineering Progress
 
-Completed:
-
-- Repository Foundation
-- Documentation Foundation
-- Engineering Governance Foundation
-- Engineering Methodology Foundation
-- AI Engineering Foundation
-- Workspace Foundation
-- Parser Foundation
-- Registry Foundation
-- Analyzer Foundation
-- Knowledge Foundation
-- Desktop Runtime Foundation
+| Phase | Status |
+|---------|--------|
+| Phase 1 — Source Discovery | COMPLETE |
+| Phase 2 — Dependency Extraction | IN PROGRESS |
+| Phase 3 — Module Detection | NOT STARTED |
+| Phase 4 — Coupling Analyzer | NOT STARTED |
+| Phase 5 — Extraction Planner | NOT STARTED |
+| Phase 6 — Safe Modularizer | NOT STARTED |
+| Phase 7 — Verification | NOT STARTED |
 
 ---
 
-# Completed Milestones
+# Completed Deliverables
 
-## M-01
+Completed engineering deliverables:
 
-Launch Bukit Prago Desktop Application
+- Function Registry
+- Global Variable Registry
 
-### Status
-
-COMPLETE
-
-FROZEN
-
-### Achievements
-
-- BukitPrago.exe
-- Windows Desktop Runtime
-- Microsoft Edge WebView2 Integration
-- Desktop Application Launch
-- Production Application Accessible from Desktop
+These deliverables are generated directly from the production source code.
 
 ---
 
-# Current Milestone
+# Current Engineering Focus
 
-## M-02
+The current engineering effort is focused exclusively on producing a complete DependencyGraph.
 
-Desktop Stabilization
+The DependencyGraph SHALL include:
 
-### Status
+- Function Call Graph
+- Global Variable Access Graph
+- DOM Access Graph
+- Browser API Graph
+- google.script.run Graph
 
-READY FOR FREEZE
-
-### Completed
-
-- Stable Desktop Runtime
-- Splash Screen
-- Loading Indicator
-- Offline Detection
-- Error Handling
-- Repository Cleanup
-- Build PASS
-- Production Behaviour Preserved
-
-### Engineering Decisions
-
-The following items were intentionally excluded from M-02:
-
-- About Dialog
-- Settings
-
-Installer remains a mandatory Release deliverable and will be implemented after the application reaches production maturity.
+No engineering work outside this objective shall become a project priority.
 
 ---
 
-# Engineering Status
+# Behaviour Preservation
 
-Current engineering progress:
+The production application SHALL NOT change during this phase.
 
-| Component | Status |
-|-----------|--------|
-| Repository Foundation | COMPLETE |
-| Documentation Foundation | COMPLETE |
-| Engineering Governance | COMPLETE |
-| AI Engineering Foundation | COMPLETE |
-| Workspace | COMPLETE |
-| Parser | COMPLETE |
-| Registry | COMPLETE |
-| Analyzer | COMPLETE |
-| Knowledge Foundation | COMPLETE |
-| Desktop Runtime | COMPLETE |
-| Desktop Application Launch | COMPLETE |
-| Desktop Stabilization | READY FOR FREEZE |
-| Operational Verification | NOT STARTED |
+All engineering work is performed through static analysis.
+
+Behaviour Preservation remains mandatory.
 
 ---
 
@@ -196,55 +148,76 @@ CURRENT_WORK.md
 
 This document defines:
 
-- Current Phase
-- Current Milestone
+- Current Sprint
 - Current Objective
-- Current Priority
 - Current Deliverables
 - Definition of Done
 
 ---
 
-# Next Planned Milestone
+# Repository Status
 
-M-03
+| Component | Status |
+|-----------|--------|
+| Production Application | STABLE |
+| Source Discovery | COMPLETE |
+| Function Registry | COMPLETE |
+| Global Variable Registry | COMPLETE |
+| Dependency Extraction | ACTIVE |
+| Module Detection | NOT STARTED |
+| Coupling Analyzer | NOT STARTED |
+| Extraction Planner | NOT STARTED |
+| Safe Modularizer | NOT STARTED |
+| Verification | NOT STARTED |
 
-Operational Verification
+---
 
-This milestone SHALL NOT begin before M-02 has been officially frozen.
+# Next Engineering Target
+
+Phase 3
+
+Module Detection
+
+This phase SHALL begin only after Dependency Extraction has been completed and validated.
 
 ---
 
 # Related Documentation
 
-Current Engineering Contract
+Project Context
 
 ```text
-CURRENT_WORK.md
+docs/00_PROJECT_CONTEXT.md
 ```
 
-Project Roadmap
+Architecture
+
+```text
+docs/02_ARCHITECTURE.md
+```
+
+Engineering Methodology
+
+```text
+docs/09_ENGINEERING_METHODOLOGY.md
+```
+
+Engineering Playbook
+
+```text
+docs/11_ENGINEERING_PLAYBOOK.md
+```
+
+Roadmap
 
 ```text
 docs/04_ROADMAP.md
 ```
 
-Architecture Decisions
+Current Work
 
 ```text
-docs/03_ARCHITECTURE_DECISIONS.md
-```
-
-AI Startup Guide
-
-```text
-docs/07_AI_STARTUP_GUIDE.md
-```
-
-Repository Standard
-
-```text
-docs/12_REPOSITORY_STANDARD.md
+CURRENT_WORK.md
 ```
 
 ---
@@ -257,7 +230,7 @@ Project State
 
 Version
 
-6.1
+7.0
 
 Status
 

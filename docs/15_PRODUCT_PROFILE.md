@@ -2,7 +2,7 @@
 
 # PRODUCT PROFILE
 
-Version : 2.0
+Version : 2.1
 
 Status : OFFICIAL
 
@@ -68,9 +68,9 @@ The Bukit Prago Operational Application provides operational support for plantat
 
 ---
 
-# Product Architecture
+# Product Deployment Architecture
 
-The BPV4 repository consists of three complementary engineering layers.
+The product is deployed through three complementary engineering layers.
 
 ```text
 Bukit Prago Operational Application
@@ -84,7 +84,9 @@ BPV4 Engineering Platform
 
 The Bukit Prago Operational Application remains the primary product.
 
-The Desktop Runtime and BPV4 Engineering Platform exist only to support the product.
+The Desktop Runtime provides a Windows execution environment while preserving production behaviour.
+
+The BPV4 Engineering Platform supports the engineering lifecycle without becoming part of the production application.
 
 ---
 
@@ -146,39 +148,12 @@ Microsoft Edge WebView2
 
 ---
 
-# Repository Structure
+# Product Location
 
 ```text
 apps/
     bukit-prago/
     bpv4-desktop/
-
-packages/
-docs/
-tests/
-tools/
-```
-
----
-
-# Current Engineering Status
-
-The current engineering contract is defined in:
-
-```text
-CURRENT_WORK.md
-```
-
-Current project progress is defined in:
-
-```text
-docs/01_PROJECT_STATE.md
-```
-
-Future engineering direction is defined in:
-
-```text
-docs/04_ROADMAP.md
 ```
 
 ---
@@ -187,26 +162,14 @@ docs/04_ROADMAP.md
 
 The product SHALL:
 
-- remain the Product SSOT;
+- remain the Product Single Source of Truth (Product SSOT);
 - preserve operational behaviour;
-- remain backward compatible;
+- remain backward compatible whenever practical;
 - remain available for daily operational activities.
 
-Desktop Runtime SHALL support the product without modifying production behaviour.
+The Desktop Runtime SHALL preserve production behaviour.
 
-Engineering Platform SHALL support engineering activities without modifying production behaviour.
-
----
-
-# Engineering Priority
-
-Engineering SHALL always follow this order.
-
-1. Product
-2. Current Engineering Contract
-3. Operational Stability
-4. Product Preservation
-5. Continuous Improvement
+The BPV4 Engineering Platform SHALL support engineering activities without modifying the production application.
 
 ---
 
@@ -236,16 +199,16 @@ Architecture Decisions
 docs/03_ARCHITECTURE_DECISIONS.md
 ```
 
-Current Engineering Contract
-
-```text
-CURRENT_WORK.md
-```
-
 Information Ownership
 
 ```text
 docs/13_INFORMATION_OWNERSHIP.md
+```
+
+Current Engineering Contract
+
+```text
+CURRENT_WORK.md
 ```
 
 ---
@@ -258,7 +221,7 @@ Product Profile
 
 Version
 
-2.0
+2.1
 
 Status
 

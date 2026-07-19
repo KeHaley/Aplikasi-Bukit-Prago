@@ -2,7 +2,7 @@
 
 # ARCHITECTURE
 
-Version : 5.2
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -12,49 +12,19 @@ State : ACTIVE
 
 # Purpose
 
-Define the official architecture of the BPV4 project.
+Define the official architecture of the BPV4 Modularization Engine.
 
-This document defines the engineering platform architecture, repository architecture, engineering layers, component responsibilities, dependency rules and runtime architecture supporting the Bukit Prago Operational Application.
-
----
-
-# Engineering Platform
-
-BPV4_MASTER is the official Engineering Platform for the Bukit Prago Operational Application.
-
-The repository is developed as one integrated engineering platform.
-
-Every engineering capability exists to support one common objective:
-
-Restore.
-
-Launch.
-
-Operate.
-
-Preserve.
-
-Continuously improve.
-
-The Bukit Prago Operational Application.
-
-Engineering capabilities are NOT independent products.
-
-They are integrated engineering components working together within one engineering platform.
-
-The Bukit Prago Operational Application remains the only primary product.
+This document defines the engineering architecture responsible for safely modularizing the Bukit Prago Operational Application while preserving identical behaviour.
 
 ---
 
-# Architecture Philosophy
+# Architecture Goal
 
-BPV4 follows a product-centric architecture.
+The architecture exists to support one objective:
 
-The Bukit Prago Operational Application is the center of the engineering ecosystem.
+Safely modularize the production application's `Index.html`.
 
-Every engineering component exists to support, protect and improve the Product SSOT.
-
-Engineering SHALL always prioritize the product over engineering infrastructure.
+Every engineering component SHALL directly contribute to that objective.
 
 ---
 
@@ -63,193 +33,227 @@ Engineering SHALL always prioritize the product over engineering infrastructure.
 Official Product
 
 ```text
-apps/bukit-prago
+apps/Bukit Prago
 ```
 
-The official production application.
+The Bukit Prago Operational Application.
 
 This directory is the Product Single Source of Truth (Product SSOT).
 
+The production application SHALL remain preserved.
+
 ---
 
-# Desktop Runtime
+# Engineering Product
 
-Official Desktop Runtime
+Official Engineering Product
 
 ```text
-apps/bpv4-desktop
+engine/
 ```
 
-The official Windows Desktop Runtime.
+The BPV4 Modularization Engine.
 
-Responsibilities
-
-- Launch the production application.
-- Host Microsoft Edge WebView2.
-- Integrate with the Windows desktop environment.
-- Preserve production behaviour.
-
-The Desktop Runtime is an engineering capability.
-
-It is NOT the primary product.
+The engine analyzes the production source code, discovers dependencies, detects module boundaries, generates extraction plans, produces JavaScript modules, and verifies behavioural equivalence.
 
 ---
 
 # Repository Architecture
 
-BPV4_MASTER is organized as one integrated engineering platform.
-
 ```text
-BPV4_MASTER
+BPV4_MASTER/
+
+├── apps/
+│   └── Bukit Prago/
 │
-├── Product
-│   └── apps/
-│       ├── bukit-prago
-│       └── bpv4-desktop
+├── engine/
 │
-├── Engineering Components
-│   ├── packages/
-│   ├── docs/
-│   ├── tests/
-│   └── tools/
+├── docs/
 │
-└── Engineering Assets
-    ├── blueprint/
-    ├── archive/
-    ├── patches/
-    └── other engineering resources
+├── artifacts/
+│
+├── archive/
+│
+└── tests/
 ```
-
-Additional engineering directories MAY exist.
-
-As long as they support the Product SSOT and remain consistent with the engineering platform architecture.
-
-The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
-
-Engineering activities are performed using local Working Copies synchronized with the official repository.
 
 ---
 
-# Repository Layers
+# Engineering Layers
 
-## Layer 1 — Product
+## Layer 1 — Production Application
 
 ```text
-apps/bukit-prago
+apps/Bukit Prago
 ```
 
-Official production application.
+The Product SSOT.
 
-Product Single Source of Truth.
+No engineering component may modify application behaviour during analysis.
 
 ---
 
-## Layer 2 — Desktop Runtime
+## Layer 2 — Modularization Engine
 
 ```text
-apps/bpv4-desktop
+engine/
 ```
 
-Official Windows Desktop Runtime.
+Responsible for:
 
-Responsible for launching and hosting the Product SSOT.
+- Source Discovery
+- Static Analysis
+- Function Registry
+- Global Variable Registry
+- Dependency Extraction
+- Module Detection
+- Coupling Analysis
+- Extraction Planning
+- Safe Modularization
+- Verification
 
 ---
 
-## Layer 3 — Engineering Components
+## Layer 3 — Artifacts
 
 ```text
-packages/
+artifacts/
 ```
 
-Reusable engineering libraries.
+Automatically generated engineering outputs.
 
-Examples
+Examples:
 
-- workspace
-- parser
-- analyzer
-- knowledge
-- documentation
-- deployment
+- Function Registry
+- Global Variable Registry
+- Dependency Graph
+- Module Candidate
+- Module Metrics
+- Extraction Plan
+
+Artifacts SHALL NOT be edited manually.
 
 ---
 
 ## Layer 4 — Documentation
 
-Official engineering documentation.
+```text
+docs/
+```
 
-Official engineering governance.
+Active engineering documentation.
 
-Permanent engineering knowledge.
-
-Engineering Documentation Single Source of Truth (Documentation SSOT).
+Documentation defines engineering intent, architecture, and project governance.
 
 ---
 
-## Layer 5 — Verification
+## Layer 5 — Archive
+
+```text
+archive/
+```
+
+Historical documentation.
+
+Archive is read-only.
+
+Archived documents SHALL NOT become active engineering references unless explicitly requested.
+
+---
+
+## Layer 6 — Verification
 
 ```text
 tests/
 ```
 
-Testing and verification.
+Verification and regression testing.
+
+Responsible for confirming that modularization preserves application behaviour.
 
 ---
 
-## Layer 6 — Engineering Utilities
+# Engineering Pipeline
+
+The Modularization Engine operates through the following pipeline.
 
 ```text
-tools/
+Production Source Code
+
+↓
+
+Source Discovery
+
+↓
+
+Function Registry
+
+↓
+
+Global Variable Registry
+
+↓
+
+Dependency Extraction
+
+↓
+
+Dependency Graph
+
+↓
+
+Module Detection
+
+↓
+
+Module Candidate
+
+↓
+
+Coupling Analysis
+
+↓
+
+Module Metrics
+
+↓
+
+Extraction Planner
+
+↓
+
+Extraction Plan
+
+↓
+
+Safe Modularizer
+
+↓
+
+JavaScript Modules
+
+↓
+
+Verification
 ```
 
-Engineering support utilities.
-
----
-
-# Runtime Architecture
-
-```text
-BukitPrago.exe
-
-↓
-
-Windows Forms
-
-↓
-
-Microsoft Edge WebView2
-
-↓
-
-Google Apps Script
-
-↓
-
-Bukit Prago Operational Application
-```
+Every stage consumes evidence produced by the previous stage.
 
 ---
 
 # Dependency Architecture
 
-All engineering dependencies SHALL move toward the Product SSOT.
+Engineering dependencies SHALL always move toward the production source code.
 
 ```text
-Engineering Components
+Engine
 
 ↓
 
-Desktop Runtime
-
-↓
-
-Product SSOT
+Production Source Code
 ```
 
-Engineering infrastructure MAY depend on other engineering components.
-
-The Product SSOT SHALL NEVER depend on engineering infrastructure.
+The production application SHALL NEVER depend on the engineering engine.
 
 ---
 
@@ -258,47 +262,47 @@ The Product SSOT SHALL NEVER depend on engineering infrastructure.
 Allowed
 
 ```text
-Engineering Components
+Engine
 
 ↓
 
-Engineering Components
+Production Source Code
 ```
 
 Allowed
 
 ```text
-Desktop Runtime
+Verification
 
 ↓
 
-Product SSOT
+Artifacts
+```
+
+Allowed
+
+```text
+Documentation
+
+↓
+
+Artifacts
 ```
 
 Prohibited
 
 ```text
-Product SSOT
+Production Source Code
 
 ↓
 
-Desktop Runtime
+Engine
 ```
 
 Prohibited
 
 ```text
-Product SSOT
-
-↓
-
-Engineering Components
-```
-
-Prohibited
-
-```text
-Product SSOT
+Production Source Code
 
 ↓
 
@@ -308,71 +312,52 @@ Documentation
 Prohibited
 
 ```text
-Product SSOT
+Production Source Code
 
 ↓
 
 Tests
 ```
 
-Prohibited
-
-```text
-Product SSOT
-
-↓
-
-Tools
-```
-
 Circular dependencies are prohibited.
 
 ---
 
-# Engineering Platform Principles
+# Engineering Principles
 
-BPV4_MASTER SHALL operate as one integrated engineering platform.
+The architecture permanently follows these principles.
 
-Engineering capabilities SHALL:
-
-- cooperate;
-- share engineering knowledge;
-- preserve the Product SSOT;
-- remain modular;
-- remain loosely coupled;
-- support the active engineering contract.
-
-Engineering capabilities SHALL NOT become independent products unless explicitly defined by the Project Owner.
+- Source Code First
+- Evidence First
+- Static Analysis
+- Behaviour Preservation
+- Safe Refactoring
+- Incremental Development
+- Repeatable Engineering
 
 ---
 
-# Product Preservation
+# Behaviour Preservation
 
-The Product SSOT SHALL remain protected.
+Behaviour Preservation is the highest engineering constraint.
 
-Engineering improvements SHOULD be implemented outside the production application whenever practical.
-
-Desktop Runtime SHALL evolve independently while preserving production behaviour.
-
----
-
-# Extension Principles
-
-Engineering SHALL:
-
-- extend;
-- integrate;
-- preserve.
-
-Engineering SHALL NOT:
-
-- redesign the production application;
-- modify production behaviour unintentionally;
-- tightly couple engineering components with the Product SSOT.
+No engineering activity shall intentionally change production behaviour before verification has confirmed behavioural equivalence.
 
 ---
 
 # Related Documentation
+
+Project Context
+
+```text
+docs/00_PROJECT_CONTEXT.md
+```
+
+Project State
+
+```text
+docs/01_PROJECT_STATE.md
+```
 
 Engineering Methodology
 
@@ -380,28 +365,22 @@ Engineering Methodology
 docs/09_ENGINEERING_METHODOLOGY.md
 ```
 
-Engineering Workflow
+Engineering Playbook
 
 ```text
 docs/11_ENGINEERING_PLAYBOOK.md
 ```
 
-Architecture Decisions
+Roadmap
 
 ```text
-docs/03_ARCHITECTURE_DECISIONS.md
+docs/04_ROADMAP.md
 ```
 
-Repository Standard
+Current Work
 
 ```text
-docs/12_REPOSITORY_STANDARD.md
-```
-
-Information Ownership
-
-```text
-docs/13_INFORMATION_OWNERSHIP.md
+CURRENT_WORK.md
 ```
 
 ---
@@ -410,15 +389,12 @@ docs/13_INFORMATION_OWNERSHIP.md
 
 The architecture is considered successful when:
 
-- the engineering platform is understood as one integrated system;
-- repository responsibilities are clearly separated;
-- the Product SSOT remains protected;
-- the Source Code SSOT remains protected;
-- the Desktop Runtime remains independent;
-- engineering capabilities remain integrated;
-- dependencies remain consistent;
-- engineering components remain modular;
-- future engineering expansion can be implemented without impacting the production application.
+- every engineering component directly supports modularization;
+- dependencies are extracted automatically;
+- module boundaries are identified safely;
+- modularization can be performed incrementally;
+- generated modules preserve identical behaviour;
+- verification confirms zero broken references.
 
 ---
 
@@ -430,7 +406,7 @@ Architecture
 
 Version
 
-5.2
+6.0
 
 Status
 

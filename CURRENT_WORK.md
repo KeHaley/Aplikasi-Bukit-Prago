@@ -2,7 +2,7 @@
 
 # CURRENT WORK
 
-Version : 5.1
+Version : 6.0
 
 Status : ACTIVE
 
@@ -12,17 +12,19 @@ State : LOCKED
 
 # Purpose
 
-Define the only active engineering contract.
+Define the active engineering contract of the BPV4 Modularization Engine.
+
+This document is the Operational Single Source of Truth (Operational SSOT).
 
 Every AI and engineer SHALL continue implementation from this document.
 
-This document is the Operational Single Source of Truth (Operational SSOT).
+If this document conflicts with any other document, this document takes precedence for day-to-day engineering work.
 
 ---
 
 # Current Mission
 
-Stabilize the Bukit Prago Desktop Application.
+Build the BPV4 Modularization Engine capable of safely modularizing the Bukit Prago Operational Application while preserving identical behaviour.
 
 Nothing has higher priority.
 
@@ -30,23 +32,32 @@ Nothing has higher priority.
 
 # Current Phase
 
-Desktop Stabilization
+Phase 2
 
----
-
-# Current Milestone
-
-M-02
-
-Desktop Stabilization
+Dependency Extraction
 
 ---
 
 # Current Objective
 
-Stabilize the Bukit Prago Desktop Application while preserving the Product SSOT.
+Generate a complete Dependency Graph from the production application's `Index.html`.
 
-Desktop improvements SHALL NOT modify production behaviour.
+The Dependency Graph SHALL become the primary engineering artifact for all subsequent modularization activities.
+
+---
+
+# Current Deliverables
+
+The current phase SHALL produce:
+
+- Function Call Graph
+- Global Variable Access Graph
+- DOM Access Graph
+- Browser API Dependency Graph
+- `google.script.run` Dependency Graph
+- Unified Dependency Graph
+
+All artifacts SHALL be generated automatically from the production source code.
 
 ---
 
@@ -54,54 +65,26 @@ Desktop improvements SHALL NOT modify production behaviour.
 
 ONLY ONE
 
-Stabilize the Desktop Runtime.
+Complete Dependency Extraction.
 
-Current implementation SHALL focus on:
+Every implementation SHALL directly contribute to generating an accurate Dependency Graph.
 
-- Splash Screen
-- Loading Indicator
-- Offline Detection
-- Error Handling
-
-The following items are intentionally excluded from M-02:
-
-- About Dialog
-- Settings
-
-Installer remains a mandatory project deliverable but SHALL be implemented during the Release phase after the Desktop Runtime and the Bukit Prago Application have reached production maturity.
-
-No work outside this priority SHALL take precedence.
-
----
-
-# Current Deliverables
-
-This milestone SHALL produce:
-
-- Stable Desktop Runtime
-- Splash Screen
-- Loading Screen
-- Offline Detection
-- Error Handling
-- Production behaviour preserved
-- Build PASS
-- Typecheck PASS
-
-Installer is NOT part of M-02.
-
-Installer SHALL be implemented during the Release phase after the application has reached production readiness.
+Activities outside this objective SHALL NOT take priority.
 
 ---
 
 # Current Constraints
 
-During this milestone:
+During this phase:
 
-- DO NOT modify `apps/bukit-prago` unless explicitly instructed by the Project Owner.
-- Preserve production behaviour.
-- Desktop Runtime SHALL remain independent from the Product SSOT.
-- Avoid unnecessary architectural changes.
-- Do NOT introduce native Desktop UI that changes the existing user experience without explicit approval.
+- DO NOT modify the production application's behaviour.
+- DO NOT manually edit the production source code unless explicitly approved by the Project Owner.
+- DO NOT begin module extraction.
+- DO NOT split production files.
+- DO NOT rename production functions or variables.
+- DO NOT introduce architectural redesign unrelated to dependency extraction.
+
+The production application remains the Product SSOT.
 
 ---
 
@@ -111,10 +94,11 @@ Before implementation:
 
 - validate the repository;
 - verify the Product SSOT;
-- verify the Desktop Runtime;
+- verify the current engineering phase;
+- review the latest architecture decisions;
 - follow the Engineering Playbook.
 
-Repository validation is defined in:
+Repository standards are defined in:
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
@@ -130,38 +114,67 @@ docs/11_ENGINEERING_PLAYBOOK.md
 
 # Engineering Decisions
 
-The following decisions are LOCKED for M-02:
+The following decisions are LOCKED during Phase 2:
 
-- Desktop Runtime acts only as the native host.
-- The primary user interface remains the Bukit Prago Web Application.
-- Native desktop menus (About, Settings, etc.) are intentionally omitted.
-- Desktop Runtime shall remain lightweight and focused on stability.
-- Avoid feature additions without demonstrated operational value.
-- Installer remains a mandatory Release deliverable and SHALL NOT be implemented before the application reaches production maturity.
+- Source code is the only engineering evidence.
+- Dependency extraction SHALL use static analysis.
+- Dependency Graph SHALL be generated automatically.
+- Manual dependency mapping is prohibited.
+- Behaviour Preservation is mandatory.
+- Module extraction SHALL NOT begin before Dependency Extraction is complete.
 
 ---
 
 # Definition of Done
 
-The current milestone is complete when:
+The current phase is complete when:
 
-- Desktop Runtime is stable;
-- planned deliverables are complete;
-- production behaviour remains compatible;
-- Build PASS;
-- Typecheck PASS;
+- every dependency has been extracted;
+- the Dependency Graph has been generated successfully;
+- engineering artifacts are reproducible;
+- no production behaviour has been modified;
+- validation passes;
 - required documentation has been updated;
-- Project Owner confirms PASS.
+- the Project Owner confirms PASS.
 
 ---
 
-# Next Milestone
+# Next Phase
 
-M-03
+Phase 3
 
-Operational Verification
+Module Detection
 
-The next milestone SHALL NOT begin before the current milestone is completed and frozen.
+Module Detection SHALL NOT begin until Dependency Extraction has been completed, validated, and frozen.
+
+---
+
+# AI Startup
+
+If you are an AI continuing this project:
+
+Current Priority
+
+Dependency Extraction.
+
+Your immediate objective is to generate a complete Dependency Graph.
+
+Do NOT redesign the architecture.
+
+Do NOT perform modularization.
+
+Do NOT modify production behaviour.
+
+Read this document together with:
+
+```text
+docs/01_PROJECT_STATE.md
+docs/02_ARCHITECTURE.md
+docs/03_ARCHITECTURE_DECISIONS.md
+docs/04_ROADMAP.md
+```
+
+Continue implementation only within the scope defined by this engineering contract.
 
 ---
 
@@ -173,18 +186,18 @@ Current Work
 
 Version
 
-5.1
+6.0
 
-State
+Status
 
 ACTIVE
 
-Current Milestone
+State
 
-M-02
+LOCKED
 
-Status
+Current Phase
 
-Status
+Phase 2
 
-FROZEN
+Dependency Extraction

@@ -2,7 +2,7 @@
 
 Engineering Platform for the Bukit Prago Operational Application.
 
-Version : 6.1
+Version : 6.2
 
 Status : OFFICIAL
 
@@ -12,11 +12,11 @@ State : ACTIVE
 
 # Purpose
 
-BPV4_MASTER provides the official engineering platform used to restore, launch, operate, verify, preserve and continuously improve the Bukit Prago Operational Application.
+BPV4_MASTER provides the official engineering platform used to restore, launch, operate, verify, preserve, and continuously improve the Bukit Prago Operational Application.
 
 The Bukit Prago Operational Application is the primary product of the project.
 
-All engineering capabilities exist only to support that product.
+All engineering capabilities exist solely to support that product.
 
 ---
 
@@ -33,19 +33,6 @@ Preserve.
 Continuously Improve.
 
 The Bukit Prago Operational Application through disciplined software engineering.
-
----
-
-# Project Principles
-
-The project follows these permanent principles.
-
-- Product First
-- Repository First
-- Preserve the Product
-- Evidence First
-- Knowledge First
-- Continuous Improvement
 
 ---
 
@@ -72,9 +59,7 @@ Additional engineering directories MAY exist when they support the Product SSOT.
 
 The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
 
-Engineering activities are performed using local Working Copies synchronized with the official repository.
-
-Implementation SHALL always continue from the latest approved repository.
+All engineering work SHALL originate from and be synchronized with the official repository.
 
 ---
 
@@ -86,7 +71,7 @@ Official Product
 apps/bukit-prago
 ```
 
-Official Product Single Source of Truth (Product SSOT).
+This directory contains the official Product Single Source of Truth (Product SSOT).
 
 ---
 
@@ -98,7 +83,7 @@ Official Desktop Runtime
 apps/bpv4-desktop
 ```
 
-Official Windows Desktop Runtime supporting the Product SSOT.
+This runtime provides the official Windows execution environment for the Product SSOT.
 
 ---
 
@@ -108,69 +93,36 @@ The `docs/` directory contains the official engineering documentation.
 
 Documentation is the Engineering Documentation Single Source of Truth (Documentation SSOT).
 
-Every engineering activity SHALL follow the official documentation.
+All engineering decisions SHALL follow the appropriate owner document.
 
 ---
 
 # Current Engineering Contract
 
-The active engineering contract is defined only in:
+The active engineering contract is defined in:
 
 ```text
 CURRENT_WORK.md
 ```
 
-This document is the Operational Single Source of Truth.
-
-It defines:
-
-- Current Phase
-- Current Milestone
-- Current Objective
-- Current Priority
-- Current Deliverables
-- Definition of Done
-
-No other document SHALL duplicate this operational information.
-
----
-
-# AI Startup Sequence
-
-Every engineer or AI SHALL follow the official startup procedure.
-
-Read the documentation in the following order.
-
-1. README.md
-2. docs/00_PROJECT_CONTEXT.md
-3. docs/15_PRODUCT_PROFILE.md
-4. docs/01_PROJECT_STATE.md
-5. docs/10_PROJECT_INTENT.md
-6. docs/04_ROADMAP.md
-7. docs/09_ENGINEERING_METHODOLOGY.md
-8. docs/06_AI_ASSISTANT_POLICY.md
-9. docs/13_INFORMATION_OWNERSHIP.md
-10. CURRENT_WORK.md
-11. docs/11_ENGINEERING_PLAYBOOK.md
-12. docs/07_AI_STARTUP_GUIDE.md
-13. docs/08_DOCUMENTATION_STANDARD.md
-
-Do not skip documents.
+This document is the Operational Single Source of Truth (Operational SSOT).
 
 ---
 
 # Getting Started
 
-Every engineer or AI SHALL:
+Before contributing to the project:
 
-1. Validate the repository.
-2. Validate the Source Code SSOT.
-3. Complete the official startup procedure.
-4. Verify the Product SSOT.
-5. Verify the Desktop Runtime.
-6. Read CURRENT_WORK.md.
-7. Understand the active engineering contract.
-8. Continue the active engineering milestone.
+1. Read this README.
+2. Complete the official startup procedure.
+3. Read the active engineering contract.
+4. Continue the active engineering milestone.
+
+The official startup procedure is defined in:
+
+```text
+docs/07_AI_STARTUP_GUIDE.md
+```
 
 ---
 
@@ -198,10 +150,22 @@ Project Context
 docs/00_PROJECT_CONTEXT.md
 ```
 
+Product Profile
+
+```text
+docs/15_PRODUCT_PROFILE.md
+```
+
 Architecture
 
 ```text
 docs/02_ARCHITECTURE.md
+```
+
+Project Intent
+
+```text
+docs/10_PROJECT_INTENT.md
 ```
 
 Repository Standard
@@ -232,7 +196,7 @@ README
 
 Version
 
-6.1
+6.2
 
 Status
 

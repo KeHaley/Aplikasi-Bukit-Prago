@@ -2,7 +2,7 @@
 
 # INFORMATION OWNERSHIP
 
-Version : 2.2
+Version : 3.0
 
 Status : OFFICIAL
 
@@ -12,11 +12,11 @@ State : ACTIVE
 
 # Purpose
 
-Define the official information ownership model of the BPV4 project.
+Define the official Information Ownership model of the BPV4 Modularization Engine.
 
 Every important information SHALL have exactly one owner document.
 
-Other documents MAY reference the information but SHALL NOT duplicate or redefine it.
+Other documents MAY reference the information but SHALL NOT redefine or duplicate it.
 
 This document establishes the Information Single Source of Truth (Information SSOT).
 
@@ -24,80 +24,53 @@ This document establishes the Information Single Source of Truth (Information SS
 
 # Philosophy
 
+Information Ownership follows one simple principle.
+
+```text
 One Information
-
-↓
-
+        ↓
 One Owner
-
-↓
-
+        ↓
 Many References
-
-↓
-
+        ↓
 No Duplication
+```
+
+Every information domain SHALL have exactly one authoritative owner.
 
 ---
 
 # Ownership Principles
 
-Information ownership SHALL follow these principles.
+Every AI and engineer SHALL follow these principles.
 
-- Every important information has exactly one owner.
-- Owner documents define the authoritative information.
+- Every information domain has one owner.
+- Owner documents define the official information.
 - Other documents MAY reference the owner.
-- Duplicate information SHOULD be eliminated whenever practical.
-- Information ownership SHALL remain stable.
-- Documentation SHALL evolve by revising the owner document rather than creating duplicate owner documents whenever practical.
+- Information SHALL NOT be duplicated.
+- Information SHALL remain internally consistent.
+- Existing owner documents SHALL be preferred over creating new ones.
 
 ---
 
 # Information Ownership Matrix
 
-| Information | Owner Document |
-|-------------|----------------|
-| Project Overview | README.md |
+| Information Domain | Owner Document |
+|--------------------|----------------|
 | Project Context | docs/00_PROJECT_CONTEXT.md |
-| Project Intent | docs/10_PROJECT_INTENT.md |
-| Product SSOT | docs/00_PROJECT_CONTEXT.md |
-| Repository Architecture | docs/02_ARCHITECTURE.md |
-| Desktop Runtime | docs/02_ARCHITECTURE.md |
+| Project State | docs/01_PROJECT_STATE.md |
+| System Architecture | docs/02_ARCHITECTURE.md |
 | Architecture Decisions | docs/03_ARCHITECTURE_DECISIONS.md |
 | Engineering Roadmap | docs/04_ROADMAP.md |
+| Current Engineering Contract | CURRENT_WORK.md |
 | Project History | docs/05_CHANGELOG.md |
-| Repository Baselines | docs/99_RELEASE_BASELINE.md |
-| AI Policy | docs/06_AI_ASSISTANT_POLICY.md |
-| AI Native Engineering Policy | docs/06_AI_ASSISTANT_POLICY.md |
-| AI Safe Mode | docs/06_AI_ASSISTANT_POLICY.md |
-| Git Command Guidance | docs/06_AI_ASSISTANT_POLICY.md |
-| AI Responsibility Model | docs/06_AI_ASSISTANT_POLICY.md |
-| Startup Procedure | docs/07_AI_STARTUP_GUIDE.md |
-| AI Startup Protocol | docs/07_AI_STARTUP_GUIDE.md |
-| AI Startup Package | docs/07_AI_STARTUP_GUIDE.md |
-| AI Context Protocol | docs/07_AI_STARTUP_GUIDE.md |
-| AI Session Continuation | docs/07_AI_STARTUP_GUIDE.md |
+| AI Startup | docs/07_AI_STARTUP_GUIDE.md |
 | Documentation Standard | docs/08_DOCUMENTATION_STANDARD.md |
 | Engineering Methodology | docs/09_ENGINEERING_METHODOLOGY.md |
-| Engineering Workflow | docs/11_ENGINEERING_PLAYBOOK.md |
+| Engineering Playbook | docs/11_ENGINEERING_PLAYBOOK.md |
 | Repository Standard | docs/12_REPOSITORY_STANDARD.md |
-| Source Code SSOT | docs/12_REPOSITORY_STANDARD.md |
-| Official Git Repository | docs/12_REPOSITORY_STANDARD.md |
-| Working Copy Standard | docs/12_REPOSITORY_STANDARD.md |
-| Repository Lifecycle | docs/12_REPOSITORY_STANDARD.md |
-| Cloud Backup Policy | docs/12_REPOSITORY_STANDARD.md |
-| Offline Backup Policy | docs/12_REPOSITORY_STANDARD.md |
-| Current Engineering Contract | CURRENT_WORK.md |
-| Current Phase | CURRENT_WORK.md |
-| Current Milestone | CURRENT_WORK.md |
-| Current Objective | CURRENT_WORK.md |
-| Current Priority | CURRENT_WORK.md |
-| Current Deliverables | CURRENT_WORK.md |
-| Definition of Done | CURRENT_WORK.md |
-| Next Milestone | CURRENT_WORK.md |
-| Engineering Progress | docs/01_PROJECT_STATE.md |
-| Completed Milestones | docs/01_PROJECT_STATE.md |
-| Documentation Migration | docs/14_DOCUMENTATION_MIGRATION_PLAN.md |
+| Information Ownership | docs/13_INFORMATION_OWNERSHIP.md |
+| Product Profile | docs/15_PRODUCT_PROFILE.md |
 
 ---
 
@@ -107,91 +80,96 @@ The owner document SHALL:
 
 - define the official information;
 - maintain the information;
-- approve future revisions.
+- receive future revisions.
 
 Other documents:
 
-- MAY reference the owner.
-- SHALL NOT redefine the information.
+- MAY reference the owner;
+- SHALL NOT redefine the information;
 - SHALL NOT contradict the owner.
 
 ---
 
-# Reference Rule
+# Reference Rules
 
 When information already exists in its owner document:
 
 - reference it;
-- do not copy it.
+- do not duplicate it.
 
-References SHALL be preferred over duplication.
+References SHALL always be preferred over copied information.
+
+---
+
+# Updating Documentation
+
+Before updating documentation:
+
+1. Identify the information to be changed.
+2. Locate the owner document.
+3. Update only the owner document.
+4. Review affected references.
+5. Verify repository consistency.
 
 ---
 
 # Conflict Resolution
 
-If conflicting information exists:
+When conflicting information exists:
 
 1. Use the owner document.
-2. Report the inconsistency.
+2. Treat the owner as authoritative.
 3. Update the non-owner document.
-4. Preserve repository consistency.
+4. Restore repository consistency.
 
-Owner documents always have priority.
+The owner document always has priority.
 
 ---
 
-# Ownership Change
+# Ownership Changes
 
-Information ownership SHALL change only when:
+Information Ownership SHALL change only when:
 
+- a new information domain is introduced;
 - repository architecture changes;
 - documentation architecture changes;
 - the Project Owner approves the change.
 
-Routine implementation SHALL NOT change information ownership.
+Routine engineering SHALL NOT modify Information Ownership.
 
 ---
 
-# Documentation Evolution Rule
+# AI Guidance
 
-Repository documentation SHALL evolve by extending the appropriate owner document.
+Before creating a new document, every AI SHALL ask:
 
-Creating a new document SHALL be the last option.
+- Does an owner document already exist?
+- Can the existing owner document be updated?
+- Will this create duplicate information?
 
-A new owner document MAY be introduced only when:
+If the answer indicates duplication,
 
-- a new information domain is introduced;
-- no existing owner document can legitimately own the information;
-- no ownership overlap is introduced;
-- the Project Owner approves the new owner document.
+a new document SHALL NOT be created.
 
 ---
 
 # Success Criteria
 
-Information ownership is complete when:
+Information Ownership is successful when:
 
-- every important information has exactly one owner;
+- every information domain has one owner;
 - duplicate information is minimized;
 - documentation remains internally consistent;
-- documentation is easy to maintain;
-- a new AI can continue the project using documentation only.
+- every AI knows exactly where information belongs.
 
 ---
 
-# Related Documents
+# Related Documentation
 
 Documentation Standard
 
 ```text
 docs/08_DOCUMENTATION_STANDARD.md
-```
-
-Documentation Migration Plan
-
-```text
-docs/14_DOCUMENTATION_MIGRATION_PLAN.md
 ```
 
 Repository Standard
@@ -200,25 +178,13 @@ Repository Standard
 docs/12_REPOSITORY_STANDARD.md
 ```
 
-AI Assistant Policy
-
-```text
-docs/06_AI_ASSISTANT_POLICY.md
-```
-
 AI Startup Guide
 
 ```text
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
-Release Baseline
-
-```text
-docs/99_RELEASE_BASELINE.md
-```
-
-Current Engineering Contract
+Current Work
 
 ```text
 CURRENT_WORK.md
@@ -234,7 +200,7 @@ Information Ownership
 
 Version
 
-2.2
+3.0
 
 Status
 

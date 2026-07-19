@@ -2,7 +2,7 @@
 
 # ENGINEERING METHODOLOGY
 
-Version : 6.1
+Version : 7.1
 
 Status : OFFICIAL
 
@@ -12,214 +12,235 @@ State : ACTIVE
 
 # Purpose
 
-Define the official engineering methodology used throughout the BPV4 project.
+Define the official engineering methodology of the BPV4 Modularization Engine.
 
-Every engineering activity SHALL follow this methodology.
+This document establishes the permanent engineering principles used throughout the project.
+
+The methodology defines how engineering decisions are made.
+
+It does NOT define implementation workflow, project status, or the active engineering contract.
 
 ---
 
 # Engineering Philosophy
 
-Engineering exists to support the Bukit Prago Operational Application.
+The objective of engineering is to safely modularize the Bukit Prago Operational Application while preserving identical behaviour.
 
-The application is always the primary product.
+Engineering decisions SHALL be:
 
-Engineering is successful only when it continuously improves the product while preserving production integrity.
+- evidence-driven;
+- repository-driven;
+- repeatable;
+- behaviour-preserving;
+- necessary.
 
-Engineering SHALL always be repository-driven, evidence-driven, and documentation-driven.
+Engineering SHALL maximize engineering quality while preserving identical external behaviour.
 
 ---
 
-# Core Principles
+# Engineering Principles
 
-The BPV4 project follows these permanent engineering principles.
+Every engineering activity SHALL follow these principles.
 
-- Product First
-- Repository First
+- Source Code First
 - Evidence First
-- Documentation First
-- Preserve the Product
-- Preserve the Repository
-- Working Software First
-- Knowledge First
-- Continuous Improvement
+- Behaviour Preservation
+- Necessary Engineering
+- Static Analysis
+- Incremental Engineering
+- Repeatable Engineering
+- Validation Before Change
+- Single Source of Truth
+- Traceability
 
-These principles are independent of the current milestone.
+These principles remain valid throughout the lifetime of the project.
 
 ---
 
-# Engineering Lifecycle
+# Engineering Method
 
-Engineering follows one continuous lifecycle.
+Engineering SHALL follow the following methodology.
 
 ```text
-Understand
-
-↓
-
-Audit
-
-↓
-
-Plan
-
-↓
-
-Implement
-
-↓
-
-Verify
-
-↓
-
-Review
-
-↓
-
-Freeze
-
-↓
-
-Release
-
-↓
-
 Observe
-
-↓
-
-Improve
-
-↓
-
+        ↓
+Understand
+        ↓
+Analyze
+        ↓
+Plan
+        ↓
+Implement
+        ↓
+Validate
+        ↓
+Review
+        ↓
 Repeat
 ```
 
-This lifecycle applies throughout the lifetime of the project.
+Each step SHALL be completed before progressing to the next.
 
 ---
 
-# Repository First
+# Evidence-Driven Engineering
 
-Engineering SHALL begin from verified repository evidence.
+Engineering decisions SHALL always be based on verified repository evidence.
 
-The official GitHub repository SHALL be treated as the Source Code Single Source of Truth.
+Evidence MAY include:
 
-Repository evidence SHALL always override assumptions.
+- source code;
+- dependency analysis;
+- validation results;
+- generated engineering artifacts.
 
----
-
-# Product Preservation
-
-The Product SSOT SHALL remain protected.
-
-Engineering SHALL preserve production behaviour unless an intentional product change has been approved by the Project Owner.
-
-Whenever practical, engineering improvements SHALL be implemented outside the production application.
-
-# Verification Before Modularization
-
-Behavior-preserving modularization SHALL only begin after:
-
-- operational verification has been completed; and
-- a verified behavior baseline has been established.
-
-Engineering SHALL follow the sequence below whenever structural refactoring of the Product SSOT is planned.
-
-```text
-Operational Verification
-        ↓
-Behavior Baseline Freeze
-        ↓
-Behavior-Preserving Modularization
-```
-
-Analysis, planning and dependency mapping MAY be performed before modularization.
-
-Structural changes to the Product SSOT SHALL NOT begin until the behavior baseline has been frozen.
+Assumptions SHALL NOT become engineering facts.
 
 ---
 
-# Documentation Evolution
+# Behaviour Preservation
 
-Engineering documentation SHALL evolve by revising the appropriate owner document.
+Behaviour Preservation is the highest engineering constraint.
 
-Creation of new documentation SHALL be minimized.
+Engineering SHALL preserve:
 
-Documentation SHALL remain consistent with the Information Ownership model.
+- application behaviour;
+- business logic;
+- user workflow;
+- user interface;
+- visual appearance;
+- data processing;
+- calculations;
+- outputs;
+- APIs;
+- integrations.
 
----
+Engineering SHALL preserve production behaviour unless explicitly approved by the Project Owner.
 
-# Engineering Rules
+Whenever practical, engineering work SHALL occur outside the production source code.
 
-Every engineering activity SHALL:
-
-- preserve the Product SSOT;
-- preserve the Source Code SSOT;
-- preserve repository consistency;
-- preserve documentation consistency;
-- remain backward compatible;
-- minimize unnecessary changes;
-- produce working software;
-- use verified repository evidence;
-- improve engineering knowledge;
-- maintain repository quality.
+From the Product Owner's perspective, the application SHALL behave identically before and after engineering changes.
 
 ---
 
-# Decision Priority
+# Engineering Freedom
 
-Engineering decisions SHALL always follow this order.
+Within the Behaviour Preservation constraint, engineering MAY freely improve the internal implementation.
 
-1. Product
-2. Repository Consistency
-3. Operational Stability
-4. Product Preservation
-5. Source Code SSOT
-6. Working Software
-7. Engineering Productivity
-8. Engineering Convenience
+Engineering MAY:
+
+- reorganize source code;
+- redesign module boundaries;
+- split or merge modules;
+- relocate functions;
+- improve dependencies;
+- improve maintainability;
+- improve readability;
+- improve extensibility;
+- improve testability.
+
+Internal implementation MAY evolve provided that external behaviour remains unchanged.
 
 ---
 
-# Completion Principles
+# Necessary Engineering
 
-An engineering task is considered complete when:
+Every engineering change SHALL address a demonstrated current engineering need.
 
-- the engineering objective has been achieved;
-- production behaviour remains compatible;
-- repository consistency is preserved;
-- Build PASS;
-- Typecheck PASS;
-- documentation has been updated when required;
-- completed milestones have been frozen when applicable;
-- the Project Owner confirms PASS.
+Engineering SHALL NOT introduce new abstractions, modules, utilities, interfaces, or supporting structures solely for possible future use.
+
+Every engineering artifact SHALL provide immediate engineering value by:
+
+- solving a current engineering problem;
+- supporting the current engineering objective;
+- reducing current complexity; or
+- improving current maintainability.
+
+Speculative engineering SHALL be avoided.
+
+---
+
+# Static Analysis
+
+Static analysis is the preferred engineering approach.
+
+Repository understanding SHALL be derived from source code analysis before any implementation begins.
+
+Manual interpretation SHALL be minimized whenever engineering evidence can be generated automatically.
+
+---
+
+# Incremental Engineering
+
+Engineering SHALL progress in small, verifiable increments.
+
+Every completed increment SHALL:
+
+- produce measurable results;
+- remain independently verifiable;
+- preserve repository consistency.
+
+Future engineering SHALL build upon completed engineering results rather than speculative preparation.
+
+---
+
+# Validation
+
+Every engineering change SHALL be validated before continuation.
+
+Validation methods MAY include:
+
+- dependency validation;
+- engineering validation;
+- regression validation;
+- behaviour validation;
+- build validation;
+- typecheck validation.
+
+Only validations applicable to the current engineering activity are required.
+
+---
+
+# Decision Principles
+
+When multiple engineering options exist, preference SHALL be given to the solution that:
+
+1. preserves production behaviour;
+2. solves the current engineering need;
+3. minimizes engineering risk;
+4. relies on repository evidence;
+5. minimizes implementation scope;
+6. improves maintainability;
+7. avoids speculative engineering;
+8. remains repeatable.
 
 ---
 
 # Continuous Improvement
 
-Engineering SHALL continuously improve the product based on verified repository and operational evidence.
+Engineering methodology SHALL continuously evolve while preserving:
 
-Observed operational behaviour SHALL always take priority over assumptions.
+- Product SSOT;
+- Source Code SSOT;
+- repository consistency;
+- documentation consistency.
 
-Engineering methodology SHALL continuously evolve while preserving documentation consistency.
+Methodology improvements SHALL simplify engineering without changing project objectives.
 
 ---
 
 # Related Documentation
 
-AI Assistant Policy
+Project Context
 
 ```text
-docs/06_AI_ASSISTANT_POLICY.md
+docs/00_PROJECT_CONTEXT.md
 ```
 
-AI Startup Guide
+Architecture
 
 ```text
-docs/07_AI_STARTUP_GUIDE.md
+docs/02_ARCHITECTURE.md
 ```
 
 Engineering Playbook
@@ -232,12 +253,6 @@ Repository Standard
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
-```
-
-Information Ownership
-
-```text
-docs/13_INFORMATION_OWNERSHIP.md
 ```
 
 Current Engineering Contract
@@ -256,7 +271,7 @@ Engineering Methodology
 
 Version
 
-6.1
+7.1
 
 Status
 

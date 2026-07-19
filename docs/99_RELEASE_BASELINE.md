@@ -2,7 +2,7 @@
 
 # RELEASE BASELINE
 
-Version : 2.0
+Version : 2.1
 
 Status : OFFICIAL
 
@@ -16,7 +16,7 @@ Record every official project baseline.
 
 This document provides a single reference for identifying the current engineering baseline, completed milestones, frozen documentation and official repository baselines.
 
-It answers one question:
+It answers one question.
 
 What is the current official baseline of the BPV4 project?
 
@@ -99,11 +99,9 @@ Location
 apps/bpv4-desktop
 ```
 
-Technology
+State
 
-- .NET 8
-- Windows Forms
-- Microsoft Edge WebView2
+LOCKED
 
 ---
 
@@ -129,28 +127,6 @@ Git Tag
 
 DOC-V6-FROZEN
 
-Description
-
-Documentation architecture upgraded.
-
-Engineering governance strengthened.
-
-Repository Standard updated.
-
-AI Assistant Policy updated.
-
-AI Startup Guide updated.
-
-Engineering Methodology updated.
-
-Engineering Playbook updated.
-
-Architecture Decisions expanded.
-
-Information Ownership strengthened.
-
-Documentation consistency established.
-
 ---
 
 ## Repository
@@ -175,18 +151,6 @@ Git Tag
 
 REPO-V2-FROZEN
 
-Description
-
-Repository engineering foundation validated.
-
-Source Code SSOT established.
-
-Repository lifecycle documented.
-
-Repository governance strengthened.
-
-Repository validation standardized.
-
 ---
 
 ## Engineering Governance
@@ -206,18 +170,6 @@ COMPLETE
 State
 
 FROZEN
-
-Description
-
-Engineering governance standardized.
-
-Repository First adopted.
-
-Documentation Evolution adopted.
-
-Information Ownership enforced.
-
-Engineering workflow standardized.
 
 ---
 
@@ -243,7 +195,7 @@ Engineering workflow standardized.
 
 ---
 
-# Active Engineering Baseline
+# Current Engineering References
 
 Current Engineering Contract
 
@@ -251,7 +203,7 @@ Current Engineering Contract
 CURRENT_WORK.md
 ```
 
-Current Project Status
+Current Project State
 
 ```text
 docs/01_PROJECT_STATE.md
@@ -270,7 +222,7 @@ docs/04_ROADMAP.md
 A new baseline SHALL be added only when:
 
 - a milestone is completed;
-- documentation is officially frozen;
+- a documentation baseline is officially frozen;
 - a repository engineering baseline is officially established;
 - an engineering governance baseline is officially established;
 - a major architecture baseline is approved;
@@ -296,7 +248,7 @@ Routine engineering work SHALL NOT update this document.
 
 # Related Documents
 
-Current Work
+Current Engineering Contract
 
 ```text
 CURRENT_WORK.md
@@ -336,7 +288,7 @@ Release Baseline
 
 Version
 
-2.0
+2.1
 
 Status
 

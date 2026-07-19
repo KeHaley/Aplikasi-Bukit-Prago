@@ -2,7 +2,7 @@
 
 # REPOSITORY STANDARD
 
-Version : 5.1
+Version : 6.0
 
 Status : OFFICIAL
 
@@ -12,167 +12,180 @@ State : ACTIVE
 
 # Purpose
 
-Define the official repository standard of the BPV4 project.
+Define the official repository standard of the BPV4 Modularization Engine.
 
-This document specifies the official repository model, repository lifecycle, Source Code Single Source of Truth (Source Code SSOT), and the minimum repository validation requirements before any engineering activity may begin.
+This document defines the permanent rules governing repository organization, repository integrity, Source Code SSOT, repository validation, and engineering consistency.
+
+Every AI and engineer SHALL preserve these standards.
 
 ---
 
-# Repository Principle
+# Repository Principles
 
-The repository is the official implementation source.
+The repository is the official engineering workspace.
 
-The official GitHub repository SHALL be the Source Code Single Source of Truth (Source Code SSOT).
+The official GitHub repository is the Source Code Single Source of Truth (Source Code SSOT).
 
-Every engineering activity SHALL use the latest repository approved by the Project Owner.
+Engineering SHALL always begin from the latest approved repository.
 
-The repository SHALL remain internally consistent.
+Repository consistency SHALL always be preserved.
 
 ---
 
 # Repository Authority
 
-The official GitHub repository SHALL be the authoritative source of all BPV4 source code.
-
-The local repository is the official Working Copy used for engineering activities.
-
-Cloud Backup and Offline Backup support repository recovery but SHALL NOT replace the Source Code SSOT.
-
----
-
-# Repository Lifecycle
-
-Repository lifecycle SHALL follow the sequence below.
+Repository authority SHALL follow the hierarchy below.
 
 ```text
-Working Copy
-
-↓
-
-Build
-
-↓
-
-Test
-
-↓
-
-Commit
-
-↓
-
-Push
-
-↓
-
-GitHub Repository (Source Code SSOT)
-
-↓
-
+GitHub Repository
+        ↓
+Local Working Copy
+        ↓
 Cloud Backup
-
-↓
-
+        ↓
 Offline Backup
 ```
 
-Only the GitHub repository represents the official source code baseline.
+Only the GitHub Repository represents the official Source Code SSOT.
+
+Backups exist solely for recovery purposes.
 
 ---
 
 # Repository Structure
 
-The repository SHALL contain the following root directories.
+The repository SHALL remain logically organized.
+
+Primary directories include:
 
 ```text
 apps/
-packages/
+```
+
+Production applications.
+
+```text
+engine/
+```
+
+BPV4 Modularization Engine.
+
+```text
 docs/
+```
+
+Official active documentation.
+
+```text
+archive/
+```
+
+Historical documentation.
+
+Read Only.
+
+```text
 tests/
-tools/
 ```
+
+Validation and regression tests.
+
+Additional directories MAY exist when they directly support engineering.
 
 ---
 
-# Required Applications
+# Repository Classification
 
-The repository SHALL contain:
+Repository contents SHALL be classified as follows.
+
+## Production
+
+Contains operational application source code.
+
+Example:
 
 ```text
-apps/bukit-prago
+apps/Bukit Prago
 ```
 
-Official Product Single Source of Truth (Product SSOT).
+Production behaviour SHALL be preserved.
 
 ---
 
-The repository SHALL contain:
+## Engineering
+
+Contains engineering tools and supporting code.
+
+Example:
 
 ```text
-apps/bpv4-desktop
+engine/
 ```
 
-Official Desktop Runtime.
+Engineering components MAY evolve independently.
 
 ---
 
-# Required Documentation
+## Documentation
 
-The repository SHALL contain:
+Contains active engineering documentation.
 
-```text
-README.md
-CURRENT_WORK.md
-```
-
-and the official documentation directory:
+Example:
 
 ```text
 docs/
 ```
 
-containing at minimum:
+Documentation SHALL follow Information Ownership.
+
+---
+
+## Archive
+
+Contains historical engineering information.
+
+Example:
 
 ```text
-00_PROJECT_CONTEXT.md
-01_PROJECT_STATE.md
-02_ARCHITECTURE.md
-03_ARCHITECTURE_DECISIONS.md
-04_ROADMAP.md
-05_CHANGELOG.md
-06_AI_ASSISTANT_POLICY.md
-07_AI_STARTUP_GUIDE.md
-08_DOCUMENTATION_STANDARD.md
-09_ENGINEERING_METHODOLOGY.md
-10_PROJECT_INTENT.md
-11_ENGINEERING_PLAYBOOK.md
-12_REPOSITORY_STANDARD.md
-13_INFORMATION_OWNERSHIP.md
-14_DOCUMENTATION_MIGRATION_PLAN.md
+archive/
 ```
+
+Archive SHALL NOT become an active engineering reference unless explicitly requested.
+
+---
+
+## Tests
+
+Contains validation assets.
+
+Example:
+
+```text
+tests/
+```
+
+Validation assets SHALL remain consistent with the active repository.
 
 ---
 
 # Repository Validation
 
-Before implementation begins, verify:
+Before implementation begins verify:
 
 - repository structure;
-- required applications;
-- required documentation;
 - Product SSOT;
-- Desktop Runtime;
-- CURRENT_WORK.md;
-- official Git repository;
-- Working Copy consistency.
+- active documentation;
+- CURRENT_WORK;
+- Source Code SSOT;
+- repository consistency.
 
-If any required item is missing:
+If validation fails:
 
 STOP.
 
 Report the inconsistency.
 
-Do not continue implementation.
+Implementation SHALL NOT begin.
 
 ---
 
@@ -180,104 +193,115 @@ Do not continue implementation.
 
 Repository validation SHALL confirm:
 
-- Repository available
-- Repository structure valid
-- Documentation available
-- CURRENT_WORK.md available
-- Product SSOT exists
-- Desktop Runtime exists
-- Product accessible
-- Desktop Runtime accessible
-- GitHub repository available
-- Working Copy available
-- Source Code SSOT confirmed
+- repository available;
+- repository structure valid;
+- Product SSOT exists;
+- CURRENT_WORK exists;
+- active documentation available;
+- repository consistency confirmed;
+- Source Code SSOT confirmed.
 
-Every item SHALL pass before implementation begins.
-
----
-
-# Documentation Consistency
-
-The repository SHALL remain internally consistent.
-
-Documentation, repository structure and engineering contracts SHALL describe the same repository.
-
-Any inconsistency SHALL be reported before implementation.
+Every validation SHALL pass before implementation.
 
 ---
 
 # Repository Rules
 
-Engineering SHALL:
+Every engineering activity SHALL:
 
-- verify repository contents;
-- verify Source Code SSOT;
-- use repository evidence;
-- avoid assumptions;
 - preserve repository consistency;
-- preserve Working Copy consistency.
+- preserve Source Code SSOT;
+- preserve Product SSOT;
+- avoid unnecessary repository changes;
+- avoid duplicate documentation;
+- avoid duplicate engineering artifacts;
+- follow Information Ownership;
+- use repository evidence.
 
-Repository evidence always overrides assumptions.
+Repository evidence SHALL always override assumptions.
 
 ---
 
-# Backup Model
+# Repository Modification Rules
 
-Repository backup SHALL follow the official recovery model.
+Repository changes SHALL remain minimal.
+
+Before creating a new file, verify that:
+
+- an existing owner document cannot be updated;
+- Information Ownership is preserved;
+- duplicate information is not introduced.
+
+Before deleting a file, verify that:
+
+- the file is obsolete;
+- no active references remain;
+- Information Ownership remains valid.
+
+---
+
+# Documentation Rules
+
+Only documents inside:
 
 ```text
-GitHub Repository
-
-↓
-
-Cloud Backup
-
-↓
-
-Offline Backup
+docs/
 ```
 
-Cloud Backup and Offline Backup exist for recovery purposes and SHALL NOT become the official Source Code SSOT.
+represent the active engineering documentation.
+
+Documents inside:
+
+```text
+archive/
+```
+
+are historical references.
+
+They SHALL NOT become active documentation unless explicitly restored.
 
 ---
 
 # Repository Success Criteria
 
-The repository is considered valid when:
+The repository is considered healthy when:
 
-- required directories exist;
-- required applications exist;
-- required documentation exists;
-- Product SSOT exists;
-- Desktop Runtime exists;
-- CURRENT_WORK.md exists;
-- GitHub repository is available;
-- Source Code SSOT is confirmed;
+- repository structure is consistent;
+- Product SSOT is preserved;
+- Source Code SSOT is preserved;
+- Information Ownership is maintained;
+- documentation remains consistent;
 - repository validation passes.
 
 ---
 
 # Related Documentation
 
-Repository architecture
+Architecture
 
 ```text
 docs/02_ARCHITECTURE.md
 ```
 
-AI startup
+AI Startup Guide
 
 ```text
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
-Information ownership
+Engineering Playbook
+
+```text
+docs/11_ENGINEERING_PLAYBOOK.md
+```
+
+Information Ownership
 
 ```text
 docs/13_INFORMATION_OWNERSHIP.md
 ```
 
-Current engineering contract
+Current Work
 
 ```text
 CURRENT_WORK.md
@@ -293,7 +317,7 @@ Repository Standard
 
 Version
 
-5.1
+6.0
 
 Status
 

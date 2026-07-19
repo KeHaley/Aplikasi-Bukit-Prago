@@ -2,7 +2,7 @@
 
 # DOCUMENTATION STANDARD
 
-Version : 5.0
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,31 +12,25 @@ State : ACTIVE
 
 # Purpose
 
-Define the official documentation standard of the BPV4 project.
+Define the official documentation standard of the BPV4 Modularization Engine.
 
-Every project document SHALL follow this standard.
+This document establishes the quality standards that every repository document SHALL satisfy.
 
-Documentation is the permanent engineering knowledge of the project.
+It defines how documentation is written, organized, maintained, evaluated, and improved.
 
 ---
 
 # Documentation Philosophy
 
-Documentation exists to preserve engineering knowledge.
+Documentation is the permanent engineering knowledge of the repository.
 
-Project knowledge SHALL live in documentation.
+Project knowledge SHALL exist in documentation rather than:
 
-Project knowledge SHALL NOT depend on:
-
-- previous conversations;
+- conversation history;
 - AI memory;
 - engineer memory.
 
----
-
-# Primary Objective
-
-Documentation SHALL enable a new AI or engineer to understand the project and continue engineering work without additional explanation.
+Documentation SHALL enable a new AI to continue engineering using the repository alone.
 
 ---
 
@@ -45,218 +39,178 @@ Documentation SHALL enable a new AI or engineer to understand the project and co
 Every document SHALL be:
 
 - accurate;
-- complete;
 - concise;
 - consistent;
-- easy to understand;
-- professional;
-- maintainable.
+- maintainable;
+- evidence-based;
+- implementation-oriented.
+
+Every document SHALL have one primary responsibility.
 
 ---
 
-# Documentation Architecture Principles
+# Document Structure
 
-Documentation SHALL follow the following principles.
+Official documents SHOULD use a consistent structure.
 
-- One Information → One Owner Document.
-- Single Source of Truth (SSOT).
-- Evidence First.
-- Preserve Existing Content.
-- Minimum Necessary Revision.
-- Full File Delivery.
-- Consistency Across Documents.
+When applicable, documents SHOULD contain:
 
-Documentation SHALL evolve incrementally.
+- Purpose
+- Main Content
+- Related Documentation
+- Official Status
 
-Documentation SHALL NOT be rewritten from scratch unless explicitly instructed by the Project Owner.
+Sections SHALL remain relevant to the document's responsibility.
+
+---
+
+# Writing Standards
+
+Documentation SHALL:
+
+- use clear language;
+- avoid unnecessary explanation;
+- avoid duplicated information;
+- use consistent terminology;
+- remain focused on actionable engineering knowledge.
+
+Information SHALL be organized for efficient retrieval by both AI and engineers.
 
 ---
 
 # Documentation Ownership
 
-Every important information SHALL have exactly one owner document.
+Documentation SHALL follow the Information Ownership model.
 
-Other documents MAY reference the information.
+Every information domain SHALL have one owner document.
 
-They SHALL NOT duplicate the information.
-
-Information ownership is defined in:
-
-```text
-docs/13_INFORMATION_OWNERSHIP.md
-```
+Existing owner documents SHALL be updated in preference to creating new documents.
 
 ---
 
-# Documentation Hierarchy
+# Documentation Consistency
 
-The official documentation hierarchy is:
+Documentation SHALL remain internally consistent.
 
-```text
-README.md
+Documentation SHALL NOT:
 
-↓
-
-00_PROJECT_CONTEXT.md
-
-↓
-
-10_PROJECT_INTENT.md
-
-↓
-
-02_ARCHITECTURE.md
-
-↓
-
-03_ARCHITECTURE_DECISIONS.md
-
-↓
-
-09_ENGINEERING_METHODOLOGY.md
-
-↓
-
-06_AI_ASSISTANT_POLICY.md
-
-↓
-
-08_DOCUMENTATION_STANDARD.md
-
-↓
-
-11_ENGINEERING_PLAYBOOK.md
-
-↓
-
-12_REPOSITORY_STANDARD.md
-
-↓
-
-CURRENT_WORK.md
-```
-
-Lower-level documents SHALL NOT contradict higher-level documents.
-
-If conflicts exist, the higher-level document SHALL prevail.
+- contradict owner documents;
+- duplicate engineering knowledge;
+- redefine existing information;
+- introduce conflicting terminology.
 
 ---
 
-# Documentation Structure
+# Documentation Revision Principle
 
-Each document SHALL answer one primary question.
+Documentation SHALL remain stable.
 
-| Document | Primary Question |
-|----------|------------------|
-| README | What is this project? |
-| PROJECT_CONTEXT | Why does this project exist? |
-| PROJECT_INTENT | What is the long-term direction? |
-| ARCHITECTURE | How is the system organized? |
-| CURRENT_WORK | What should be done now? |
-| PROJECT_STATE | What has been completed? |
-| CHANGELOG | What has changed? |
-| ROADMAP | What comes next? |
+A document SHALL be revised only when there is a demonstrable engineering need.
 
----
+Documentation SHALL NOT be revised solely because:
 
-# Documentation Workflow
+- wording can be improved;
+- formatting can be changed;
+- an alternative writing style is preferred;
+- an AI proposes a different organization without measurable engineering benefit.
 
-Every documentation revision SHALL follow:
+Repository stability SHALL be preferred over unnecessary documentation changes.
 
-Audit
-
-↓
-
-Compare
-
-↓
-
-Preserve Existing Content
-
-↓
-
-Minimum Revision
-
-↓
-
-Provide FULL FILE
-
-↓
-
-Review
-
-↓
-
-PASS
-
-↓
-
-Freeze
-
-Documentation SHALL NOT be updated using partial snippets unless explicitly requested by the Project Owner.
+The default decision SHALL be to preserve the existing document.
 
 ---
 
-# Documentation Update Rules
+# Documentation Revision
 
-Documentation SHALL be updated only when:
+Documentation SHALL be revised only when one or more of the following applies:
 
 - engineering knowledge changes;
+- repository governance changes;
 - architecture changes;
-- repository structure changes;
-- engineering governance changes;
-- official engineering contracts change;
-- documentation inconsistency is discovered.
+- engineering methodology changes;
+- documentation quality can be demonstrably improved according to the Engineering Review Checklist.
 
-Routine implementation SHALL NOT trigger unnecessary documentation revisions.
+Routine implementation SHALL NOT trigger unnecessary documentation updates.
 
-Current milestone information SHALL be maintained only by its owner document.
+If no demonstrable engineering improvement exists, the existing document SHALL be preserved.
 
 ---
 
-# Documentation Acceptance Criteria
+# Documentation Quality
 
-Documentation is considered complete when:
+Documentation quality SHALL be evaluated using the Engineering Review Checklist.
 
-- every important information has one owner;
-- documentation is internally consistent;
+A revision is considered an improvement only if it demonstrably improves one or more of the following:
+
+- Single Responsibility
+- Less Duplication
+- Better AI Usability
+- Better Separation of Concerns
+- Higher Signal / Lower Noise
+- Better Maintainability
+- Better Consistency
+- Better Onboarding
+- Future Scalability
+- Stable Information Ownership
+
+Cosmetic, stylistic, or preference-based changes alone SHALL NOT justify documentation revision.
+
+---
+
+# Documentation Lifecycle
+
+Documentation evolves through continuous improvement.
+
+Each approved revision SHALL:
+
+- preserve valid engineering knowledge;
+- improve documentation quality;
+- preserve repository consistency.
+
+Documentation SHALL become more useful over time while remaining stable whenever possible.
+
+---
+
+# Success Criteria
+
+Documentation is considered successful when:
+
+- repository knowledge is complete;
+- documentation remains internally consistent;
+- every information domain has one owner;
 - duplicate information is minimized;
-- project knowledge is preserved;
-- a new AI can continue the project using documentation only.
-
----
-
-# Documentation Freeze
-
-Foundation and Governance documentation SHOULD remain stable.
-
-Operational documentation MAY change according to the active engineering contract.
-
-Documentation SHALL only be revised when its own subject changes.
+- documentation revisions are supported by demonstrable engineering value;
+- a new AI can continue engineering using documentation alone.
 
 ---
 
 # Related Documentation
 
-Information ownership
+AI Assistant Policy
 
 ```text
-docs/13_INFORMATION_OWNERSHIP.md
+docs/06_AI_ASSISTANT_POLICY.md
 ```
 
-Documentation migration
-
-```text
-docs/14_DOCUMENTATION_MIGRATION_PLAN.md
-```
-
-AI startup
+AI Startup Guide
 
 ```text
 docs/07_AI_STARTUP_GUIDE.md
 ```
 
-Current engineering contract
+Engineering Methodology
+
+```text
+docs/09_ENGINEERING_METHODOLOGY.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
+Current Work
 
 ```text
 CURRENT_WORK.md
@@ -272,7 +226,11 @@ Documentation Standard
 
 Version
 
-5.0
+7.0
+
+Status
+
+OFFICIAL
 
 State
 

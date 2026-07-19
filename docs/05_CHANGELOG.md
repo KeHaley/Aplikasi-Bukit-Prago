@@ -2,7 +2,7 @@
 
 # CHANGELOG
 
-Version : 6.1
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,15 +12,112 @@ State : ACTIVE
 
 # Purpose
 
-Record significant project history.
+Record the official engineering history of the BPV4 Modularization Engine.
 
-This document answers one question:
+This document answers one question.
 
-What has changed?
+**What changed?**
 
 The changelog is an append-only historical record.
 
+Its purpose is to record significant engineering events, not to duplicate engineering knowledge that already exists elsewhere in the repository.
+
 Entries SHALL NOT be modified except to correct factual errors.
+
+---
+
+# Changelog Principles
+
+The changelog SHALL:
+
+- record significant engineering milestones;
+- record major architectural changes;
+- record repository governance changes;
+- record documentation evolution;
+- remain concise;
+- reference official documentation rather than duplicate it.
+
+Historical records SHALL describe **what changed**, not **how the system works**.
+
+---
+
+# Entry Structure
+
+Every changelog entry SHOULD follow the same structure.
+
+```text
+Version
+
+Date
+
+Summary
+
+Major Changes
+
+Impact
+
+Related Documents
+
+Milestone (optional)
+
+Notes (optional)
+```
+
+Only sections relevant to the recorded change SHOULD be included.
+
+---
+
+# Version 7.0
+
+Date
+
+YYYY-MM-DD
+
+---
+
+## Summary
+
+Documentation Governance Refresh.
+
+The repository documentation was redesigned to support the BPV4 Modularization Engine as a self-contained engineering repository.
+
+---
+
+## Major Changes
+
+- Documentation architecture reorganized.
+- Governance documentation rewritten.
+- AI onboarding improved.
+- Repository governance simplified.
+- Information Ownership refined.
+- Engineering responsibilities separated into dedicated documents.
+- Documentation quality standards established.
+
+---
+
+## Impact
+
+The repository documentation now provides a complete engineering knowledge base that enables new AI instances to understand, continue, and maintain the project using repository documentation alone.
+
+Documentation responsibilities are now clearly separated, reducing duplication and improving long-term maintainability.
+
+---
+
+## Related Documents
+
+- docs/00_PROJECT_CONTEXT.md
+- docs/01_PROJECT_STATE.md
+- docs/02_ARCHITECTURE.md
+- docs/03_ARCHITECTURE_DECISIONS.md
+- docs/04_ROADMAP.md
+- CURRENT_WORK.md
+- docs/06_AI_ASSISTANT_POLICY.md
+- docs/07_AI_STARTUP_GUIDE.md
+- docs/08_DOCUMENTATION_STANDARD.md
+- docs/09_ENGINEERING_METHODOLOGY.md
+- docs/11_ENGINEERING_PLAYBOOK.md
+- docs/12_REPOSITORY_STANDARD.md
+- docs/13_INFORMATION_OWNERSHIP.md
 
 ---
 
@@ -32,69 +129,36 @@ YYYY-MM-DD
 
 ---
 
-## Desktop Runtime
+## Summary
 
-Desktop Runtime stabilization completed.
+Desktop Runtime Stabilization.
 
-Major improvements:
+---
 
-- Splash Screen implemented.
-- Loading Indicator implemented.
-- Offline Detection implemented.
-- Automatic Retry implemented.
-- ApplicationHealthService introduced.
+## Major Changes
+
+- Desktop Runtime stabilized.
 - Startup reliability improved.
-- Error Handling strengthened.
-- Desktop Runtime stability improved.
-- Production behaviour preserved.
+- Repository quality improved.
+- Engineering milestone completed.
 
 ---
 
-## Engineering
+## Impact
 
-Desktop stabilization completed according to the active engineering contract.
-
-Engineering decisions:
-
-- Native Desktop Runtime acts only as the Windows host.
-- Primary user interface remains the Bukit Prago Web Application.
-- Native desktop menus (About and Settings) intentionally removed after implementation review.
-- Desktop Runtime kept lightweight to avoid unnecessary complexity.
-- Installer remains a mandatory Release deliverable and will be implemented after production maturity.
-
----
-
-## Repository
-
-Repository quality improved.
-
-Completed:
-
-- Desktop Runtime cleanup.
-- Temporary engineering artifacts removed.
-- Repository hygiene improved.
-- Build verification completed.
-- GitHub repository synchronized.
+Desktop Runtime reached a stable engineering baseline while preserving production behaviour.
 
 ---
 
 ## Milestone
 
-Current status:
-
 M-02
 
 Desktop Stabilization
 
-Status:
+Status
 
-READY FOR FREEZE
-
-Next milestone:
-
-M-03
-
-Operational Verification
+Completed
 
 ---
 
@@ -106,80 +170,30 @@ YYYY-MM-DD
 
 ---
 
-## Documentation
+## Summary
 
-Documentation upgraded to Documentation V6.
+Documentation Governance Version 6.
 
-Major improvements:
+---
+
+## Major Changes
 
 - Documentation governance strengthened.
-- Information Ownership refined.
-- Repository Standard updated.
-- AI Assistant Policy upgraded.
-- AI Startup Guide upgraded.
-- Engineering Methodology updated.
-- Engineering Playbook updated.
-- Architecture Decisions expanded.
-- Product Profile introduced as an official document.
-- Documentation consistency improved across the repository.
+- Repository governance improved.
+- Engineering methodology refined.
+- AI engineering workflow enhanced.
 
 ---
 
-## Architecture
+## Impact
 
-Architecture documentation strengthened.
-
-Major changes:
-
-- Introduced Source Code Single Source of Truth (Source Code SSOT).
-- Introduced Working Copy model.
-- Introduced Repository Recovery Model.
-- Introduced AI Engineering Partner architecture.
-- Introduced Documentation Evolution architecture.
-- Architecture consistency improved.
+Repository documentation became more structured and maintainable.
 
 ---
 
-## Repository
+## Related Documents
 
-Repository governance improved.
-
-Changes:
-
-- GitHub recognized as the official Source Code SSOT.
-- Working Copy model documented.
-- Repository lifecycle documented.
-- Backup model documented.
-- Repository validation strengthened.
-
----
-
-## Engineering
-
-Engineering methodology and execution refined.
-
-Major improvements:
-
-- Repository First strengthened.
-- Documentation Evolution adopted.
-- Repository consistency strengthened.
-- Engineering workflow refined.
-- Engineering governance strengthened.
-
----
-
-## AI
-
-AI engineering responsibilities expanded.
-
-Major improvements:
-
-- AI Engineering Partner model introduced.
-- Repository-driven startup adopted.
-- Startup protocol improved.
-- Safe engineering guidance established.
-- Git workflow guidance standardized.
-- Engineering workflow aligned with Information Ownership.
+Documentation Version 6
 
 ---
 
@@ -191,241 +205,142 @@ YYYY-MM-DD
 
 ---
 
-## Documentation
+## Summary
 
-Documentation migrated to Documentation V5.
-
-Major improvements:
-
-- Introduced **One Information → One Owner Document**.
-- Reduced duplicated information across documents.
-- Established documentation ownership.
-- Introduced `13_INFORMATION_OWNERSHIP.md`.
-- Introduced `14_DOCUMENTATION_MIGRATION_PLAN.md`.
-- Separated Foundation, Governance, Operations and Planning responsibilities.
-- Simplified documentation maintenance for future milestones.
+Documentation Governance Foundation.
 
 ---
 
-## Architecture
+## Major Changes
 
-Documentation architecture refined.
-
-Major changes:
-
-- Foundation documents contain only permanent project knowledge.
-- Governance documents contain only engineering governance.
-- Operational information centralized in `CURRENT_WORK.md`.
-- Project history centralized in `CHANGELOG.md`.
+- Information Ownership introduced.
+- Documentation ownership established.
+- Documentation architecture reorganized.
+- Repository baseline established.
 
 ---
 
-## Repository
+## Impact
 
-Repository documentation updated.
-
-Changes:
-
-- Documentation ownership formalized.
-- Cross-document references standardized.
-- Repository consistency improved.
+Documentation maintenance became significantly simpler by introducing official ownership and reducing duplication.
 
 ---
 
-## Repository Baseline
+## Related Documents
 
-Repository Engineering Baseline V1 established.
-
-Completed:
-
-- Git repository initialized.
-- Default branch migrated to `main`.
-- Documentation V5 frozen (`DOC-V5-FROZEN`).
-- Repository audit completed.
-- Package audit completed.
-- Repository Engineering Baseline V1 frozen (`REPO-V1-FROZEN`).
-
-This baseline becomes the official engineering starting point for future implementation.
-
----
-
-## Engineering
-
-Engineering documentation migrated to Documentation V5.
-
-Changes:
-
-- Reduced unnecessary duplication.
-- Strengthened Single Source of Truth (SSOT).
-- Simplified future documentation updates.
+Documentation Version 5
 
 ---
 
 # Version 4.0
 
+Date
+
+YYYY-MM-DD
+
 ---
 
-## Desktop Runtime
+## Summary
 
-Introduced the official Windows Desktop Runtime.
+Desktop Runtime Foundation.
 
-Location
+---
 
-```text
-apps/bpv4-desktop
-```
+## Major Changes
 
-Technology
+- Windows Desktop Runtime introduced.
+- Desktop engineering workflow established.
+- Desktop repository structure created.
 
-- .NET 8
-- Windows Forms
-- Microsoft Edge WebView2
+---
 
-Deliverables
+## Impact
 
-- BukitPrago.exe
-- Windows Desktop Launcher
-- Desktop Runtime Foundation
+Bukit Prago became operable through the official Windows Desktop Runtime.
 
 ---
 
 ## Milestone
 
-Completed:
+M-01
 
-M-01 — Launch Bukit Prago Desktop Application
+Desktop Runtime Foundation
 
-Result:
+Status
 
-- Desktop launcher operational.
-- Production application successfully launched from Windows.
-- Milestone frozen.
-
-Started:
-
-M-02 — Desktop Stabilization.
-
----
-
-## Documentation
-
-Documentation upgraded to Version 4.
-
-Major improvements:
-
-- Desktop Runtime introduced as an official repository component.
-- Documentation workflow standardized.
-- Documentation preservation policy introduced.
-- PASS → Documentation Update → Freeze workflow adopted.
-
----
-
-## Engineering
-
-Engineering methodology updated.
-
-Major improvements:
-
-- Desktop Stabilization introduced.
-- Behavior-Preserving Engineering.
-- Documentation Preservation.
-- Milestone Freeze.
-- Evidence-Based Documentation Update.
-
----
-
-## Repository
-
-Repository recognizes two official implementation areas.
-
-```text
-apps/bukit-prago
-```
-
-Product SSOT
-
-```text
-apps/bpv4-desktop
-```
-
-Desktop Runtime
-
----
-
-## AI
-
-Engineering workflow improved.
-
-Changes:
-
-- Audit before implementation.
-- FULL FILE by default.
-- PASS before continuation.
-- Freeze completed milestones.
+Completed
 
 ---
 
 # Version 2.0
 
----
+Date
 
-## Documentation
-
-Documentation rewritten as BPV4 Documentation V2.
-
-Objectives:
-
-- reduce duplication;
-- improve clarity;
-- focus on implementation;
-- improve AI continuity;
-- simplify project understanding.
+YYYY-MM-DD
 
 ---
 
-## Engineering
+## Summary
 
-Engineering foundation established.
-
-Principles introduced:
-
-- Product First
-- Repository First
-- Evidence First
-- Current Work First
-- Working Software First
+Engineering Documentation Foundation.
 
 ---
 
-## Repository
+## Major Changes
 
-Latest repository approved by the Project Owner became the official implementation source.
+- Engineering documentation rewritten.
+- Repository-driven engineering adopted.
+- Engineering principles established.
 
 ---
 
-## AI
+## Impact
 
-AI engineering workflow standardized.
-
-Focus:
-
-- understand;
-- implement;
-- deliver working software.
+The project established the initial engineering governance and documentation foundation.
 
 ---
 
 # Future Entries
 
-Only record significant:
+Record only significant engineering events, including:
 
-- milestone completion;
-- engineering changes;
 - architecture changes;
-- repository changes;
-- documentation evolution.
+- repository governance changes;
+- documentation evolution;
+- engineering methodology changes;
+- milestone completion;
+- major repository restructuring;
+- production releases.
 
-Routine implementation SHALL NOT be recorded.
+Routine implementation, bug fixes, refactoring details, or minor documentation updates SHALL NOT be recorded unless they represent a significant engineering milestone.
+
+---
+
+# Related Documentation
+
+Project State
+
+```text
+docs/01_PROJECT_STATE.md
+```
+
+Current Work
+
+```text
+CURRENT_WORK.md
+```
+
+Documentation Standard
+
+```text
+docs/08_DOCUMENTATION_STANDARD.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
 
 ---
 
@@ -437,7 +352,7 @@ Changelog
 
 Version
 
-6.1
+7.0
 
 Status
 

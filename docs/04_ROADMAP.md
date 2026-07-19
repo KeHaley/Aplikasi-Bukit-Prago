@@ -2,7 +2,7 @@
 
 # ROADMAP
 
-Version : 6.1
+Version : 7.0
 
 Status : OFFICIAL
 
@@ -12,11 +12,11 @@ State : ACTIVE
 
 # Purpose
 
-Define the long-term engineering roadmap of the BPV4 project.
+Define the official engineering roadmap of the BPV4 Modularization Engine.
 
-This document describes the planned evolution of the Bukit Prago Operational Application and the BPV4 Engineering Platform.
+This roadmap defines the long-term evolution of the engineering engine responsible for safely modularizing the Bukit Prago Operational Application.
 
-The roadmap defines long-term engineering direction.
+The roadmap defines engineering direction.
 
 It does not define the current engineering contract.
 
@@ -24,238 +24,226 @@ It does not define the current engineering contract.
 
 # Engineering Vision
 
-The long-term engineering vision is to continuously improve the Bukit Prago Operational Application while preserving production integrity.
+Build a complete engineering engine capable of safely transforming the production application's `Index.html` into modular JavaScript while preserving identical behaviour.
 
-BPV4 SHALL continuously evolve as an Engineering Platform supporting the complete engineering lifecycle of the Bukit Prago Operational Application.
-
-Every milestone SHALL contribute directly to the Product SSOT.
+Every roadmap phase SHALL directly contribute to safe modularization.
 
 ---
 
-# Engineering Lifecycle
+# Engineering Pipeline
 
-The BPV4 project follows one continuous lifecycle.
+The Modularization Engine follows one continuous engineering pipeline.
 
 ```text
-Understand
+Source Discovery
 
 ↓
 
-Build
+Dependency Extraction
 
 ↓
 
-Verify
+Module Detection
 
 ↓
 
-Stabilize
+Coupling Analysis
 
 ↓
 
-Freeze
+Extraction Planning
 
 ↓
 
-Improve
+Safe Modularization
 
 ↓
 
-Release
-
-↓
-
-Repeat
+Verification
 ```
 
----
-
-# Roadmap
-
-## M-01
-
-Launch Bukit Prago Desktop Application
-
-### Objective
-
-Launch the production application as a Windows desktop application while preserving production behaviour.
+Each phase produces engineering artifacts required by the next phase.
 
 ---
 
-## M-02
+# Engineering Roadmap
 
-Desktop Stabilization
+## Phase 1
+
+### Source Discovery
+
+Status
+
+COMPLETE
 
 ### Objective
 
-Improve the Desktop Runtime while preserving production behaviour.
+Discover every engineering element contained within the production source code.
 
-### Expected Deliverables
+### Deliverables
 
-- Splash Screen
-- Loading Screen
-- Offline Detection
-- Error Handling
-- Stable Desktop Runtime
-
-### Engineering Decisions
-
-The following items are intentionally excluded from M-02:
-
-- About Dialog
-- Settings
-
-These features were evaluated during implementation and intentionally omitted to preserve a lightweight Desktop Runtime while maintaining the existing user experience.
-
-Installer remains a mandatory project deliverable but SHALL be implemented during the Release phase after the Bukit Prago Application has reached production maturity.
+- Function Registry
+- Global Variable Registry
 
 ---
 
-## M-03
+## Phase 2
 
-Operational Verification
+### Dependency Extraction
+
+Status
+
+ACTIVE
 
 ### Objective
 
-Verify every operational feature using the running desktop application.
+Extract all dependencies directly from the production source code.
 
-### Expected Deliverables
+### Deliverables
 
-- Dashboard Verification
-- Production Verification
-- Sales Verification
-- Fertilizer Verification
-- Forecast Verification
-- Target Verification
-- Annual Report Verification
-- Backup Verification
-- Administration Verification
+- Function Call Graph
+- Global Variable Access Graph
+- DOM Access Graph
+- Browser API Graph
+- google.script.run Graph
+- DependencyGraph
 
 ---
 
-## M-04
+## Phase 3
 
-Behavior Baseline Freeze
+### Module Detection
+
+Status
+
+PLANNED
 
 ### Objective
 
-Establish a verified production behaviour baseline.
+Automatically identify safe module boundaries using the DependencyGraph.
 
-### Expected Deliverables
+### Deliverables
 
-- Verified Behaviour Baseline
-- Regression Baseline
-- Frozen Operational Reference
+- ModuleCandidate
 
 ---
 
-## M-05
+## Phase 4
 
-Behavior-Preserving Modularization
+### Coupling Analyzer
+
+Status
+
+PLANNED
 
 ### Objective
 
-Modularize the production source code while preserving identical operational behaviour.
+Measure dependency quality between module candidates.
 
-### Expected Deliverables
+### Deliverables
 
-- Modular Kode.gs
-- Modular Index.html
-- Behaviour Compatibility
-- Updated Documentation
+- Fan In
+- Fan Out
+- Cohesion
+- Coupling
+- Shared Globals
+- Shared DOM
+- ModuleMetrics
 
 ---
 
-## M-06
+## Phase 5
 
-Continuous Improvement
+### Extraction Planner
+
+Status
+
+PLANNED
 
 ### Objective
 
-Continuously improve the Bukit Prago Operational Application.
+Generate the safest modularization sequence.
 
-### Expected Deliverables
+### Deliverables
 
-- Incremental Improvements
-- Stable Releases
-- Updated Documentation
-- Engineering Knowledge Growth
-
-### Release Deliverables
-
-The following deliverables SHALL be completed before any production release:
-
-- Windows Installer
-- Desktop Packaging
-- Release Validation
-- Distribution Package
+- ExtractionPlan
 
 ---
 
-## M-07
+## Phase 6
 
-Engineering Platform
+### Safe Modularizer
+
+Status
+
+PLANNED
 
 ### Objective
 
-Continuously strengthen BPV4 as the engineering platform supporting the complete lifecycle of the Bukit Prago Operational Application.
+Generate JavaScript modules without changing production behaviour.
 
-### Expected Deliverables
+### Deliverables
 
-- Engineering Automation
-- Improved Repository Architecture
-- Improved Documentation Quality
-- Engineering Productivity Improvements
-- Stable Engineering Governance
+- dashboard.js
+- history.js
+- rekap.js
+- target.js
+- input.js
+- pemupukan.js
+- Additional modules as required
 
 ---
 
-## M-08
+## Phase 7
 
-AI Native Engineering
+### Verification
+
+Status
+
+PLANNED
 
 ### Objective
 
-Continuously improve AI-assisted engineering capabilities while preserving repository consistency and engineering governance.
+Verify that modularization preserves identical application behaviour.
 
-### Expected Deliverables
+### Deliverables
 
-- AI Engineering Workflow Improvements
-- AI Startup Improvements
-- AI Repository Integration
-- Improved Engineering Efficiency
-- Continuous AI Capability Evolution
+- Broken Reference Report
+- Dependency Validation
+- Behaviour Validation
+- Modularization Validation
 
 ---
 
 # Engineering Rules
 
-Every roadmap milestone SHALL:
+Every roadmap phase SHALL:
 
-- preserve the Product SSOT;
 - preserve production behaviour;
-- remain evidence-driven;
-- maintain backward compatibility;
-- improve engineering quality;
-- preserve repository consistency.
+- use source code as the primary evidence;
+- avoid manual dependency creation;
+- remain repeatable;
+- minimize engineering risk.
 
 ---
 
 # Current Engineering Contract
 
-The active engineering contract is defined only in:
+The active engineering contract is defined in:
 
 ```text
 CURRENT_WORK.md
 ```
 
-Roadmap milestones SHALL NOT override the active engineering contract.
+The roadmap defines long-term direction only.
+
+Current implementation priorities SHALL always follow the active engineering contract.
 
 ---
 
 # Progress Tracking
 
-Project progress is recorded in:
+Current engineering progress is recorded in:
 
 ```text
 docs/01_PROJECT_STATE.md
@@ -269,16 +257,16 @@ docs/05_CHANGELOG.md
 
 ---
 
-# Roadmap Success
+# Roadmap Success Criteria
 
-The roadmap is successful when:
+The roadmap is considered successful when:
 
-- every milestone contributes to the Product SSOT;
-- engineering remains product-driven;
-- production behaviour is preserved;
-- engineering quality continuously improves;
-- repository quality continuously improves;
-- engineering knowledge continuously grows.
+- every phase completes successfully;
+- every engineering artifact is generated automatically;
+- dependency extraction is accurate;
+- module boundaries are safely identified;
+- modularization is repeatable;
+- generated modules preserve identical behaviour.
 
 ---
 
@@ -290,7 +278,7 @@ Roadmap
 
 Version
 
-6.1
+7.0
 
 Status
 

@@ -2,7 +2,7 @@
 
 # AI STARTUP GUIDE
 
-Version : 6.0
+Version : 8.0
 
 Status : OFFICIAL
 
@@ -12,9 +12,9 @@ State : ACTIVE
 
 # Purpose
 
-Provide the official startup procedure for every AI contributing to the BPV4 project.
+Define the official startup procedure for every AI contributing to the BPV4 Modularization Engine.
 
-Every AI SHALL be able to continue the project using the official repository and documentation only.
+This document enables any AI to continue the project using only the repository and its official documentation.
 
 Previous conversations SHALL NOT be required.
 
@@ -24,179 +24,282 @@ Previous conversations SHALL NOT be required.
 
 Every startup SHALL begin from repository evidence.
 
-Repository evidence SHALL always override conversation history.
+The official repository is the Source Code Single Source of Truth (Source Code SSOT).
 
-The official GitHub repository SHALL be treated as the Source Code Single Source of Truth (Source Code SSOT).
+Conversation history MAY provide additional context but SHALL NEVER override repository evidence.
+
+When conflicts exist:
+
+Source Code takes precedence over Documentation.
+
+Documentation takes precedence over Conversation History.
 
 ---
 
 # Startup Objective
 
-Before performing any engineering activity, every AI SHALL:
+Before implementation begins, every AI SHALL understand:
 
-- validate the active repository;
-- validate the Source Code SSOT;
-- understand the project;
-- understand the Product SSOT;
-- understand the repository architecture;
-- understand the documentation architecture;
-- understand the current engineering contract;
-- determine the active engineering objective.
+- the project mission;
+- the current engineering state;
+- the repository architecture;
+- the current engineering contract;
+- the active implementation objective;
+- the engineering constraints.
+
+Implementation SHALL NOT begin until this understanding has been achieved.
 
 ---
 
 # Startup Procedure
 
-Every startup SHALL follow the following sequence.
+Every AI SHALL complete the following startup sequence.
 
 ---
 
 ## Step 1
 
-Validate the active repository.
+Validate the Repository.
 
-Follow the repository validation procedure defined in:
+Confirm that:
+
+- the repository is complete;
+- the production source exists;
+- required documentation exists.
+
+Follow:
 
 ```text
 docs/12_REPOSITORY_STANDARD.md
 ```
 
-Implementation SHALL NOT begin until repository validation has passed.
-
 ---
 
 ## Step 2
 
-Read the official documentation.
+Read the Core Documentation.
 
-Read the documents in the following order.
+Read the following documents in order.
 
-1. README.md
-
-2. docs/00_PROJECT_CONTEXT.md
-
-3. docs/15_PRODUCT_PROFILE.md
-
-4. docs/01_PROJECT_STATE.md
-
-5. docs/10_PROJECT_INTENT.md
-
-6. docs/04_ROADMAP.md
-
-7. docs/09_ENGINEERING_METHODOLOGY.md
-
-8. docs/06_AI_ASSISTANT_POLICY.md
-
-9. docs/13_INFORMATION_OWNERSHIP.md
-
-10. CURRENT_WORK.md
-
-11. docs/07_AI_STARTUP_GUIDE.md
-
-12. docs/08_DOCUMENTATION_STANDARD.md
-
-13. docs/11_ENGINEERING_PLAYBOOK.md
-
-Do not skip documents.
-
-Follow the documented startup sequence.
-
----
-
-## Step 3
-
-Locate the Product SSOT.
-
-Verify:
+1.
 
 ```text
-apps/bukit-prago
+docs/00_PROJECT_CONTEXT.md
 ```
 
-Locate the Desktop Runtime.
-
-Verify:
+2.
 
 ```text
-apps/bpv4-desktop
+docs/01_PROJECT_STATE.md
 ```
 
-Both SHALL exist before implementation begins.
+3.
 
----
+```text
+docs/02_ARCHITECTURE.md
+```
 
-## Step 4
+4.
 
-Read the current engineering contract.
+```text
+docs/03_ARCHITECTURE_DECISIONS.md
+```
 
-Read:
+5.
+
+```text
+docs/04_ROADMAP.md
+```
+
+6.
 
 ```text
 CURRENT_WORK.md
 ```
 
-Identify:
+Do NOT skip documents.
 
+---
+
+## Step 3
+
+Understand the Current Engineering Contract.
+
+From CURRENT_WORK identify:
+
+- Current Mission
 - Current Phase
-- Current Milestone
 - Current Objective
-- Current Priority
 - Current Deliverables
+- Current Constraints
 - Definition of Done
+
+Implementation SHALL always follow CURRENT_WORK.
+
+---
+
+## Step 4
+
+Locate the Product SSOT.
+
+Verify the production application.
+
+```text
+apps/Bukit Prago
+```
+
+The Product SSOT SHALL remain protected.
 
 ---
 
 ## Step 5
 
-Verify documentation ownership.
+Read Supporting Documentation.
 
-Read:
+When implementation requires additional guidance, read:
+
+```text
+docs/09_ENGINEERING_METHODOLOGY.md
+```
+
+```text
+docs/11_ENGINEERING_PLAYBOOK.md
+```
+
+```text
+docs/12_REPOSITORY_STANDARD.md
+```
 
 ```text
 docs/13_INFORMATION_OWNERSHIP.md
 ```
 
-Identify the owner document for every engineering information required during implementation.
-
-Owner documents SHALL always take precedence.
+Read additional documentation only when required.
 
 ---
 
 ## Step 6
 
-Verify startup readiness.
+Verify Startup Readiness.
 
-Before implementation, the AI SHALL understand:
+Before implementation the AI SHALL know:
 
-- project purpose;
-- primary product;
-- repository architecture;
-- Source Code SSOT;
-- documentation ownership;
-- current engineering contract;
-- implementation objective;
-- prohibited changes;
-- completion criteria.
+- what the project is;
+- why it exists;
+- what is currently being built;
+- what the current objective is;
+- what changes are prohibited;
+- when the current phase is complete.
 
-If any required information is unknown:
+If any of these questions cannot be answered,
 
-Continue reading the official documentation.
-
-Implementation SHALL NOT begin.
+implementation SHALL NOT begin.
 
 ---
 
-# Startup Completion Checklist
+# Decision Priority
+
+When information conflicts, use the following priority.
+
+1. Source Code
+
+2. CURRENT_WORK
+
+3. ARCHITECTURE_DECISIONS
+
+4. ARCHITECTURE
+
+5. PROJECT_CONTEXT
+
+6. ROADMAP
+
+7. Supporting Documentation
+
+8. Conversation History
+
+Repository evidence always has the highest priority.
+
+---
+
+# Communication Rules
+
+Every AI SHALL communicate using execution-oriented responses.
+
+Unless explicitly requested by the Project Owner, the AI SHALL NOT:
+
+- explain technical concepts;
+- provide long architectural discussions;
+- compare multiple solutions;
+- describe implementation theory;
+- provide educational content;
+- repeat information already documented;
+- justify every engineering decision;
+- produce lengthy analyses;
+- generate unnecessary documentation;
+- answer beyond the requested scope.
+
+The default response SHALL be concise, direct, and action-oriented.
+
+Responses SHOULD focus on:
+
+- implementation;
+- repository changes;
+- validation results;
+- identified issues;
+- engineering decisions;
+- next required action.
+
+Additional explanation SHALL be provided only when explicitly requested by the Project Owner.
+
+---
+
+# Default Response Mode
+
+The default response mode for every AI is:
+
+Execution Mode.
+
+Execution Mode prioritizes:
+
+- completing engineering tasks;
+- minimizing explanations;
+- minimizing repeated information;
+- minimizing discussion;
+- minimizing implementation theory;
+- minimizing speculative analysis;
+- maximizing engineering progress.
+
+Unless instructed otherwise, the AI SHALL assume that the Project Owner prefers execution over discussion.
+
+---
+
+# Engineering Communication Principle
+
+Engineering communication SHALL reduce communication overhead.
+
+Every response SHALL move the project forward.
+
+Information that does not contribute to implementation, validation, engineering decisions, or repository quality SHOULD be omitted.
+
+Communication SHALL be:
+
+- concise;
+- objective;
+- repository-oriented;
+- evidence-driven;
+- implementation-focused.
+
+---
+
+# Startup Checklist
 
 Startup is complete when:
 
 - repository validation has passed;
-- Source Code SSOT has been confirmed;
-- documentation has been understood;
-- documentation ownership has been confirmed;
-- Product SSOT has been verified;
-- Desktop Runtime has been verified;
-- CURRENT_WORK has been understood;
+- Product SSOT has been located;
+- project context is understood;
+- repository architecture is understood;
+- current engineering contract is understood;
 - implementation objective is clear.
 
 Only then MAY implementation begin.
@@ -205,64 +308,75 @@ Only then MAY implementation begin.
 
 # Startup Rules
 
-During startup the AI SHALL:
+Every AI SHALL:
 
-- use repository evidence;
-- follow Information Ownership;
+- preserve production behaviour;
+- use source code as engineering evidence;
 - avoid assumptions;
-- preserve repository consistency;
-- preserve documentation consistency;
-- follow the active engineering contract.
+- follow the active engineering contract;
+- update documentation when engineering decisions change;
+- preserve repository consistency.
 
-Repository evidence always has priority.
+---
+
+# AI Handover
+
+This repository is designed so that any AI can continue the project without previous conversations.
+
+Before implementation, every AI SHALL be able to answer:
+
+- What is the project?
+- What is the current phase?
+- What is the current objective?
+- What is the Product SSOT?
+- What changes are prohibited?
+- What is the Definition of Done?
+
+If these questions cannot be answered,
+
+continue reading the repository documentation.
+
+Implementation SHALL NOT begin until all answers are known.
 
 ---
 
 # Related Documentation
 
-Repository standard
+Project Context
 
 ```text
-docs/12_REPOSITORY_STANDARD.md
+docs/00_PROJECT_CONTEXT.md
 ```
 
-Information ownership
-
-```text
-docs/13_INFORMATION_OWNERSHIP.md
-```
-
-Engineering methodology
-
-```text
-docs/09_ENGINEERING_METHODOLOGY.md
-```
-
-Engineering workflow
-
-```text
-docs/11_ENGINEERING_PLAYBOOK.md
-```
-
-AI policy
-
-```text
-docs/06_AI_ASSISTANT_POLICY.md
-```
-
-Current engineering contract
+Current Work
 
 ```text
 CURRENT_WORK.md
 ```
 
----
+Engineering Methodology
 
-# Success Criteria
+```text
+docs/09_ENGINEERING_METHODOLOGY.md
+```
 
-Startup is successful when the AI can continue implementation without relying on previous conversations.
+Engineering Playbook
 
-Repository evidence, documentation, and the current engineering contract SHALL provide sufficient information to continue the project.
+```text
+docs/11_ENGINEERING_PLAYBOOK.md
+```
+
+Repository Standard
+
+```text
+docs/12_REPOSITORY_STANDARD.md
+```
+
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
 
 ---
 
@@ -274,7 +388,7 @@ AI Startup Guide
 
 Version
 
-6.0
+8.0
 
 Status
 

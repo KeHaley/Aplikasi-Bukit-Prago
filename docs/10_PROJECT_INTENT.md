@@ -2,7 +2,7 @@
 
 # PROJECT INTENT
 
-Version : 5.1
+Version : 5.2
 
 Status : OFFICIAL
 
@@ -49,18 +49,13 @@ The long-term mission of BPV4 is to:
 
 # Engineering Intent
 
-Engineering exists to:
+Engineering exists to support the long-term success of the Bukit Prago Operational Application.
 
-- understand the application;
-- preserve application quality;
-- improve engineering efficiency;
-- support operational excellence;
-- enable sustainable product evolution;
-- continuously strengthen the BPV4 Engineering Platform.
+All engineering capabilities SHALL ultimately contribute to preserving, understanding, evolving, and maintaining the production application.
 
 Engineering is a supporting capability.
 
-The Bukit Prago Operational Application is always the primary objective.
+The Bukit Prago Operational Application remains the primary objective.
 
 ---
 
@@ -93,13 +88,12 @@ These principles are independent of any milestone or implementation phase.
 
 Engineering decisions SHALL always follow this order.
 
-1. Product
+1. Product Integrity
 2. Repository Consistency
 3. Operational Stability
-4. Product Preservation
-5. Source Code SSOT
-6. Engineering Productivity
-7. Engineering Convenience
+4. Source Code SSOT
+5. Engineering Productivity
+6. Engineering Convenience
 
 ---
 
@@ -148,6 +142,12 @@ Project Roadmap
 docs/04_ROADMAP.md
 ```
 
+Information Ownership
+
+```text
+docs/13_INFORMATION_OWNERSHIP.md
+```
+
 Current Engineering Contract
 
 ```text
@@ -164,7 +164,7 @@ Project Intent
 
 Version
 
-5.1
+5.2
 
 Status
 
