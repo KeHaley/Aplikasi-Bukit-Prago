@@ -254,6 +254,9 @@ Repository Standard
 ```text
 docs/12_REPOSITORY_STANDARD.md
 ```
+Implementation Standard
+
+docs/16_IMPLEMENTATION_STANDARD.md
 
 Current Engineering Contract
 
